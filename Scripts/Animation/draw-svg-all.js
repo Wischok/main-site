@@ -16,14 +16,14 @@ let observer = new IntersectionObserver(entries => {
     threshold: .1
 });
 //observe all svgs
-document.querySelectorAll("svg").forEach(entry => {
+document.querySelectorAll(".svg").forEach(entry => {
     observer.observe(entry);//oberve each 'svg' element
 });
 
 //page load function
 window.addEventListener('load', function () {
     //select all svgs
-    querySelectorAll('svg').foreach((el) => {
+    this.document.querySelectorAll('.svg').foreach((el) => {
         //select all paths within svg
         let paths = el.querySelectorAll('path');
 
@@ -36,7 +36,7 @@ window.addEventListener('load', function () {
         })
     })
 
-    alert('working');
+    el.style.backgroundColor = 'blue';
 });
 
 function DrawSVG(svg) {
