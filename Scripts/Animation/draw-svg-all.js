@@ -6,10 +6,10 @@ let observer = new IntersectionObserver(entries => {
         //if intersecting by 10%
         if(entry.isIntersecting) {
             //draw svg
-            DrawSVG(entry);
+            DrawSVG(entry.target);
 
             //remove entry
-            observer.unobserve(entry);
+            observer.unobserve(entry.target);
         }
     })
 }, {
@@ -23,7 +23,7 @@ document.querySelectorAll(".svg").forEach(entry => {
 //page load function
 window.addEventListener('load', function () {
     //select all svgs
-    this.document.querySelectorAll('.svg').foreach((el) => {
+    document.querySelectorAll('.svg').forEach((el) => {
         //select all paths within svg
         let paths = el.querySelectorAll('path');
 
@@ -34,9 +34,11 @@ window.addEventListener('load', function () {
             path.style.strokeDasharray = pathLength / 2;
             path.style.strokeDashoffset = pathLength / 2;
         })
+
+        el.style.backgroundColor = 'blue';
     })
 
-    el.style.backgroundColor = 'blue';
+    
 });
 
 function DrawSVG(svg) {
