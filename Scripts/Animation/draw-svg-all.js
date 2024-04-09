@@ -35,6 +35,8 @@ window.addEventListener('load', function () {
             path.style.strokeDashoffset = pathLength / 2;
         })
     })
+
+    alert('working');
 });
 
 function DrawSVG(svg) {
