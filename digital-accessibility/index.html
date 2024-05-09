@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Accessibility | Wischok</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/docs/assets/styles/reset.css">
+    <link rel="stylesheet" href="/docs/assets/styles/main.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/docs/assets/img/wischok-favicon.svg">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SJNZHSJ17G"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SJNZHSJ17G');
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav role="navigation" class="nav" aria-label="Main menu.">
+        <div class="content flex-row-center">
+            <div class="logo-left">
+                <a href="/" aria-current="page" aria-label="Go to home page.">
+                    <img class="img img1" src="/docs/assets/img/wischok-logo.png" alt="Wischok Logo.">
+                    <img src="/docs/assets/img/wischok-favicon.svg" alt="" class="img img2">
+                </a>
+            </div>
+            <div class="links-right">
+                <ul role="menu" class="flex-row-center menu">
+                   <li role="none" class="menu-item li">
+                        <button role="menuitem" id="menu-button1" class="menu-button underline li caret" 
+                        aria-haspopup="true" aria-controls="menu1" aria-expanded="false">
+                            Web Design
+                        </button>
+                        <ul id="menu1" role="menu" aria-labelledby="menu-button1" class="sub-menu">
+                            <li class="sub-li sub-li-1" role="none"><a role="menuitem" href="/small-business-web-design/">Small Businesses</a></li>
+                            <li class="sub-li" role="none"><a role="menuitem" href="/web-design/services/">Services</a></li>
+                        </ul>
+                    </li>
+                    <li role="none" class="menu-item">
+                        <button role="menuitem" id="menu-button2" class="menu-button underline li caret" 
+                        aria-haspopup="true" aria-controls="menu2" aria-expanded="false">
+                            Digital Accessibility
+                        </button>
+                        <ul id="menu2" role="menu" aria-labelledby="menu-button2" class="sub-menu">
+                            <li class="sub-li sub-li-1" role="none"><a role="menuitem" href="/digital-accessibility/">ADA Website Remediation</a></li>
+                            <li class="sub-li" role="none"><a role="menuitem" href="/digital-accessibility/file-remediation/">File Remediation</a></li>
+                            <li class="sub-li" role="none"><a role="menuitem" href="/digital-accessibility/ada-services/">ADA Services</a></li>
+                        </ul>
+                    </li>
+                   <li role="none" class="li"><a class="underline" role="menuitem" href="blogs/">Blogs</a></li> 
+                   <li role="none" class="li"><a role="listitem" class="btn-link" href="/contact/">Free Quote</a></li>
+                </ul>
+                <button role="button" aria-expanded="false" class="hamburger">
+                    <svg class="svg" viewbox="0 0 100 100" aria-hidden="true">
+                        <line class="line top" x1="90" x2="10" y1="25" y2="25" stroke="black" stroke-width="10"
+                            stroke-linecap="round" stroke-dasharray="80" stroke-dashoffset="0"></line>
+                        <line class="line mid" x1="10" x2="90" y1="50" y2="50" stroke="black" stroke-width="10"
+                            stroke-linecap="round" stroke-dasharray="80" stroke-dashoffset="0"></line>
+                        <line class="line bot" x1="10" x2="90" y1="75" y2="75" stroke="black" stroke-width="10"
+                            stroke-linecap="round" stroke-dasharray="80" stroke-dashoffset="0">
+                        </line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <!-- Main -->
+    <main role="main">
+         <!-- Main Site Header -->
+        <header class="main-header">
+            <div class="left-content">
+                <div class="top-content view-width-constrain-left">
+                    <h1 class="heading-1 font-medium">Wischok Digital
+                        Accessibility</span></h1>
+                </div>
+                <div class="bottom-content view-width-constrain-left">
+                    <p class="p1">ADA Digital Accessibility services for website and file remediation.</p>
+                    <a href="/contact/" class="btn-link">Get Accessible</a>
+                </div>
+            </div>
+            <div class="right-content">
+                <ul class="bubble-list" aria-label="List of web design images.">
+                    <li class="bubble bubble1 no-display-810">
+                        <img class="img" src="/img/old-man.jpg" alt="A man smiling.">
+                    </li>
+                    <li class="bubble bubble2">
+                        <img class="img" src="/img/wheelchair-accessibility.jpg" alt="A man in a wheelchair.">
+                    </li>
+                    <li class="bubble bubble3">
+                        <img class="img" src="/img/auditory.jpg" alt="Auditory accessibility.">
+                    </li>
+                    <li class="bubble bubble4">
+                        <img class="img" src="/img/brain-cognitive.jpg" alt="Cognitive Disabilities">
+                    </li>
+                    <li class="bubble bubble5">
+                        <img class="img" src="/img/prosthetic-arm.jpg" alt="Prosthetic arm being attached.">
+                    </li>
+                    <li class="bubble bubble6">
+                        <img class="img" src="/img/vision.jpg" alt="An old man smiling">
+                    </li>
+                    <li class="bubble bubble7">
+                        <img class="img" src="/img/verbal-smile.jpg" alt="An eye representing visual accessibility.">
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <!-- Section | What is Digital Accessibility -->
+        <div class="section-text-left1 view-width-constrain margin-top-10">
+            <h2 class="heading2">What is Digital Accessibility</h2>
+            <section>
+                <p class="p2">Digital accessibility, in a nutshell, is making digital content and sergvices that can be accessed and used by everyone. These come from international and legal standards; it’s important to have a digital accessiblity specialist who can look over your web content for accessiblity.</p>
+            </section>
+        </div>
+        <!-- Section | How do we check for digital accessibility -->
+        
+        <div class="section-text-right2 margin-top-5 da-section flex-row-center sb-section flex-wrap">
+            <div class="content-left flex-half">
+                <img src="/img/digital-accessibility-abstract.png" alt="Passion Led Us Here." class="img">
+            </div>
+            <div class="content-right flex-half">
+                <div class="wrapper">
+                    <h2 class="heading2 max-width">How do we check for Digital Accessibility?</h2>
+                    <p class="p2">We check for Digital Accessibility using automated tools and manual testing. Here are a few from our digital accessibility specialists :</p>
+                    <ul>
+                        <li class="flex-row"><span class="list-circle"></span>Online tools such as WAVE. ANDi, and Lighthouse are used to get quick insights.</li>
+                        <li class="flex-row"><span class="list-circle"></span>Screen readers are used from beginning to end during ADA website remediation.</li>
+                        <li class="flex-row"><span class="list-circle"></span>Text must also be accessible. We check wording for good words </li>
+                        <li class="flex-row"><span class="list-circle"></span>Keyboard only: We use only a keyboard to navigate to ensure it’s good too.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Section | Everybody cares about digital accessibility -->
+        <h2 class="heading2 align-center margin-top-15">Everybody focuses on ADA Accessibility</h2>
+        <Section class="section-circle-carousel">
+            <div class="circle-row">
+                <div class="circle circle1">
+                    <div class="img-wrapper">
+                        <img src="/img/apple-logo.png" alt="Apple logo." class="img">
+                    </div>
+                </div>
+                <div class="circle circle2">
+                    <div class="img-wrapper">
+                        <img src="/img/microsoft-logo.png" alt="microsoft logo." class="img">
+                    </div>
+                </div>
+                <div class="circle circle3 active">
+                    <div class="img-wrapper">
+                        <img src="/img/google-icon.webp" alt="Google logo." class="img">
+                    </div>
+                </div>
+                <div class="circle circle4">
+                    <div class="img-wrapper">
+                        <img src="/img/amazon-logo.svg" alt="Amazon logo." class="img">
+                    </div>
+                </div>
+                <div class="circle circle5">
+                    <div class="img-wrapper">
+                        <img src="/img/facebook-logo.webp" alt="Facebook logo." class="img">
+                    </div>
+                </div>
+                <div class="circle circle6">
+                    <div class="img-wrapper">
+                        <img src="/img/x-logo.svg" alt="X / Twitter logo." class="img">
+                    </div>
+                </div>
+                <div class="circle circle7">
+                    <div class="img-wrapper">
+                        <img src="/img/linkedin-logo.webp" alt="LinkedIn logo." class="img">
+                    </div>
+                </div>
+                <div class="circle circle8">
+                    <div class="img-wrapper">
+                        <img src="/img/netflix-logo.webp" alt="Netflix logo." class="img">
+                    </div>
+                </div>
+            </div>
+        </Section>
+        <div class="section-text-center1">
+            <div class="content flex-row">
+                <div class="carousel-content flex-row-center">
+                    <div class="content-left">
+                        <div class="content-wrapper">
+                            <div class="content active">
+                                <img src="/img/apple-logo.png" alt="Apple logo." class="img">
+                                <p class="p1">Accessibility Statement</p>
+                                <p class="p2"><span class="company-name">[Apple]</span> has always believed that accessibility is a human right...</p>
+                            </div>
+                            <div class="content">
+                                <img src="/img/microsoft-logo.png" alt="Microsft logo." class="img">
+                                <p class="p1">Accessibility Statement</p>
+                                <p class="p2"><span class="company-name">[Microsoft]</span> is committed to accessibility with the belief...</p>
+                            </div>
+                            <div class="content">
+                                <img src="/img/google-icon.webp" alt="Google logo." class="img">
+                                <p class="p1">Accessibility Statement</p>
+                                <p class="p2"><span class="company-name">[Google]</span> we integrate disability-friendly workspaces and build accessible technology to...</p>
+                            </div>
+                            <div class="content">
+                                <img src="/img/amazon-logo.svg" alt="Amazon logo." class="img">
+                                <p class="p1">Accessibility Statement</p>
+                                <p class="p2"><span class="company-name">[Amazon]</span> we’re building a more accessible future...</p>
+                            </div>
+                            <div class="content">
+                                <img src="/img/x-logo.svg" alt="X / Twitter logo." class="img">
+                                <p class="p1">Accessibility Statement</p>
+                                <p class="p2"><span class="company-name">[Facebook]</span> is committed to creating a great experience for all people...</p>
+                            </div>
+                            <div class="content">
+                                <img src="/img/linkedin-logo.webp" alt="LinkedIn logo." class="img">
+                                <p class="p1">Accessibility Statement</p>
+                                <p class="p2"><span class="company-name">[X - Twitter]</span> We have a dedicated group of cross-functional inclusive designers and engineers for accessibility...</p>
+                            </div>
+                            <div class="content">
+                                <img src="/img/netflix-logo.webp" alt="Netflix logo." class="img">
+                                <p class="p1">Accessibility Statement</p>
+                                <p class="p2"><span class="company-name">[LinkedIn]</span> Accessibility means creating a space where anyone can find opportunity regardless of ability...</p>
+                            </div>
+                            <div class="content">
+                                <img src="" alt="" class="img">
+                                <p class="p1">Accessibility Statement</p>
+                                <p class="p2"><span class="company-name">[Netflix]</span> We believe incredible stories should be enjoyed by all of our members, regardless of language, device, connectivity, or ability...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-right">
+                        <p class="p1">It's no coincidence every large company is taking digital accessibility seriously.</p>
+                        <p class="p2">As online presence and our reliance on digital platforms increase, so will our need to ensure these platforms remain available and accessible to everybody.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Section | The importance of being digitally accessible -->
+        <h2 class="heading2 view-width-constrain-left margin-top-20 heading-width heading2-center-mobile">The Importance of being digitally accessible</h2>
+        <section class="left-right-text-image1 view-width-constrain">
+            <div class="content-row flex-row-center flex-wrap">
+                <div class="content-cell flex-column justify-self flex-half">
+                    <p class="p2">Digital accessibility, in a nutshell, is making digital content and services that can be accessed and used by everyone. These come from international and legal standards;</p>
+                    <div class="list">
+                        <h3 class="heading3">Benefits of ADA Accessibility</h3>
+                        <ul class="list">
+                            <li class="li"><span class="list-circle"></span>Here is the firs tbeenfit to diiganh accessiblity and how it can help you and your business</li>
+                            <li class="li"><span class="list-circle"></span>Here is the firs tbeenfit to diiganh accessiblity and how it can help you and your business</li>
+                            <li class="li"><span class="list-circle"></span>Here is the firs tbeenfit to diiganh accessiblity and how it can help you and your business</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="content-cell flex-half">
+                    <img src="/img/sign-language.jpg" alt="A girl rehearsing sign language." class="img img1">
+                </div>
+            </div>
+            <div class="content-row content-row-2 flex-row-center flex-wrap">
+                <div class="content-cell flex-half no-display-810">
+                    <img src="/img/ada-blocks.jpg" alt="Blocks with the letters ADA." class="img img2">
+                </div>
+                <div class="content-cell flex-half">
+                    <div class="list">
+                        <h3 class="heading3">Risks of ADA Accessibility</h3>
+                        <ul class="list">
+                            <li class="li"><span class="list-circle"></span>Here is the firs tbeenfit to diiganh accessiblity and how it can help you and your business</li>
+                            <li class="li"><span class="list-circle"></span>Here is the firs tbeenfit to diiganh accessiblity and how it can help you and your business</li>
+                            <li class="li"><span class="list-circle"></span>Here is the firs tbeenfit to diiganh accessiblity and how it can help you and your business</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section | Steps to ADA Website Remediation -->
+        <div class="section-carousel-single-timer2 margin-top-10">
+            <h2 class="heading2">The 4 steps of ADA Website Remediation</h2>
+            <section class="content">
+                <div class="carousel flex-row" id="carousel-single1" aria-label="4 tips to good web design">
+                    <div class="content-left">
+                        <ol class="tab-list">
+                            <li>
+                                <button role="tab" id="carousel-single-btn1" aria-selected="false" type="button" aria-label="Website Remediation Step 1" aria-controls="carousel-single2-slide1" class="btn">
+                                    <span>1</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button role="tab" id="carousel-single-btn2" aria-selected="false" type="button" aria-label="Website Remediation Step 2" aria-controls="carousel-single2-slide2" class="btn">
+                                    <span>2</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button role="tab" id="carousel-single-btn3" aria-selected="false" type="button" aria-label="Website Remediation Step 3" aria-controls="carousel-single2-slide3" class="btn">
+                                    <span>3</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button role="tab" id="carousel-single-btn4" aria-selected="false" type="button" aria-label="Website Remediation Step 4" aria-controls="carousel-single2-slide4" class="btn">
+                                    <span>4</span>
+                                </button>
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="content-right flex-column" aria-live="off">
+                        <p class=" p2">A website may look fine, but there could be a lot of accessibility problems underneath the hood. So, we send in a specialist to take a look</p>
+                        <div class="slides flex-row">
+                            <div role="tabpanel" id="carousel-single2-slide1" aria-roledescription="slide" aria-label="1 of 4" class="slide">
+                                <img src="/img/ada-remediation-step-1_1.png" alt="A generic website placed with a digital accessiblility specialist preparing to check it." class="img img1" >
+                                <img src="/img/ada-remediation-step-1_2.png" alt="" class="img img2">
+                            </div>
+                            <div role="tabpanel" id="carousel-single2-slide2" aria-roledescription="slide" aria-label="2 of 4" class="slide">
+                                <img src="/img/ada-remediation-step-2_1.png" alt="The generic website now has 3 errors that weren't previously visible." class="img img1" >
+                                <img src="/img/ada-remediation-step-2_2.png" alt="" class="img img2">
+                            </div>
+                            <div role="tabpanel" id="carousel-single2-slide3" aria-roledescription="slide" aria-label="3 of 4" class="slide">
+                                <img src="/img/ada-remediation-step-3_1.png" alt="Little workers fix the website and bring it closer to digital accessibility compliance." class="img img1" >
+                                <img src="/img/ada-remediation-step-3_2.png" alt="" class="img img2">
+                            </div>
+                            <div role="tabpanel" id="carousel-single2-slide4" aria-roledescription="slide" aria-label="4 of 4" class="slide active">
+                                <img src="/img/ada-remediation-step-4_1.png" alt="The website is now digitally accessible and passes the ada compliance check." class="img img1" >
+                                <img src="/img/ada-remediation-step-4_2.png" alt="" class="img img2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- Section | Digital Accessibility Services -->
+        <div class="sec-3-2">
+            <h2 class="heading2">Web Accessibility Services</h2>
+            <div class="content flex-row">
+                <div class="long-card card1">
+                    <div class="text-wrapper">
+                        <h3 class="heading3">Website Remediation Services</h3>
+                        <p class="desc">We'll get your website accessible and operable by everone.</p>
+                        <div class="link-wrapper">
+                            <a href="/contact/">Make my website accessible</a>
+                        </div>
+                    </div>
+                    <div class="img-wrapper">
+                        <img class="img" src="/img/laptop-website.jpg" alt="">
+                    </div>
+                </div>
+                <div class="long-card card2">
+                    <div class="text-wrapper">
+                        <h3 class="heading3">Document Remediation Services</h3>
+                        <p class="desc">Whether its a PDF, Word, or video, we'll make your document accessible</p>
+                        <div class="link-wrapper">
+                            <a href="/contact/">Fix my document</a>
+                        </div>
+                    </div>
+                    <div class="img-wrapper">
+                        <img class="img" src="/img/documents.jpg" alt="">
+                    </div>
+                </div>
+                <div class="long-card card3">
+                    <div class="text-wrapper">
+                        <h3 class="heading3">Accessibility Training Services</h3>
+                        <p class="desc">We offer training services for documents and websites.</p>
+                        <div class="link-wrapper">
+                            <a href="/contact/">ADA Training</a>
+                        </div>
+                    </div>
+                    <div class="img-wrapper">
+                        <img class="img" src="/img/accessibility-training.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Section | Free Proposal / Contact Form -->
+        <section class="section-contact margin-top-10">
+            <div class="wrapper flex-column">
+                <h2 class="heading2">Contact us now for a free quote</h2>
+                <div class="form">
+    
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer role="contentinfo" class="footer view-width-constrain">
+        <div class="wrapper flex-row-center">
+            <div class="content-left">
+                <img src="/docs/assets/img/wischok-logo-top.png" alt="Wischok logo. Home Button" class="img">
+            </div>
+            <div class="content-right flex-row flex-wrap">
+                <ul class="menu-list" role="menu" aria-labelledby="footer-list1">
+                    <p id="footer-list1" class="p1">Web Design</p>
+                    <hr class="line">
+                    <li role="none" class="link">
+                        <a role="menuitem" href="">Small Businesses</a>
+                    </li>
+                    <li role="none" class="link">
+                        <a role="menuitem" href="">Services</a>
+                    </li>
+                </ul>
+                <ul class="menu-list" role="menu" aria-labelledby="footer-list2">
+                    <p id="footer-list2" class="p1">Digital Accessibility</p>
+                    <hr class="line">
+                    <li role="none" class="link">
+                        <a role="menuitem" href="">ADA Website Remediation</a>
+                    </li>
+                    <li role="none" class="link">
+                        <a role="menuitem" href="">File Remediation</a>
+                    </li>
+                    <li role="none" class="link">
+                        <a role="menuitem" href="">PDF Remediation Tutorial</a>
+                    </li>
+                    <li role="none" class="link">
+                        <a role="menuitem" href="">Services</a>
+                    </li>
+                </ul>
+                <ul class="menu-list" role="menu" aria-labelledby="footer-list3">
+                    <p id="footer-list3" class="p1">Other</p>
+                    <hr class="line">
+                    <li role="none" class="link">
+                        <a role="menuitem" href="">Articles</a>
+                    </li>
+                    <li role="none" class="link">
+                        <a role="menuitem" href="">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wischok | Web Services</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/docs/assets/styles/reset.css">
+    <link rel="stylesheet" href="/docs/assets/styles/main.css">
+
+    <!-- Javascript -->
+    <script defer src="/docs/assets/scripts/nav.js"></script>
+    <script defer src="/docs/assets/scripts/combobox.js"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/docs/assets/img/wischok-favicon.svg">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SJNZHSJ17G"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SJNZHSJ17G');
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav role="navigation" class="nav" aria-label="Main menu.">
+        <div class="content flex-row-center">
+            <div class="logo-left">
+                <a href="/" aria-current="page" aria-label="Go to home page.">
+                    <img class="img img1" src="/docs/assets/img/wischok-logo.png" alt="Wischok Logo.">
+                    <img src="/docs/assets/img/wischok-favicon.svg" alt="" class="img img2">
+                </a>
+            </div>
+            <div class="links-right">
+                <div class="wrapper">
+                    <ul role="menu" class="flex-row-center menu">
+                        <li role="none" class="menulistitem">
+                             <button role="button" id="menu-button1" class="menu-button underline li caret" 
+                             aria-haspopup="true" aria-controls="menu1" aria-expanded="false">
+                                 Web Design
+                             </button>
+                             <ul id="menu1" role="menu" aria-labelledby="menu-button1" class="sub-menu">
+                                 <li role="none"><a role="menuitem" href="/small-business-web-design/">Small Businesses</a></li>
+                                 <li role="none"><a role="menuitem" href="/web-design/services/" >Services</a></li>
+                             </ul>
+                         </li>
+                         <li role="none" class="menulistitem">
+                             <button role="button" id="menu-button2" class="menu-button underline li caret" 
+                             aria-haspopup="true" aria-controls="menu2" aria-expanded="false">
+                                 Digital Accessibility
+                             </button>
+                             <ul id="menu2" role="menu" aria-labelledby="menu-button2" class="sub-menu">
+                                 <li role="none"><a role="menuitem" href="/digital-accessibility/">ADA Website Remediation</a></li>
+                                 <li role="none"><a role="menuitem" href="/digital-accessibility/file-remediation/">File Remediation</a></li>
+                                 <li role="none"><a role="menuitem" href="/digital-accessibility/ada-services/">ADA Services</a></li>
+                             </ul>
+                         </li>
+                        <li role="none" class="li"><a role="menuitem" class="btn-link" href="/contact/">Free Quote</a></li>
+                     </ul>
+                     <span id="menu-backdrop"></span>
+                </div>
+                <button role="button" aria-expanded="false" class="hamburger">
+                    <svg class="svg" viewbox="0 0 100 100" aria-hidden="true">
+                        <line class="line top" x1="90" x2="10" y1="25" y2="25" stroke="black" stroke-width="10"
+                            stroke-linecap="round" stroke-dasharray="80" stroke-dashoffset="0"></line>
+                        <line class="line mid" x1="10" x2="90" y1="50" y2="50" stroke="black" stroke-width="10"
+                            stroke-linecap="round" stroke-dasharray="80" stroke-dashoffset="0"></line>
+                        <line class="line bot" x1="10" x2="90" y1="75" y2="75" stroke="black" stroke-width="10"
+                            stroke-linecap="round" stroke-dasharray="80" stroke-dashoffset="0">
+                        </line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <main role="main">
+        <!-- Main Site Header -->
+        <header class="main-header">
+            <div class="left-content">
+                <div class="top-content view-width-constrain-left">
+                    <h1 class="heading-1">Wischok Website Services</span></h1>
+                </div>
+                <div class="bottom-content view-width-constrain-left">
+                    <p class="p1 max-width-long">Discover the art of digital presence with Wischok, crafting captivating websites for businesses like
+                        yours.</p>
+                    <a href="/contact/" class="btn-link">Get A Free Proposal</a>
+                </div>
+            </div>
+            <div class="right-content">
+                <ul class="bubble-list" aria-label="List of web design images.">
+                    <li class="bubble bubble1">
+                        <img class="img" src="/img/desktop-website.jpg" alt="A gorgeous website displayed on a laptop.">
+                    </li>
+                    <li class="bubble bubble2">
+                        <img class="img" src="/img/white-computer-space.jpg" alt="A white computer space with digital color theory in mind.">
+                    </li>
+                    <li class="bubble bubble3">
+                        <img class="img" src="/img/web-design-books.jpg" alt="Web design books titled with various UI techniques.">
+                    </li>
+                    <li class="bubble bubble4">
+                        <img class="img" src="/img/website-color-theory.jpg" alt="Yellow and black color theory applied to a website design.">
+                    </li>
+                    <li class="bubble bubble5">
+                        <img class="img" src="/img/young-man-designing-websites.jpg" alt="A young man designing a website for a small business.">
+                    </li>
+                    <li class="bubble bubble6">
+                        <img class="img" src="/img/creation-digital-ideas.jpg" alt="A lightbulb glowing with the creativity needed for digital web design.">
+                    </li>
+                    <li class="bubble bubble7">
+                        <img class="img" src="/img/mobile-website.jpg" alt="Mobile and responsive website being displayed on a phone.">
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <!-- Section 1 | Everybody Needs a Website -->
+        <h2 class="heading2 view-width-constrain-left margin-top-10">Everybody Needs a Website</h2>
+        <section class="section-text-left1 view-width-constrain">
+            <p class="p2">Your website is more than just a website. It’s the story of your brand and everything it holds. From
+                the color, to the font, to the picture, everything should be custom tailored for your brand. That’s what Wischok
+                does. We design websites that bring out the best in design, feel, accessibility, marketing, and most
+                importantly, it tells the story of your brand and identity.</p>
+        </section>
+        <!-- Section 2 | Showcase Your Brand -->
+        <div class="section-text-right1 flex-row margin-top-10">
+            <div class="content-left flex-row-center flex-half">
+                <div class="img-wrapper flex-row">
+                    <img src="/img/online-browsing1.jpg" alt="A student using a website to shop online." class="img img1">
+                    <img src="/img/consumer-shopping.jpg" alt="A person buying oranges." class="img img2 cover">
+                </div>
+            </div>
+            <div class="content-right flex-half">
+                <div class="wrapper wrapper-text">
+                    <img src="/img/online-browsing2.jpg" alt="A person showing excitement as they browse online shops." class="img right-0">
+                    <h2 class="heading2">Showcase Your Brand</h2>
+                    <p class="p2">Discover how a professionally designed website can transform your brand's online presence.</p>
+                    <p class="p2">Wischok crafts visually engaging websites that resonate with your audience. Showcase your brand's identity through a website that stands out and leaves a lasting impression.</p>
+                    <a href="/contact/" class="btn-link">Building your brand</a>
+                </div>
+            </div>
+        </div>
+        <!-- Section 3 | Text Center -->
+        <section class="section-text-center1">
+            <div class="content">
+                <div class="circle"></div>
+                <div class="wrapper">
+                    <h3 class="heading3">User Online Experiences</h3>
+                    <p class="p2">Owning a website allows your brand to reach an audience without having to interact with each person.
+                        There's power and credibility to having an established presence online, where embracing a digital landscape is one of the
+                        first steps to maximizing the potential of people finding you.
+                    </p>
+                </div>
+                <div class="img-wrapper">
+                    <img class="img" src="/img/abstract-shape1.png" alt="">
+                </div>
+            </div>
+        </section>
+        <!-- Section 4 | Scrolling Images -->
+        <section class="img-scroll1">
+
+        </section>
+        <!-- Section 5 | Responsive Web Design -->
+        <section class="section-text-left2 flex-row-center flex-wrap">
+            <div class="content-left flex-half">
+                <div class="wrapper">
+                    <h2 class="heading2">Responsive Design</h2>
+                    <p class="p2">With over 50% of internet traffic being through mobile phones, it’s important that your website works on any device.</p>
+                    <p class="p2">Whether it's on mobile, tablet, or any other device, your website will grow, shrink, and work on any screen.</p>
+                </div>
+            </div>
+            <div class="content-right flex-half">
+                <img src="/img/responsive-design-devices.png" alt="Responsive design template for mobile, tablet, and pc." class="img">
+            </div>
+        </section>
+        <!-- Section 6 | Custom Made Websites -->
+        <section class="section-text-right2 flex-row-center flex-wrap" aria-labelledby="section-text-right2-h2">
+            <div class="content-left flex-half">
+                <img aria-label="Playable web browser game." id="game" src="/img/abstract-game-design.png" alt="" class="img">
+            </div>
+            <div class="content-right flex-half">
+                <div class="wrapper">
+                    <h2 id="section-text-right2-h2" class="heading2">Custom Made Websites</h2>
+                    <p class="p2">We pride ourselves on custom and unique solutions. From drag and drop, to special interactions and even web games, we enjoy the challenge of bringing your idea to life.</p>
+                    <p class="p2">Tell us your vision and we'll work to bring it to life.</p>
+                    <!-- <button role="button" class="btn-blank flex-row" aria-controls="game">
+                        <svg width="50" height="100%" viewBox="0 0 78 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.939339 10.9393C0.353554 11.5251 0.353554 12.4749 0.939339 13.0607L10.4853 22.6066C11.0711 23.1924 12.0208 23.1924 12.6066 22.6066C13.1924 22.0208 13.1924 21.0711 12.6066 20.4853L4.12132 12L12.6066 3.51472C13.1924 2.92894 13.1924 1.97919 12.6066 1.3934C12.0208 0.807617 11.0711 0.807617 10.4853 1.3934L0.939339 10.9393ZM78 10.5L2 10.5L2 13.5L78 13.5L78 10.5Z" fill="black"/>
+                        </svg>
+                        <span>Click to play game</span>   
+                    </button> -->
+                </div>
+            </div>
+        </section>
+        <!-- Section 7 | Portfolio Websites -->
+        <!-- <section class="section-text-left3 margin-top-15 flex-row-center flex-wrap">
+            <div class="content-left">
+                <div class="wrapper">
+                    <h2 class="heading2">Portfolio Websites</h2>
+                    <p class="p2">Here are a few examples of our work with the theme being special website interactions.</p>
+                    <a href="" class="btn-link">Design my website</a>
+                </div>
+            </div>
+            <div class="content-right">
+                <div class="wrapper flex-row">
+                    <a class="container" href=""><img src="/img/black-timber-desktop.png" alt="Real estate website for a small business." class="img img1"></a>
+                    <a class="container" href=""><img src="/img/wedding-site.png" alt="Wedding Website." class="img"></a>
+                </div>
+            </div>
+        </section> -->
+        <!-- Section 8 | Our Services -->
+        <section class="section-bento1 flex-column-center">
+            <h2 class="heading2">Our Services</h2>
+            <div class="wrapper grid">
+                <a class="card border card1" href="/small-business-web-design/">
+                    <h3 class="heading3">Web Design</h3>
+                    <img src="/img/web-design-workhard.jpg" alt="A website design, based on working hard." class="img">
+                </a>
+                <div class="card flex-row">
+                    <a class="subcard border card2" href="/digital-accessibility/file-remediation/">
+                        <h3 class="heading3">File Remediation</h3>
+                        <img src="/img/pastel-folders.jpg" alt="Pastel folders orgnaizing work." class="img">
+                    </a>
+                    <a class="subcard border card3" href="/digital-accessibility/">
+                        <h3 class="heading3">Digital Accessibility</h3>
+                        <img src="/img/sticky-note-designs.jpg" alt="Sticky notes with search optimization (SEO) notes." class="img">
+                    </a>
+                </div>
+                <div class="card flex-row">
+                    <a class="subcard border card4" href="/contact/">
+                        <h3 class="heading3">Contact Us</h3>
+                        <img src="/img/pastel-phone.jpg" alt="A pastel colored phone." class="img">
+                    </a>
+                    <a class="subcard border card5" href="/small-business-web-design/">
+                        <h3 class="heading3">Wireframing</h3>
+                        <img src="/img/pencil.jpg" alt="A pencil and background showcasing color theory" class="img">
+                    </a>
+                </div>
+                <a class="card border card6" href="/contact/">
+                    <h3 class="heading3">Website Redesign</h3>
+                    <img src="/img/arrow-building.jpg" alt="An arrow pointing towards a redesign" class="img">
+                </a>
+            </div>
+        </section>
+        <!-- Section | Free Proposal / Contact Form -->
+        <div class="section-contact margin-top-10">
+            <div class="form-region1" aria-labelledby="form-region1-lbl">
+                <div class="container">
+                    <h2 class="heading2">Contact us now for a free quote</h2>
+                    <form role="form" class="contact-form grid form-grid" action="https://formsubmit.co/atevans33@gmail.com" method="POST">
+                        <!-- Name Field -->
+                        <div class="field-wrapper flex">
+                            <div class="label-wrapper">
+                                <label for="name" class="lbl">Name<span aria-hidden="true">*</span></label>
+                            </div>
+                            <div class="input-wrapper">
+                                <input type="text" name="name" id="name" placeholder="Full Name" required>
+                            </div>
+                        </div>
+                        <!-- Email Field -->
+                        <div class="field-wrapper flex">
+                            <div class="label-wrapper">
+                                <label for="email" class="lbl">Email<span aria-hidden="true">*</span></label>
+                            </div>
+                            <div class="input-wrapper">
+                                <input type="email" name="email" id="email" placeholder="Email Address" required>
+                                <p class="error-desc">Improper email format. Example: 123@gmail.com</p>
+                            </div>
+                        </div>
+                        <!-- Phone Field -->
+                        <div class="field-wrapper flex">
+                            <div class="label-wrapper">
+                                <label for="phone" class="lbl">Phone<span aria-hidden="true">*</span></label>
+                            </div>
+                            <div class="input-wrapper">
+                                <input type="number" name="phone" id="phone" placeholder="Phone" required>
+                                <p class="error-desc">Improper phone format. Example: 012 345 6789</p>
+                            </div>
+                        </div>
+                        <!-- Project Type Field -->
+                        <div class="field-wrapper flex">
+                            <div class="label-wrapper">
+                                <label for="combo1" class="lbl" id="combo1-lbl">Project Type<span aria-hidden="true">*</span></label>
+                            </div>
+                            <div class="input-wrapper project-input-wrapper">
+                                <div class="combo combo-standard combo1">
+                                    <div class="combo-input" id="combo1" role="combobox" 
+                                    tabindex="0" aria-labelledby="combo1-lbl"
+                                    aria-haspopup="listbox" aria-controls="listbox1">Website Design</div>
+                                    <!-- Combo Menu | List of Options -->
+                                    <div class="combo-menu" role="listbox" id="listbox1" 
+                                    aria-labelledby="combo1-lbl" tabindex="-1">
+                                        <div role="option" id="combo1-0" class="combo-option"
+                                        aria-selected="false">Accessibility Review / VPAT / ACR</div>
+                                        <div role="option" id="combo1-1" class="combo-option"
+                                        aria-selected="false">Document Remediation</div>
+                                        <div role="option" id="combo1-3" class="combo-option"
+                                        aria-selected="true">Website Design</div>
+                                        <div role="option" id="combo1-2" class="combo-option"
+                                        aria-selected="false">Website Redesign</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Additional Comments Field -->
+                        <div class="field-wrapper flex ">
+                            <div class="label-wrapper lw-5">
+                                <label for="comments" class="lbl">Anything Else?<br>(Optional)</label>
+                            </div>
+                            <div class="input-wrapper iw-5">
+                                <textarea class="textarea" type="text" name="comments" id="comments" placeholder="Extra Comments" rows="8"></textarea>
+                            </div>
+                        </div>
+                        <!-- Submit Button -->
+                        <div class="field-wrapper flex ">
+                            <div class="label-wrapper submit-label-wrapper" aria-hidden="true">
+                            </div>
+                            <div class="input-wrapper submit">
+                                <input type="submit" value="Submit">
+                            </div>
+                        </div>
+                        <!-- Form API -->
+                        <input type="hidden" name="_subject" value="New Submission for Web Development">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_next" value="https://aarondevspot.com/thankyou/">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer role="contentinfo" class="footer view-width-constrain">
+        <div class="wrapper flex-row-center">
+            <div class="content-left">
+                <img src="/docs/assets/img/wischok-logo-top.png" alt="Wischok logo. Home Button" class="img">
+            </div>
+            <div class="content-right flex-row flex-wrap">
+                <ul class="menu-list" role="menu" aria-labelledby="footer-list1">
+                    <p id="footer-list1" class="p1">Web Design</p>
+                    <hr class="line">
+                    <li role="none" class="link">
+                        <a role="menuitem" href="">Small Businesses</a>
+                    </li>
+                    <li role="none" class="link">
+                        <a role="menuitem" href="">Services</a>
+                    </li>
+                </ul>
+                <ul class="menu-list" role="menu" aria-labelledby="footer-list2">
+                    <p id="footer-list2" class="p1">Digital Accessibility</p>
+                    <hr class="line">
+                    <li role="none" class="link">
+                        <a role="menuitem" href="">ADA Website Remediation</a>
+                    </li>
+                    <li role="none" class="link">
+                        <a role="menuitem" href="">File Remediation</a>
+                    </li>
+                    <!-- <li role="none" class="link">
+                        <a role="menuitem" href="">PDF Remediation Tutorial</a>
+                    </li> -->
+                    <li role="none" class="link">
+                        <a role="menuitem" href="">Services</a>
+                    </li>
+                </ul>
+                <ul class="menu-list" role="menu" aria-labelledby="footer-list3">
+                    <p id="footer-list3" class="p1">Other</p>
+                    <hr class="line">
+                    <!-- <li role="none" class="link">
+                        <a role="menuitem" href="">Blogs</a>
+                    </li> -->
+                    <li role="none" class="link">
+                        <a role="menuitem" href="">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+<!-- Commented out Blog link in nav, blog link in footer, website porfolios -->

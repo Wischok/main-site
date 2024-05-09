@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Services | Wischok</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/docs/assets/styles/reset.css">
+    <link rel="stylesheet" href="/docs/assets/styles/main.css">
+
+    <!-- Javascript -->
+    <script defer src="/docs/assets/scripts/nav.js"></script>
+    <script defer src="/docs/assets/scripts/combobox.js"></script>
+    <script defer src="/docs/assets/scripts/service-card.js"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/docs/assets/img/wischok-favicon.svg">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SJNZHSJ17G"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SJNZHSJ17G');
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav role="navigation" class="nav" aria-label="Main menu.">
+        <div class="content flex-row-center">
+            <div class="logo-left">
+                <a href="/" aria-current="page" aria-label="Go to home page.">
+                    <img class="img img1" src="/docs/assets/img/wischok-logo.png" alt="Wischok Logo.">
+                    <img src="/docs/assets/img/wischok-favicon.svg" alt="" class="img img2">
+                </a>
+            </div>
+            <div class="links-right">
+                <div class="wrapper">
+                    <ul role="menu" class="flex-row-center menu">
+                        <li role="none" class="menulistitem">
+                             <button role="button" id="menu-button1" class="menu-button underline li caret" 
+                             aria-haspopup="true" aria-controls="menu1" aria-expanded="false">
+                                 Web Design
+                             </button>
+                             <ul id="menu1" role="menu" aria-labelledby="menu-button1" class="sub-menu">
+                                 <li role="none"><a role="menuitem" href="/small-business-web-design/">Small Businesses</a></li>
+                                 <li role="none"><a role="menuitem" href="/web-design/services/" >Services</a></li>
+                             </ul>
+                         </li>
+                         <li role="none" class="menulistitem">
+                             <button role="button" id="menu-button2" class="menu-button underline li caret" 
+                             aria-haspopup="true" aria-controls="menu2" aria-expanded="false">
+                                 Digital Accessibility
+                             </button>
+                             <ul id="menu2" role="menu" aria-labelledby="menu-button2" class="sub-menu">
+                                 <li role="none"><a role="menuitem" href="/digital-accessibility/">ADA Website Remediation</a></li>
+                                 <li role="none"><a role="menuitem" href="/digital-accessibility/file-remediation/">File Remediation</a></li>
+                                 <li role="none"><a role="menuitem" href="/digital-accessibility/ada-services/">ADA Services</a></li>
+                             </ul>
+                         </li>
+                        <li role="none" class="li"><a role="menuitem" class="btn-link" href="/contact/">Free Quote</a></li>
+                     </ul>
+                     <span id="menu-backdrop"></span>
+                </div>
+                <button role="button" aria-expanded="false" class="hamburger">
+                    <svg class="svg" viewbox="0 0 100 100" aria-hidden="true">
+                        <line class="line top" x1="90" x2="10" y1="25" y2="25" stroke="black" stroke-width="10"
+                            stroke-linecap="round" stroke-dasharray="80" stroke-dashoffset="0"></line>
+                        <line class="line mid" x1="10" x2="90" y1="50" y2="50" stroke="black" stroke-width="10"
+                            stroke-linecap="round" stroke-dasharray="80" stroke-dashoffset="0"></line>
+                        <line class="line bot" x1="10" x2="90" y1="75" y2="75" stroke="black" stroke-width="10"
+                            stroke-linecap="round" stroke-dasharray="80" stroke-dashoffset="0">
+                        </line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <main role="main">
+        <!-- Main Site Header -->
+        <header class="main-header">
+            <div class="left-content">
+                <div class="top-content view-width-constrain-left">
+                    <h1 class="heading-1">Wischok Website Services</span></h1>
+                </div>
+                <div class="bottom-content view-width-constrain-left">
+                    <p class="p1 max-width-long">Quality Web Design Services that cater to small businesses are hard to come by, but as Wischok, we’ve got you covered.</p>
+                </div>
+            </div>
+            <div class="right-content">
+                <ul class="bubble-list" aria-label="List of web design images.">
+                    <li class="bubble bubble1">
+                        <img class="img" src="/img/pottery-maker.jpg" alt="A young potter maker standing in their shop.">
+                    </li>
+                    <li class="bubble bubble2">
+                        <img class="img" src="/img/small-bussiness-shop.jpg" alt="A barista welcoming customers into their small business cafe.">
+                    </li>
+                    <li class="bubble bubble3">
+                        <img class="img" src="/img/small-business-open.jpg" alt="Young woman opening up a store.">
+                    </li>
+                    <li class="bubble bubble4">
+                        <img class="img" src="/img/barber-shop.jpg" alt="A barber cutting a clients hair.">
+                    </li>
+                    <li class="bubble bubble5">
+                        <img class="img" src="/img/young-man-designing-websites.jpg" alt="A man designing their small business's website.">
+                    </li>
+                    <li class="bubble bubble6">
+                        <img class="img" src="/img/coffee-barista.jpg" alt="A barista making coffee for their small business.">
+                    </li>
+                    <li class="bubble bubble7">
+                        <img class="img" src="/img/cafe-employee.jpg" alt="A cafe employee handing coffee to a customer.">
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <!-- Section 508 Document Remediation Services -->
+        <h2 class="heading2 margin-top-15 align-center services-heading2 margin-bottom">
+            <span>Our Services</span>
+        </h2>
+        <section class="section-cards flex-row">
+            <!-- Website Maintainence Card -->
+            <div class="card card1" id="card1">
+                <div class="wrapper">
+                    <img src="/img/tools.jpg" alt="" class="img web">
+                    <p class="2">Get a quote for:</p>
+                    <h3 class="heading3">Website Maintenance</h3>
+                    <p class="p1">Includes</p>
+                    <hr class="line">
+                    <ul class="bullet-list">
+                        <li>
+                            <span class="bullet"></span>
+                            Monthly Website Changes
+                        </li>
+                        <li>
+                            <span class="bullet"></span>
+                            CMS and Store Updates or Additions
+                        </li>
+                        <li>
+                            <span class="bullet"></span>
+                            Bug fixes with quick turnaround
+                        </li>
+                        <li>
+                            <span class="bullet"></span>
+                            SEO marketing updates
+                        </li>
+                    </ul>
+                    <button id="service-btn1" role="button" aria-controls="form1" class="btn-link word">Website Maintenance</button>
+                </div>
+                <div class="form" id="form1">
+                    <form role="form" class="contact-form grid form-grid" action="https://formsubmit.co/contact@wischok.com" method="POST">
+                        <!-- Name Field -->
+                        <div class="field-wrapper flex">
+                            <div class="label-wrapper">
+                                <label for="name1" class="lbl">Name<span aria-hidden="true">*</span></label>
+                            </div>
+                            <div class="input-wrapper">
+                                <input type="text" name="name" id="name1" placeholder="Full Name" required>
+                            </div>
+                        </div>
+                        <!-- Email Field -->
+                        <div class="field-wrapper flex">
+                            <div class="label-wrapper">
+                                <label for="email1" class="lbl">Email<span aria-hidden="true">*</span></label>
+                            </div>
+                            <div class="input-wrapper">
+                                <input type="email" name="email" id="email1" placeholder="Email Address" required>
+                                <p class="error-desc">Improper email format. Example: 123@gmail.com</p>
+                            </div>
+                        </div>
+                        <!-- Phone Field -->
+                        <div class="field-wrapper flex">
+                            <div class="label-wrapper">
+                                <label for="phone1" class="lbl">Phone<span aria-hidden="true">*</span></label>
+                            </div>
+                            <div class="input-wrapper">
+                                <input type="number" name="phone" id="phone1" placeholder="Phone" required>
+                                <p class="error-desc">Improper phone format. Example: 012 345 6789</p>
+                            </div>
+                        </div>
+                        <!-- Additional Comments Field -->
+                        <div class="field-wrapper flex ">
+                            <div class="label-wrapper lw-5">
+                                <label for="comments1" class="lbl">Anything Else?<br>(Optional)</label>
+                            </div>
+                            <div class="input-wrapper iw-5">
+                                <textarea class="textarea" type="text" name="comments" id="comments1" placeholder="I would like website maintenance" rows="6"></textarea>
+                            </div>
+                        </div>
+                        <!-- Submit Button -->
+                        <div class="field-wrapper flex ">
+                            <div class="input-wrapper submit">
+                                <input type="submit" value="Submit">
+                            </div>
+                        </div>
+                        <!-- Form API -->
+                        <input type="hidden" name="_subject" value="New Submission for Website Maintenance">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_next" value="https://aarondevspot.com/thankyou/">
+                    </form>
+                </div>
+            </div>
+            <!-- Website Design Card -->
+            <div class="card card2" id="card2">
+                <div class="wrapper">
+                    <img src="/img/laptop-generic.jpg" alt="" class="img web">
+                    <p class="2">Get a quote for:</p>
+                    <h3 class="heading3">Website Design</h3>
+                    <p class="p1">Includes</p>
+                    <hr class="line">
+                    <ul class="bullet-list">
+                        <li>
+                            <span class="bullet"></span>
+                            Responsive Design
+                        </li>
+                        <li>
+                            <span class="bullet"></span>
+                            Wireframing and Custom coding
+                        </li>
+                        <li>
+                            <span class="bullet"></span>
+                            Beautiful UI / UX
+                        </li>
+                        <li>
+                            <span class="bullet"></span>
+                            Fully ADA Accessible Website
+                        </li>
+                    </ul>
+                    <button role="button" id="service-btn2" class="btn-link pdf" aria-controls="form2">Design my Website</button>
+                </div>
+                <div class="form" id="form2">
+                    <form role="form" class="contact-form grid form-grid" action="https://formsubmit.co/contact@wischok.com" method="POST">
+                        <!-- Name Field -->
+                        <div class="field-wrapper flex">
+                            <div class="label-wrapper">
+                                <label for="name2" class="lbl">Name<span aria-hidden="true">*</span></label>
+                            </div>
+                            <div class="input-wrapper">
+                                <input type="text" name="name" id="name2" placeholder="Full Name" required>
+                            </div>
+                        </div>
+                        <!-- Email Field -->
+                        <div class="field-wrapper flex">
+                            <div class="label-wrapper">
+                                <label for="email2" class="lbl">Email<span aria-hidden="true">*</span></label>
+                            </div>
+                            <div class="input-wrapper">
+                                <input type="email" name="email" id="email2" placeholder="Email Address" required>
+                                <p class="error-desc">Improper email format. Example: 123@gmail.com</p>
+                            </div>
+                        </div>
+                        <!-- Phone Field -->
+                        <div class="field-wrapper flex">
+                            <div class="label-wrapper">
+                                <label for="phone2" class="lbl">Phone<span aria-hidden="true">*</span></label>
+                            </div>
+                            <div class="input-wrapper">
+                                <input type="number" name="phone" id="phone2" placeholder="Phone" required>
+                                <p class="error-desc">Improper phone format. Example: 012 345 6789</p>
+                            </div>
+                        </div>
+                        <!-- Additional Comments Field -->
+                        <div class="field-wrapper flex ">
+                            <div class="label-wrapper lw-5">
+                                <label for="comments2" class="lbl">Anything Else?<br>(Optional)</label>
+                            </div>
+                            <div class="input-wrapper iw-5">
+                                <textarea class="textarea" type="text" name="comments" id="comments2" placeholder="I need a website designed" rows="6"></textarea>
+                            </div>
+                        </div>
+                        <!-- Submit Button -->
+                        <div class="field-wrapper flex ">
+                            <div class="input-wrapper submit">
+                                <input type="submit" value="Submit">
+                            </div>
+                        </div>
+                        <!-- Form API -->
+                        <input type="hidden" name="_subject" value="New Submission for Website Design">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_next" value="https://aarondevspot.com/thankyou/">
+                    </form>
+                </div>
+            </div>
+            <!-- Website Redesign Card -->
+            <div class="card card3" id="card3">
+                <div class="wrapper">
+                    <img src="/img/pupper-working.jpg" alt="" class="img web">
+                    <p class="2">Get a quote for:</p>
+                    <h3 class="heading3">Other Document Remediation</h3>
+                    <p class="p1">Includes</p>
+                    <hr class="line">
+                    <ul class="bullet-list">
+                        <li>
+                            <span class="bullet"></span>
+                            Renovated website with a modern look
+                        </li>
+                        <li>
+                            <span class="bullet"></span>
+                            Maintain your website's identity                        
+                        </li>
+                        <li>
+                            <span class="bullet"></span>
+                            UI / UX Graphical updates
+                        </li>
+                        <li>
+                            <span class="bullet"></span>
+                            SEO and keyword Optimization
+                        </li>
+                    </ul>
+                    <button role="button" id="service-btn3" class="btn-link other-doc" aria-controls="form3">Redesign my Website</button>
+                </div>
+                <div class="form" id="form3">
+                    <form role="form" class="contact-form grid form-grid" action="https://formsubmit.co/contact@wischok.com" method="POST">
+                        <!-- Name Field -->
+                        <div class="field-wrapper flex">
+                            <div class="label-wrapper">
+                                <label for="name3" class="lbl">Name<span aria-hidden="true">*</span></label>
+                            </div>
+                            <div class="input-wrapper">
+                                <input type="text" name="name" id="name3" placeholder="Full Name" required>
+                            </div>
+                        </div>
+                        <!-- Email Field -->
+                        <div class="field-wrapper flex">
+                            <div class="label-wrapper">
+                                <label for="email3" class="lbl">Email<span aria-hidden="true">*</span></label>
+                            </div>
+                            <div class="input-wrapper">
+                                <input type="email" name="email" id="email3" placeholder="Email Address" required>
+                                <p class="error-desc">Improper email format. Example: 123@gmail.com</p>
+                            </div>
+                        </div>
+                        <!-- Phone Field -->
+                        <div class="field-wrapper flex">
+                            <div class="label-wrapper">
+                                <label for="phone3" class="lbl">Phone<span aria-hidden="true">*</span></label>
+                            </div>
+                            <div class="input-wrapper">
+                                <input type="number" name="phone" id="phone3" placeholder="Phone" required>
+                                <p class="error-desc">Improper phone format. Example: 012 345 6789</p>
+                            </div>
+                        </div>
+                        <!-- Additional Comments Field -->
+                        <div class="field-wrapper flex ">
+                            <div class="label-wrapper lw-5">
+                                <label for="comments3" class="lbl">Anything Else?<br>(Optional)</label>
+                            </div>
+                            <div class="input-wrapper iw-5">
+                                <textarea class="textarea" type="text" name="comments" id="comments3" placeholder="I need redesign services" rows="6"></textarea>
+                            </div>
+                        </div>
+                        <!-- Submit Button -->
+                        <div class="field-wrapper flex ">
+                            <div class="input-wrapper submit">
+                                <input type="submit" value="Submit">
+                            </div>
+                        </div>
+                        <!-- Form API -->
+                        <input type="hidden" name="_subject" value="New Submission for Website Redesign">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_next" value="https://aarondevspot.com/thankyou/">
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer role="contentinfo" class="footer view-width-constrain margin-top-20">
+        <div class="wrapper flex-row-center">
+            <div class="content-left">
+                <img src="/docs/assets/img/wischok-logo-top.png" alt="Wischok logo. Home Button" class="img">
+            </div>
+            <div class="content-right flex-row flex-wrap">
+                <ul class="menu-list" role="menu" aria-labelledby="footer-list1">
+                    <p id="footer-list1" class="p1">Web Design</p>
+                    <hr class="line">
+                    <li role="none" class="link">
+                        <a role="menuitem" href="">Small Businesses</a>
+                    </li>
+                    <li role="none" class="link">
+                        <a role="menuitem" href="">Services</a>
+                    </li>
+                </ul>
+                <ul class="menu-list" role="menu" aria-labelledby="footer-list2">
+                    <p id="footer-list2" class="p1">Digital Accessibility</p>
+                    <hr class="line">
+                    <li role="none" class="link">
+                        <a role="menuitem" href="">ADA Website Remediation</a>
+                    </li>
+                    <li role="none" class="link">
+                        <a role="menuitem" href="">File Remediation</a>
+                    </li>
+                    <!-- <li role="none" class="link">
+                        <a role="menuitem" href="">PDF Remediation Tutorial</a>
+                    </li> -->
+                    <li role="none" class="link">
+                        <a role="menuitem" href="">Services</a>
+                    </li>
+                </ul>
+                <ul class="menu-list" role="menu" aria-labelledby="footer-list3">
+                    <p id="footer-list3" class="p1">Other</p>
+                    <hr class="line">
+                    <!-- <li role="none" class="link">
+                        <a role="menuitem" href="">Blogs</a>
+                    </li> -->
+                    <li role="none" class="link">
+                        <a role="menuitem" href="">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
