@@ -38,31 +38,33 @@
                 </a>
             </div>
             <div class="links-right">
-                <ul role="menu" class="flex-row-center menu">
-                   <li role="none" class="menu-item li">
-                        <button role="menuitem" id="menu-button1" class="menu-button underline li caret" 
-                        aria-haspopup="true" aria-controls="menu1" aria-expanded="false">
-                            Web Design
-                        </button>
-                        <ul id="menu1" role="menu" aria-labelledby="menu-button1" class="sub-menu">
-                            <li class="sub-li sub-li-1" role="none"><a role="menuitem" href="/small-business-web-design/">Small Businesses</a></li>
-                            <li class="sub-li" role="none"><a role="menuitem" href="/web-design/services/">Services</a></li>
-                        </ul>
-                    </li>
-                    <li role="none" class="menu-item">
-                        <button role="menuitem" id="menu-button2" class="menu-button underline li caret" 
-                        aria-haspopup="true" aria-controls="menu2" aria-expanded="false">
-                            Digital Accessibility
-                        </button>
-                        <ul id="menu2" role="menu" aria-labelledby="menu-button2" class="sub-menu">
-                            <li class="sub-li sub-li-1" role="none"><a role="menuitem" href="/digital-accessibility/">ADA Website Remediation</a></li>
-                            <li class="sub-li" role="none"><a role="menuitem" href="/digital-accessibility/file-remediation/">File Remediation</a></li>
-                            <li class="sub-li" role="none"><a role="menuitem" href="/digital-accessibility/ada-services/">ADA Services</a></li>
-                        </ul>
-                    </li>
-                   <li role="none" class="li"><a class="underline" role="menuitem" href="blogs/">Blogs</a></li> 
-                   <li role="none" class="li"><a role="listitem" class="btn-link" href="/contact/">Free Quote</a></li>
-                </ul>
+                <div class="wrapper">
+                    <ul role="menu" class="flex-row-center menu">
+                        <li role="none" class="menulistitem">
+                             <button role="button" id="menu-button1" class="menu-button underline li caret" 
+                             aria-haspopup="true" aria-controls="menu1" aria-expanded="false">
+                                 Web Design
+                             </button>
+                             <ul id="menu1" role="menu" aria-labelledby="menu-button1" class="sub-menu">
+                                 <li role="none"><a role="menuitem" href="/small-business-web-design/">Small Businesses</a></li>
+                                 <li role="none"><a role="menuitem" href="/web-design/services/" >Services</a></li>
+                             </ul>
+                         </li>
+                         <li role="none" class="menulistitem">
+                             <button role="button" id="menu-button2" class="menu-button underline li caret" 
+                             aria-haspopup="true" aria-controls="menu2" aria-expanded="false">
+                                 Digital Accessibility
+                             </button>
+                             <ul id="menu2" role="menu" aria-labelledby="menu-button2" class="sub-menu">
+                                 <li role="none"><a role="menuitem" href="/digital-accessibility/">ADA Website Remediation</a></li>
+                                 <li role="none"><a role="menuitem" href="/digital-accessibility/file-remediation/">File Remediation</a></li>
+                                 <li role="none"><a role="menuitem" href="/digital-accessibility/ada-services/">ADA Services</a></li>
+                             </ul>
+                         </li>
+                        <li role="none" class="li"><a role="menuitem" class="btn-link" href="/contact/">Free Quote</a></li>
+                     </ul>
+                     <span id="menu-backdrop"></span>
+                </div>
                 <button role="button" aria-expanded="false" class="hamburger">
                     <svg class="svg" viewbox="0 0 100 100" aria-hidden="true">
                         <line class="line top" x1="90" x2="10" y1="25" y2="25" stroke="black" stroke-width="10"
