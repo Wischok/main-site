@@ -12,7 +12,7 @@
 */
 
 //Select Actions
-const SelectActions = {
+var SelectActions = {
     First: 0,
     Last: 1,
     Next: 2,

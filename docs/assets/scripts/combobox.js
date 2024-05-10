@@ -15,7 +15,7 @@ Last Update: 02/04/2024
 
 //Save a list of actions for various UI elements
 //each HTML interactive element functions off of these user actions
-const SelectActions = {
+var SelectActions = {
     Close: 0,//escape
     CloseSelect: 1,
     First: 2,
