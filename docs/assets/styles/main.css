@@ -2847,19 +2847,6 @@ button, a, div {
     }
 }
 
-
-
-.section-carousel-single-timer1 .carousel .img::after {
-    content: " ";
-    position: absolute;
-    width: 10rem;
-    height: 10rem;
-    background-color: blue;
-    left: 0;
-    top: 0;
-    z-index: 10;
-}
-
 .section-carousel-single-timer1 .slide-list .btn span {
     margin-left: 9px;
     font-size: 1.2rem;
