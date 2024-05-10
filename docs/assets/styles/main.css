@@ -169,6 +169,7 @@ p.max-width-small {
 
 p.max-width-medium {
     max-width: 35ch;
+    margin-right: var(--side-margin);
 }
 
 p.max-width-long {
@@ -4197,4 +4198,66 @@ span.bullet {
 .section-text-left5 .img-wrapper .img {
     object-fit: contain;
     width: 70%;
+}
+
+/* Form Received */
+.form-recieved {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  justify-items: center;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (max-width: 500px) {
+  .form-recieved {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  }
+}
+
+.form-recieved .lbl {
+  font-size: 3rem;
+  width: 100%;
+  line-height: 100%;
+}
+
+.form-recieved .img-wrapper {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.form-recieved .img {
+  max-width: 15rem;
+  aspect-ratio: 3 / 4;
+}
+
+.form-recieved .content {
+  margin-top: 5rem;
+  flex-direction: column;
+  font-size: 1.2rem;
+  line-height: 180%;
+  box-sizing: border-box;
+  padding: 2rem;
+}
+
+.form-recieved .wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form-recieved .text {
+  max-width: 50ch;
+  margin-top: 2rem;
+  box-sizing: border-box;
+}
+
+.form-recieved a {
+  font-family: "Quicksand", sans-serif;
+  width: 100%;
+  text-align: left;
 }
