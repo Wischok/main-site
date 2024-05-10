@@ -58,20 +58,21 @@ h1 span {
 
 .heading-1.font-medium {
     max-width: 12ch !important;
+    font-size: 4rem;
 }
 @media screen and (max-width: 1024px) and (min-width: 900px) {
     .heading-1.font-medium {
-        font-size: 4rem;
+        font-size: 3.5rem;
     }
 }
 @media screen and (max-width: 414px) {
     .heading-1.font-medium {
-        font-size: 2rem !important;
+        font-size: 1.6rem !important;
     }
 }
 @media screen and (max-width: 400px) {
     .heading-1.font-medium {
-        font-size: 1.5rem !important;
+        font-size: 1.2rem !important;
     }
 }
 
@@ -1569,13 +1570,13 @@ button, a, div {
     gap: 2rem;
     margin: 1rem 0;
 }
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 601px) {
     .section-text-right1 .content-right .row {
         flex-direction: column;
     }
 }
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 601px) {
     .section-text-right1 .content-right .row .li .content{
         display: flex;
         flex-direction: row;
@@ -1606,7 +1607,7 @@ button, a, div {
     -moz-box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.341);
     box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.341);
 }
-@media screen  and (max-width: 414px ){
+@media screen  and (max-width: 601px ){
     .section-text-right1 .content-right .mini-icon {
         height: 4rem;
         min-width: 4rem;
@@ -2001,6 +2002,31 @@ button, a, div {
     font-weight: 500;
 }
 
+.section-bento1 .card .heading3 {
+    bottom: 1rem;
+    left: 1rem;
+}
+@media screen and (max-width: 1280px) {
+    .section-bento1 .card .heading3 {
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .section-bento1 .card .heading3 {
+        font-size: 0.9rem;
+    }
+}
+@media screen and (max-width: 810px) {
+    .section-bento1 .card .heading3 {
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width: 414px) {
+    .section-bento1 .card .heading3 {
+        font-size: 0.8rem;
+    }
+}
+
 .section-bento1 .subcard .heading3 {
     width: 14ch;
     display: flex;
@@ -2008,40 +2034,41 @@ button, a, div {
     align-items: center;
     padding: 0 1rem;
 }
+@media screen and (max-width: 1024px) {
+    .section-bento1 .subcard .heading3 {
+        left: 10px;
+    }
+}
+@media screen and (max-width: 450px) {
+    .section-bento1 .subcard .heading3 {
+        left: 0px;
+        bottom: 0;
+    }
+}
 
 .section-bento1 .card1 .heading3 {
-    bottom: 1rem;
+    left: auto;
     right: 1rem;
     color: #414141;
 }
 
 .section-bento1 .card2 .heading3 {
-    bottom: 1rem;
-    left: 1rem;
     color: #5F789B;
 }
 
 .section-bento1 .card3 .heading3 {
-    bottom: 1rem;
-    left: 1rem;
     color: #8D6B16;
 }
 
 .section-bento1 .card4 .heading3 {
-    bottom: 1rem;
-    left: 1rem;
     color: #AC605D;
 }
 
 .section-bento1 .card5 .heading3 {
-    bottom: 1rem;
-    left: 1rem;
     color: #917050;
 }
 
 .section-bento1 .card6 .heading3 {
-    bottom: 1rem;
-    left: 1rem;
     color: #334F57;;
 }
 
@@ -2068,14 +2095,20 @@ button, a, div {
     padding-left: 2rem;
 
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1600px) {
     .section-contact .heading2 {
-        top: -4rem;
+        top: -6rem;
+    }
+}
+@media screen and (max-width: 900px) {
+    .section-contact .heading2 {
+        padding-inline: var(--side-margin);
     }
 }
 @media screen and (max-width: 400px) {
     .section-contact .heading2 {
         top: -8rem;
+        text-align: center;
     }
 }
 
@@ -2998,6 +3031,7 @@ button, a, div {
     align-items: center;
     width: 100%;
     min-height: 80%;
+    position: relative;
 }
 @media screen and (max-width: 810px) {
     .section-carousel-single-timer2 .tab-list {
@@ -3017,17 +3051,19 @@ button, a, div {
     justify-self: center;
     align-items: center;
     font-family: "Work Sans", sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     border-radius: 50%;
     aspect-ratio: 1 / 1;
     height: 2.5rem;
     margin-right: 2rem;
     margin: 1.2rem 0;
-    font-weight: 600;
+    font-weight: 500;
+    cursor: pointer;
 }
 
 .section-carousel-single-timer2 .content-left .btn span {
-    transform: translateX(5px);
+    margin-inline: auto;
+
 }
 
 .section-carousel-single-timer2 .content-right {
@@ -3039,11 +3075,19 @@ button, a, div {
 .section-carousel-single-timer2 .content-right .p2 {
     max-width: 80ch;
     text-align: center;
+    display: none;
+    transition: display 0ms 750ms;
+    opacity: 0;
 }
 @media screen and (max-width: 810px) {
     .section-carousel-single-timer2 .content-right .p2 {
         margin-bottom: 2rem;
     }
+}
+
+.section-carousel-single-timer2 .content-right .p2.display {
+    display: block;
+    animation: fade-in 1000ms ease-in-out forwards;
 }
 
 .section-carousel-single-timer2 .content-right .slides {
@@ -3057,13 +3101,57 @@ button, a, div {
     }
 }
 
+.section-carousel-single-timer2 .content-right .slide {
+    visibility: hidden;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    animation: visibility-fade-out 1000ms ease-in-out forwards;
+    transition: visibility 0ms 1000ms;
+}
+
+@keyframes visibility-fade-out {
+    from {
+        opacity: 1;
+        visibility: visible;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.section-carousel-single-timer2 .content-right .slide.display {
+    visibility: visible;
+    animation: fade-in 1000ms ease-in-out forwards;
+}
+
 .section-carousel-single-timer2 .content-right .slide .img {
     border-radius: 2rem;
     width: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    display: none;
 }
 
 .section-carousel-single-timer2 .content-right .slide .img1 {
@@ -3079,6 +3167,97 @@ button, a, div {
 
 .section-carousel-single-timer2 .content-right .active .img {
     display: block;
+}
+
+.section-carousel-single-timer2 .progress-bar {
+    position: absolute;
+    top: 12.5%;
+    left: 45%;
+    background-color: rgb(187, 187, 187);
+    height: 75%;
+    width: 10%;
+    z-index: -1;
+    overflow: hidden;
+}
+@media screen and (max-width: 810px) {
+    .section-carousel-single-timer2 .progress-bar {
+        top: 45%;
+        left: 15%;
+        height: 10%;
+        width: 70%;
+    }
+}
+
+.section-carousel-single-timer2 .progress-bar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(var(--progress) * 1%);
+    background-color: #226e69;
+    transition: height 100ms linear;
+    /* animation: progress-load1 24000ms 8000ms infinite forwards linear; */
+}
+@media screen and (max-width: 810px) {
+    .section-carousel-single-timer2 .progress-bar::before {
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: calc(var(--progress) * 1%);
+    }
+}
+
+@keyframes progress-load1 {
+    from {
+        height: 0%;
+    }
+    to {
+        height: 100%;
+    }
+}
+
+.section-carousel-single-timer2 .pause-play {
+    height: 2.5rem;
+    aspect-ratio: 1 / 1;
+    background-color: var(--color-background-1);
+    border: none;
+    border-radius: 50%;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    outline-offset: 4px;
+}
+
+.section-carousel-single-timer2 .pause-play svg {
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+
+.section-carousel-single-timer2 .pause-play svg.pause {
+    display:block;
+}
+
+.section-carousel-single-timer2 button[aria-pressed="true"] svg.pause {
+    display: none;
+}
+
+.section-carousel-single-timer2 button[aria-pressed="true"] svg.play {
+    display: block;
+}
+
+.section-carousel-single-timer2 .play {
+    transform: translateX(7px) translateY(2px);
+}
+
+.section-carousel-single-timer2 .play path {
+    fill: white;
+}
+
+.section-carousel-single-timer2 .pause-play svg line {
+    stroke: white;
 }
 
 /* Digital Accessibility Section | Text Right Image Left */
@@ -3758,6 +3937,15 @@ span.bullet {
 
 .left-right-text-image1 .content-cell span {
     margin: 0 1rem;
+}
+
+.left-right-text-image1 a {
+    display: inline;
+    color: #212C58;
+}
+
+.left-right-text-image1 b {
+    font-weight: 600;
 }
 
 /* Accordion styling */

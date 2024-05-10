@@ -14,6 +14,10 @@
     <link rel="stylesheet" href="/docs/assets/styles/reset.css">
     <link rel="stylesheet" href="/docs/assets/styles/main.css">
 
+    <!-- Javascript -->
+    <script defer src="/docs/assets/scripts/nav.js"></script>
+    <script defer src="/docs/assets/scripts/combobox.js"></script>
+
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/docs/assets/img/wischok-favicon.svg">
 
@@ -39,29 +43,30 @@
             <div class="links-right">
                 <div class="wrapper">
                     <ul role="menu" class="flex-row-center menu">
-                        <li role="none" class="menu-item li">
-                             <button role="menuitem" id="menu-button1" class="menu-button underline li caret" 
+                        <li role="none" class="menulistitem">
+                             <button role="button" id="menu-button1" class="menu-button underline li caret" 
                              aria-haspopup="true" aria-controls="menu1" aria-expanded="false">
                                  Web Design
                              </button>
                              <ul id="menu1" role="menu" aria-labelledby="menu-button1" class="sub-menu">
-                                 <li class="sub-li sub-li-1" role="none"><a role="menuitem" href="/small-business-web-design/">Small Businesses</a></li>
-                                 <li class="sub-li" role="none"><a role="menuitem" href="/web-design/services/">Services</a></li>
+                                 <li role="none"><a role="menuitem" href="/small-business-web-design/">Small Businesses</a></li>
+                                 <li role="none"><a role="menuitem" href="/web-design/services/" >Services</a></li>
                              </ul>
                          </li>
-                         <li role="none" class="menu-item">
-                             <button role="menuitem" id="menu-button2" class="menu-button underline li caret" 
+                         <li role="none" class="menulistitem">
+                             <button role="button" id="menu-button2" class="menu-button underline li caret" 
                              aria-haspopup="true" aria-controls="menu2" aria-expanded="false">
                                  Digital Accessibility
                              </button>
                              <ul id="menu2" role="menu" aria-labelledby="menu-button2" class="sub-menu">
-                                 <li class="sub-li sub-li-1" role="none"><a role="menuitem" href="/digital-accessibility/">ADA Website Remediation</a></li>
-                                 <li class="sub-li" role="none"><a role="menuitem" href="/digital-accessibility/file-remediation/">File Remediation</a></li>
-                                 <li class="sub-li" role="none"><a role="menuitem" href="/digital-accessibility/ada-services/">ADA Services</a></li>
+                                 <li role="none"><a role="menuitem" href="/digital-accessibility/">ADA Website Remediation</a></li>
+                                 <li role="none"><a role="menuitem" href="/digital-accessibility/file-remediation/">File Remediation</a></li>
+                                 <li role="none"><a role="menuitem" href="/digital-accessibility/ada-services/">ADA Services</a></li>
                              </ul>
                          </li>
-                        <li role="none" class="li"><a role="listitem" class="btn-link" href="/contact/">Free Quote</a></li>
+                        <li role="none" class="li"><a role="menuitem" class="btn-link" href="/contact/">Free Quote</a></li>
                      </ul>
+                     <span id="menu-backdrop"></span>
                 </div>
                 <button role="button" aria-expanded="false" class="hamburger">
                     <svg class="svg" viewbox="0 0 100 100" aria-hidden="true">
@@ -86,7 +91,8 @@
                         Services</span></h1>
                 </div>
                 <div class="bottom-content view-width-constrain-left">
-                    <p class="p1 max-width-57ch">We really on file sharing to communicate information every day. It’s important to ensure their accessible to everyone, regardless of disabilities.</p>
+                    <p class="p1 max-width-57ch">We rely on file sharing to communicate information every day. It’s important to ensure
+                        their accessible to everyone, regardless of disabilities.</p>
                     <a href="/contact/" class="btn-link">Fix My File</a>
                 </div>
             </div>
@@ -116,13 +122,11 @@
                 </ul>
             </div>
         </header>
-        <!-- Section 1 | Everybody Needs a Website -->
-        <h2 class="heading2 view-width-constrain-left margin-top-15">Everybody Needs a Website</h2>
+        <!-- Section 1 | What are ADA Accessible Documents -->
+        <h2 class="heading2 view-width-constrain-left margin-top-15">What are ADA Accessible Documents</h2>
         <section class="section-text-left1 view-width-constrain">
-            <p class="p2">Your website is more than just a website. It’s the story of your brand and everything it holds. From
-                the color, to the font, to the picture, everything should be custom tailored for your brand. That’s what Wischok
-                does. We design websites that bring out the best in design, feel, accessibility, marketing, and most
-                importantly, it tells the story of your brand and identity.</p>
+            <p class="p2">ADA Accessible Documents are compliant with Section 508 standards. In Other words, whether somebody has low vision, color blindness, difficulty with hearing, or any other disability, they can still receive all of the information from a document or video.</p>
+            <p class="p2">File Remediation Services are an important part of keeping all of you web content and files accessible.</p>
         </section>
         <!-- Section | What we Check For -->
         <div class="section-text-right1 flex-row margin-top-10">
@@ -172,7 +176,7 @@
                                     <img src="/img/reading.jpg" alt="" class="mini-icon">
                                     <div class="text">
                                         <p class="p1">Reading Order</p>
-                                        <p class="p2">A screen reader needs to know the order to read the document.</p>
+                                        <p class="p2">Telling a screen reader the order in which to read a document.</p>
                                     </div>
                                 </div>
                             </li>
@@ -181,7 +185,7 @@
                                     <img src="/img/document-pen.jpg" alt="" class="mini-icon">
                                     <div class="text">
                                         <p class="p1">Form Structure</p>
-                                        <p class="p2">Using Form PDFs is common. Let’s make sure everybody can use them</p>
+                                        <p class="p2">Using Form PDFs is common. Let’s make sure everybody can use them.</p>
                                     </div>
                     
                                 </div>
@@ -191,13 +195,12 @@
                                     <img src="/img/arrow-right-brick.jpg" alt="" class="mini-icon">
                                     <div class="text">
                                         <p class="p1">Other</p>
-                                        <p class="p2">There are many items to check for. Here are only 5 from a long list.</p>
+                                        <p class="p2">There are many items to check for. There are only 5 from a very long list.</p>
                                     </div>
                                 </div>
                             </li>
                         </div>
                     </ul>
-                    <a href="" class="btn-link arrow-right">Fix my file</a>
                 </div>
             </div>
         </div>
@@ -235,12 +238,14 @@
             </div>
         </div>
         <!-- Section | How to make your own file accessible -->    
-        <div class="view-width-constrain margin-top-10 section-text-left5">
+        <!-- <div class="view-width-constrain margin-top-10 section-text-left5">
             <div class="container flex-row-center flex-wrap">
                 <div class="content-left flex-half">
                     <h2 class="heading2 max-width"><span>How to Make Your Own File Accessible</span></h2>
-                    <p class="p2 max-width-medium">Making your own pdf or word document ada compliant can be daunting. Constantly having to google everything you run into means and what it means, but we got your back.</p>
-                    <p class="p2 max-width-medium">Select the following file types to view simple, step by step instructions for how you can make your own Documents ADA compliant.</p>
+                    <p class="p2 max-width-medium">Making your own pdf or word document ADA compliant can be daunting. Constantly having to
+                        google everything you run into and learn what it means. Luckily, there are resources to help.</p>
+                    <p class="p2 max-width-medium">Select the following file types to view simple, step by step instructions for how you can
+                        make your own Documents ADA compliant.</p>
                     <a href="" class="link">
                         Learn More about File Remediation 
                         <span class="arrow-right">
@@ -287,7 +292,7 @@
                     </div>
                 </div> 
             </div>
-        </div>
+        </div> -->
         <!-- Section | File Creation -->
         <div class="section-text-right2 flex-row flex-wrap margin-top-10">
             <div class="content-left flex-half">
@@ -303,14 +308,91 @@
             </div>
         </div>
         <!-- Section | Free Proposal / Contact Form -->
-        <section class="section-contact margin-top-10">
-            <div class="wrapper flex-column">
-                <h2 class="heading2">Contact us now for a free quote</h2>
-                <div class="form">
-    
+        <div class="section-contact margin-top-10">
+            <div class="form-region1" aria-labelledby="form-region1-lbl">
+                <div class="container">
+                    <h2 class="heading2">Contact us now for a free quote</h2>
+                    <form role="form" class="contact-form grid form-grid" action="https://formsubmit.co/atevans33@gmail.com" method="POST">
+                        <!-- Name Field -->
+                        <div class="field-wrapper flex">
+                            <div class="label-wrapper">
+                                <label for="name" class="lbl">Name<span aria-hidden="true">*</span></label>
+                            </div>
+                            <div class="input-wrapper">
+                                <input type="text" name="name" id="name" placeholder="Full Name" required>
+                            </div>
+                        </div>
+                        <!-- Email Field -->
+                        <div class="field-wrapper flex">
+                            <div class="label-wrapper">
+                                <label for="email" class="lbl">Email<span aria-hidden="true">*</span></label>
+                            </div>
+                            <div class="input-wrapper">
+                                <input type="email" name="email" id="email" placeholder="Email Address" required>
+                                <p class="error-desc">Improper email format. Example: 123@gmail.com</p>
+                            </div>
+                        </div>
+                        <!-- Phone Field -->
+                        <div class="field-wrapper flex">
+                            <div class="label-wrapper">
+                                <label for="phone" class="lbl">Phone<span aria-hidden="true">*</span></label>
+                            </div>
+                            <div class="input-wrapper">
+                                <input type="number" name="phone" id="phone" placeholder="Phone" required>
+                                <p class="error-desc">Improper phone format. Example: 012 345 6789</p>
+                            </div>
+                        </div>
+                        <!-- Project Type Field -->
+                        <div class="field-wrapper flex">
+                            <div class="label-wrapper">
+                                <label for="combo1" class="lbl" id="combo1-lbl">Project Type<span aria-hidden="true">*</span></label>
+                            </div>
+                            <div class="input-wrapper project-input-wrapper">
+                                <div class="combo combo-standard combo1">
+                                    <div class="combo-input" id="combo1" role="combobox" 
+                                    tabindex="0" aria-labelledby="combo1-lbl"
+                                    aria-haspopup="listbox" aria-controls="listbox1">Website Design</div>
+                                    <!-- Combo Menu | List of Options -->
+                                    <div class="combo-menu" role="listbox" id="listbox1" 
+                                    aria-labelledby="combo1-lbl" tabindex="-1">
+                                        <div role="option" id="combo1-0" class="combo-option"
+                                        aria-selected="false">Accessibility Review / VPAT / ACR</div>
+                                        <div role="option" id="combo1-1" class="combo-option"
+                                        aria-selected="false">Document Remediation</div>
+                                        <div role="option" id="combo1-3" class="combo-option"
+                                        aria-selected="true">Website Design</div>
+                                        <div role="option" id="combo1-2" class="combo-option"
+                                        aria-selected="false">Website Redesign</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Additional Comments Field -->
+                        <div class="field-wrapper flex ">
+                            <div class="label-wrapper lw-5">
+                                <label for="comments" class="lbl">Anything Else?<br>(Optional)</label>
+                            </div>
+                            <div class="input-wrapper iw-5">
+                                <textarea class="textarea" type="text" name="comments" id="comments" placeholder="Extra Comments" rows="8"></textarea>
+                            </div>
+                        </div>
+                        <!-- Submit Button -->
+                        <div class="field-wrapper flex ">
+                            <div class="label-wrapper submit-label-wrapper" aria-hidden="true">
+                            </div>
+                            <div class="input-wrapper submit">
+                                <input type="submit" value="Submit">
+                            </div>
+                        </div>
+                        <!-- Form API -->
+                        <input type="hidden" name="_subject" value="New Submission for Web Development">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_next" value="https://aarondevspot.com/thankyou/">
+                    </form>
                 </div>
             </div>
-        </section>
+        </div>
     </main>
     <!-- Footer -->
     <footer role="contentinfo" class="footer view-width-constrain">
