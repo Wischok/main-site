@@ -60,9 +60,14 @@ h1 span {
     max-width: 12ch !important;
     font-size: 4rem;
 }
-@media screen and (max-width: 1024px) and (min-width: 900px) {
+@media screen and (max-width: 1024px) {
     .heading-1.font-medium {
         font-size: 3.5rem;
+    }
+}
+@media screen and (max-width: 601px) {
+    .heading-1.font-medium {
+        font-size: 2.5rem;
     }
 }
 @media screen and (max-width: 414px) {
@@ -89,6 +94,11 @@ h2 {
     font-weight: 700;
     margin-bottom: 2.5rem;
     line-height: 167%;
+}
+@media screen and (max-width: 1024px) {
+    h2 {
+        font-size: 1.5rem;
+    }
 }
 
 .heading2.align-right {
@@ -354,7 +364,7 @@ button, a, div {
     align-items: center;
     justify-content: center;
 }
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 900px) {
     .nav {
         -webkit-box-shadow: 3px 0px 10px 2px rgba(0, 0, 0, 0.382);
         -moz-box-shadow: 0px 3px 10px 2px rgba(0, 0, 0, 0.382);
@@ -375,7 +385,7 @@ button, a, div {
     width: 100%;
     border-radius: 5rem;
 }
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 900px) {
     .nav .content {
         -webkit-box-shadow: none;
         -moz-box-shadow: none;
@@ -394,7 +404,7 @@ button, a, div {
     justify-content: start;
     padding-left: 2rem;
 }
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 900px) {
     .nav .logo-left {
         padding-left: 0;
     }
@@ -409,7 +419,7 @@ button, a, div {
         height: 1.5rem;
     }
 }
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 1000px) {
     .nav .logo-left .img1 {
         display: none;
     }
@@ -418,7 +428,7 @@ button, a, div {
 .nav .logo-left .img2 {
     display: none;
 }
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 1000px) {
     .nav .logo-left .img2 {
         display: block;
     }
@@ -444,7 +454,7 @@ button, a, div {
         gap: .5rem;
     }
 }
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 900px) {
     .nav .menu {
         display: none;
         top: 0;
@@ -489,7 +499,7 @@ button, a, div {
     padding: 1rem;
     display: none;
 }
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 900px) {
    .menu .sub-menu {
         display: block;
    } 
@@ -509,19 +519,19 @@ button, a, div {
     margin: 1rem 0;
     display: inline-block;
 }
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 900px) {
     .menu .sub-menu a {
         margin: .6rem 0;
     }
 }
 
 .menu .li {
-    max-width: 18ch;
+    max-width: 19ch;
     white-space: nowrap;
     padding-left: 1rem;
     position: relative;
 }
-@media screen and (max-width: 810px){
+@media screen and (max-width: 900px){
     .menu .li {
         max-width: none;
     }
@@ -536,7 +546,7 @@ button, a, div {
     width: calc(100% - 1rem);
 }
 
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 900px) {
     .menu .underline {
         font-weight: 700;
         padding-right: 1rem;
@@ -564,7 +574,7 @@ button, a, div {
 .menu .sub-menu [role="menuitem"]{
     width: 18ch;
 }
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 900px) {
     .menu .sub-menu [role="menuitem"] {
         width: auto;
     }    
@@ -583,7 +593,7 @@ button, a, div {
     position: absolute;
     background-color: white;
 }
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 900px) {
     .menu [role="menu"] {
         background-color: transparent;
         position: relative;
@@ -596,6 +606,7 @@ button, a, div {
     font-size: 1rem;
     letter-spacing: 1px;
     position: relative;
+    color: var(--color-background-1);
 }
 
 .menu .menu-button:hover + .sub-menu,
@@ -607,7 +618,7 @@ button, a, div {
 .nav .links-right {
     flex-grow: 1;
 }
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 900px) {
     .nav .links-right:has(.hamburger[aria-expanded="true"]) .menu {
         display: block;
         padding-top: 8rem;
@@ -620,7 +631,7 @@ button, a, div {
     }
 }
 
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 900px) {
     .nav .links-right .wrapper {
         width: 100vw;
         height: 100vh;
@@ -667,7 +678,7 @@ button, a, div {
     padding: .5rem 1.5rem;
     color: white;
 }
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 900px) {
     .nav .btn-link {
         margin-left: auto;
         margin-top: 2rem;
@@ -683,7 +694,7 @@ button, a, div {
     cursor: pointer;
     z-index: 999;
 }
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 900px) {
     .nav .hamburger {
         display: block;
         justify-self: end;
@@ -1291,27 +1302,30 @@ button, a, div {
     height: 80%;
     width: 85%;
     background-color: var(--color-background-1);
+    background-size: cover;
     border-bottom-right-radius: 25rem;
     display: flex;
     flex-direction: column;
     justify-content: end;
     padding-top: 12rem;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1200px) {
     .main-header .top-content {
         width: 90%;
+        border-bottom-right-radius: 20rem;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .main-header .top-content {
+        width: 100%;
+        border-bottom-right-radius: 15rem;
     }
 }
 @media screen and (max-width: 810px) {
     .main-header .top-content {
         width: 100%;
-        border-bottom-right-radius: 15rem;
+        border-bottom-right-radius: 0;
         padding-top: 7rem;
-    }
-}
-@media screen and (max-width: 414px) {
-    .main-header .top-content {
-        border-bottom-right-radius: 10rem;
     }
 }
 
@@ -1321,6 +1335,12 @@ button, a, div {
     font-weight: 650;
     margin-bottom: 1.5rem;
 }
+@media screen and (max-width: 900px) {
+    .main-header .heading-1 {
+        max-width: 13ch;
+    }
+}
+
 @media screen and (max-width: 414px) {
     .main-header .heading-1 {
         position: relative;
@@ -1343,10 +1363,21 @@ button, a, div {
     width: 30%;
     aspect-ratio: 1/1;
 }
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 1200px) {
+    .main-header .right-content {
+        width: 25%;
+    }
+}
+@media screen and (max-width: 1000px) {
     .main-header .right-content {
         display: block;
-        top: 17%;
+        width: 20%;
+        top: 35%;
+    }
+}
+@media screen and (max-width: 900px) {
+    .main-header .right-content {
+        display: none;
     }
 }
 
@@ -1370,7 +1401,7 @@ button, a, div {
     -moz-box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.75);
 }
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 1000px) {
     .main-header .bubble-list .bubble {
         display: none;
     }
@@ -1384,7 +1415,7 @@ button, a, div {
     width: 48%;
     z-index: 1;
 }
-@media screen and (max-width: 810px) and (min-width: 600px) {
+@media screen and (max-width: 1000px) and (min-width: 600px) {
     .main-header .bubble-list .bubble1 {
         display: block;
         width: 100%;
@@ -1449,10 +1480,11 @@ button, a, div {
     gap: 5rem;
     margin: 0 var(--side-margin);
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1200px) {
     .section-text-right1 {
         flex-wrap: wrap;
         gap: 1rem;
+        padding-bottom: 0;
     }
 }
 
@@ -1464,7 +1496,7 @@ button, a, div {
     align-items: center;
     position: relative;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1200px) {
     .section-text-right1 .content-right,
     .section-text-right1 .content-left {
         max-width: none;
@@ -1506,11 +1538,12 @@ button, a, div {
 .section-text-right1 .content-right .wrapper {
     position: relative;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1200px) {
     .section-text-right1 .content-right .wrapper-text {
         text-align: center;
     }
 }
+
 
 /* btn-link */
 @media screen and (max-width: 1024px) {
@@ -1558,11 +1591,6 @@ button, a, div {
 }
 @media screen and (max-width: 1600px) {
     .section-text-right1 .content-right .img.right-0 {
-        top: -12rem;
-    }
-}
-@media screen and (max-width: 1366px){
-    .section-text-right1 .content-right .img.right-0 {
         display: none;
     }
 }
@@ -1571,13 +1599,13 @@ button, a, div {
     gap: 2rem;
     margin: 1rem 0;
 }
-@media screen and (max-width: 601px) {
+@media screen and (max-width: 810px) {
     .section-text-right1 .content-right .row {
         flex-direction: column;
     }
 }
 
-@media screen and (max-width: 601px) {
+@media screen and (max-width: 810px) {
     .section-text-right1 .content-right .row .li .content{
         display: flex;
         flex-direction: row;
@@ -1608,7 +1636,7 @@ button, a, div {
     -moz-box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.341);
     box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.341);
 }
-@media screen  and (max-width: 601px ){
+@media screen  and (max-width: 810px ){
     .section-text-right1 .content-right .mini-icon {
         height: 4rem;
         min-width: 4rem;
@@ -1778,6 +1806,9 @@ button, a, div {
 .section-text-right2 {
     margin-left: var(--side-margin);
     margin-right: var(--side-margin);
+}
+@media screen and (max-width: 1200px) {
+    
 }
 
 @media screen and (max-width: 810px) {
@@ -1958,18 +1989,27 @@ button, a, div {
 .section-bento1 .card {
 }
 
+.section-bento1 .card:has(.subcard) {
+    
+}
+
 .section-bento1 .card1,
 .section-bento1 .card6 {
-    height: 100%;
-    width: 100%;
+    height: calc(var(--card-width) *  0.75);
+    width: var(--card-width);
 }
 
 .section-bento1 .card2,
 .section-bento1 .card3,
 .section-bento1 .card5,
 .section-bento1 .card4 {
-    aspect-ratio: 3 / 4;
-    width: 100%;
+    flex-grow: 1;
+}
+
+.section-bento1 .card1,
+.section-bento1 .card6 {
+    aspect-ratio: 4 / 3;
+    flex-grow: 1;
 }
 
 .section-bento1 .card .img {
@@ -2196,7 +2236,7 @@ button, a, div {
     border-radius: 2rem;
     margin-top: 4rem;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1600px) {
     .section-quote-content1 .content-bottom {
         flex-wrap: wrap;
         justify-content: center;
@@ -2214,7 +2254,7 @@ button, a, div {
     min-width: max(40%, 300px);
     position: relative;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1600px) {
     .section-quote-content1 .content-bottom .img-wrapper {
         flex-grow: 1;
         max-width: 15rem;
@@ -2229,7 +2269,7 @@ button, a, div {
     object-fit: contain;
     top: 3rem;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1600px) {
     .section-quote-content1 .content-bottom .img-wrapper .img {
         top: auto;
         margin: 0;
@@ -2308,13 +2348,13 @@ button, a, div {
     padding: 4rem 2rem 1rem var(--side-margin);
     justify-content: space-evenly;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1200px) {
     .section-tri-content1 .list {
         margin: 0;
         border-radius: 0;
     }
 }
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 1000px) {
     .section-tri-content1 .list {
         flex-direction: column;
     }
@@ -2325,10 +2365,10 @@ button, a, div {
     margin: 0 3rem;
     flex-grow: 1;
 }
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 1000px) {
     .section-tri-content1 .list .li {
         max-width: 40ch;
-        margin: 0;
+        margin: 1rem 0;
     }
 
     .section-tri-content1 .list .li .p1 {
@@ -2341,17 +2381,18 @@ button, a, div {
 }
 
 .section-tri-content1 .list .li .img {
-    max-width: 20ch;
-    aspect-ratio: 1 / 1;
+    width: 20ch;
+    height: 20ch;
     object-fit: cover;
     border-radius: 50%;
     -webkit-box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.347);
     -moz-box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.347);
     box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.347);
 }
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 1000px) {
     .section-tri-content1 .list .li .img  {
-        max-width: 10ch;
+        width: 10ch;
+        height: 10ch;
     }
 }
 
@@ -2360,7 +2401,7 @@ button, a, div {
 }
 
 /* .section-tri-content1 .list .li-2 */
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 1000px) {
     .section-tri-content1 .list .li-2 {
         align-self: flex-end;
         text-align: end;
@@ -2732,6 +2773,12 @@ button, a, div {
    background-color: var(--color-background-2);
     border-radius: 2rem;
     padding: 2rem 5rem;
+    position: relative;
+}
+@media screen and (max-width: 1500px) and (min-width: 1025px) {
+    .section-carousel-single-timer1 .content {
+        width: 77%;
+    }
 }
 @media screen and (max-width: 810px) {
     .section-carousel-single-timer1 .content {
@@ -2787,7 +2834,7 @@ button, a, div {
     max-width: 66%;
     padding: 2rem 0;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1500px) {
     .section-carousel-single-timer1 .content-left {
         max-width: none;
     }
@@ -2811,12 +2858,21 @@ button, a, div {
     align-items: center;
     position: relative;
 }
+@media screen and (max-width: 1500px) and (min-width: 1025px) {
+    .section-carousel-single-timer1 .carousel .img-wrapper {
+        position: absolute;
+        right: -30%;
+        top: 45%;
+        min-width: 40%;
+    }
+}
 @media screen and (max-width: 1024px) {
     .section-carousel-single-timer1 .carousel .img-wrapper {
         min-width: 200px;
         margin-bottom: 20rem;
     }
 }
+
 
 .section-carousel-single-timer1 .carousel {
     gap: 2rem;
@@ -2836,9 +2892,9 @@ button, a, div {
     object-fit: contain;
     min-width: 200px;
 }
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1500px) and (min-width: 1025px) {
     .section-carousel-single-timer1 .carousel .img {
-        top: 10%;
+        width: 100%;
     }
 }
 @media screen and (max-width: 1024px) {
@@ -3207,7 +3263,7 @@ button, a, div {
 
 .section-carousel-single-timer2 .pause-play {
     height: 2.5rem;
-    aspect-ratio: 1 / 1;
+    width: 2.5rem;
     background-color: var(--color-background-1);
     border: none;
     border-radius: 50%;
@@ -3353,7 +3409,7 @@ button, a, div {
         max-width: 50%;
     }
   }
-  @media screen and (max-width: 810px) {
+  @media screen and (max-width: 1000px) {
     .sec-3-2 .content .card2,
     .sec-3-2 .content .card3 {
         max-width: 45%;
@@ -3823,9 +3879,14 @@ span.bullet {
     gap: 4rem;
     justify-content: space-between;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1600px) {
     .left-right-text-image1 .content-row {
         gap: 2rem;
+    }
+}
+@media screen and (max-width: 1600px) {
+    .left-right-text-image1 .content-row {
+        flex-wrap: wrap;
     }
 }
 
@@ -3843,14 +3904,15 @@ span.bullet {
     flex-grow: 1;
     position: relative;
 }
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1700px) {
     .left-right-text-image1 .content-cell {
-        padding: 1rem;
+        padding: 0;
     }
 }
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1600px) {
     .left-right-text-image1 .content-cell {
-        padding: 0rem;
+        flex-grow: 1;
+        max-width: none;
     }
 }
 
@@ -3864,6 +3926,11 @@ span.bullet {
 
 .left-right-text-image1 .content-cell .img1 {
     position: relative;
+}
+@media screen and (max-width: 1600px) {
+    .left-right-text-image1 .content-cell .img1 {
+        display: none;
+    }
 }
 
 .left-right-text-image1 .content-cell:has(.img1)::before {
@@ -3879,7 +3946,7 @@ span.bullet {
     border-radius: 2rem;
     transform: rotate(-30deg);
 }
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 1600px) {
     .left-right-text-image1 .content-cell:has(.img1)::before {
         width: 150%;
         height: 50%;
@@ -3921,6 +3988,12 @@ span.bullet {
     max-width: 55ch;
     line-height: 220%;
     font-size: 1.15;
+}
+@media screen and (max-width: 1600px) {
+    .left-right-text-image1 .content-cell .li,
+    .left-right-text-image1 .content-cell .p2 {
+        max-width: none;
+    }
 }
 
 .left-right-text-image1 .content-cell span {
@@ -3984,6 +4057,12 @@ span.bullet {
 .section-text-left4 {
     background-color: #212C58;
     width: 100%;
+}
+@media screen and (max-width: 810px) {
+    .section-text-left4 {
+        border-top-left-radius: 3rem;
+        border-top-right-radius: 3rem;
+    }
 }
 
 .section-text-left4 .container {
