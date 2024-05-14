@@ -81,6 +81,10 @@ h1 span {
     }
 }
 
+.heading-1.less-width {
+    max-width: 11ch !important;
+}
+
 
 /* Heading 2 Stylings */
 
@@ -1980,7 +1984,7 @@ button, a, div {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr) minmax(300px, 1fr));
     }
 }
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 950px) {
     .section-bento1 .wrapper {
         grid-template-columns: 1fr;
     }
@@ -2240,7 +2244,7 @@ button, a, div {
     .section-quote-content1 .content-bottom {
         flex-wrap: wrap;
         justify-content: center;
-        margin-top: 20rem;
+        margin-top: 15rem;
     }
 }
 @media screen and (max-width: 810px) {
@@ -2410,7 +2414,6 @@ button, a, div {
 
 /* Section | Carousel tri 1 */
 .section-carousel-tri-text-left {
-    margin-top: 15rem;
     padding-left: var(--side-margin);
 }
 
@@ -2815,8 +2818,10 @@ button, a, div {
     font-family: "Work Sans", sans-serif;
     font-size: 2.2rem;
     border-radius: 50%;
-    aspect-ratio: 1 / 1;
-    height: 2.5rem;
+    min-width: 2.5rem;
+    min-height: 2.5rem;
+    max-width: 2.5rem;
+    max-height: 2.5rem;
     margin-right: 2rem;
 }
 @media screen and (max-width: 414px) {
@@ -3119,19 +3124,20 @@ button, a, div {
 .section-carousel-single-timer2 .content-right .p2 {
     max-width: 80ch;
     text-align: center;
-    display: none;
-    transition: display 0ms 750ms;
+    visibility: hidden;
+    transition: visibility 0ms 750ms;
     opacity: 0;
-}
-@media screen and (max-width: 810px) {
-    .section-carousel-single-timer2 .content-right .p2 {
-        margin-bottom: 2rem;
-    }
+    animation: fade-out 1000ms ease-in-out forwards;
+    height: 0px;
+    margin: 0;
 }
 
 .section-carousel-single-timer2 .content-right .p2.display {
-    display: block;
+    visibility: visible;
     animation: fade-in 1000ms ease-in-out forwards;
+    height: fit-content;
+    transition: height ease-in-out 300ms;
+    margin-bottom: 2rem;
 }
 
 .section-carousel-single-timer2 .content-right .slides {
@@ -3215,13 +3221,14 @@ button, a, div {
 
 .section-carousel-single-timer2 .progress-bar {
     position: absolute;
-    top: 12.5%;
+    top: 15%;
     left: 45%;
     background-color: rgb(187, 187, 187);
-    height: 75%;
+    height: 70%;
     width: 10%;
     z-index: -1;
     overflow: hidden;
+    right: 45%;
 }
 @media screen and (max-width: 810px) {
     .section-carousel-single-timer2 .progress-bar {
@@ -3229,6 +3236,7 @@ button, a, div {
         left: 15%;
         height: 10%;
         width: 70%;
+        right: 15%;
     }
 }
 
@@ -3241,7 +3249,6 @@ button, a, div {
     height: calc(var(--progress) * 1%);
     background-color: #226e69;
     transition: height 100ms linear;
-    /* animation: progress-load1 24000ms 8000ms infinite forwards linear; */
 }
 @media screen and (max-width: 810px) {
     .section-carousel-single-timer2 .progress-bar::before {
@@ -3249,15 +3256,6 @@ button, a, div {
         left: 0;
         height: 100%;
         width: calc(var(--progress) * 1%);
-    }
-}
-
-@keyframes progress-load1 {
-    from {
-        height: 0%;
-    }
-    to {
-        height: 100%;
     }
 }
 
@@ -3773,7 +3771,7 @@ span.bullet {
 .section-text-center1 .carousel-content {
 
 }
-@media screen and (max-width: 601px) {
+@media screen and (max-width: 1000px) {
     .section-text-center1 .carousel-content {
         flex-wrap: wrap;
     }
@@ -3800,7 +3798,7 @@ span.bullet {
     right: 0;
     top: 5%;
 }
-@media screen and (max-width: 601px) {
+@media screen and (max-width: 1000px) {
     .section-text-center1 .carousel-content .content::after
     {
         content: " ";
@@ -3818,13 +3816,12 @@ span.bullet {
 {
     flex-grow: 1;
 }
-@media screen and (max-width: 601px) {
+@media screen and (max-width: 1000px) {
     .section-text-center1 .carousel-content .content-left
     {
         padding-bottom: 3rem;
     }
 }
-
 @media screen and (max-width: 810px) {
     .section-text-center1 .carousel-content .content-left .p2,
     .section-text-center1 .carousel-content .content-right .p2 {
@@ -3838,7 +3835,7 @@ span.bullet {
     max-width: 65%;
     padding: 0 1.5rem;
 }
-@media screen and (max-width: 601px) {
+@media screen and (max-width: 1000px) {
     .section-text-center1 .carousel-content .content-right {
         max-width: none;
     }
