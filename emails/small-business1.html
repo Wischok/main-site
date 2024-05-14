@@ -11,7 +11,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
 <style type="text/css">
-	body {
+    :root {
+        --side-margin: 20px;
+        --color-background-1: #212C58;
+    }
+	body,footer {
 		margin: 0;
 		background-color: #F1F6F5;
 	}
@@ -41,10 +45,41 @@
         max-width: 100%;
         font-weight: 450;
     }
-
     .p1 {
         font-weight: 600;
         font-size: 1.1rem;
+    }
+    a {
+        font-family: "Quicksand", sans-serif;
+    }
+    .btn-link {
+        background-color: var(--color-background-1);
+        padding: 1rem 4rem;
+        color: white;
+        letter-spacing: 1px;
+        font-size: 1.2rem;
+        border-radius: 1.5rem;
+        font-weight: 600;
+        margin-top: 2rem;
+        cursor: pointer;
+        text-decoration: none;
+        display: block;
+        width: max-content;
+        outline-offset: 5px;
+    }
+    @media screen and (max-width: 1440px) {
+        .btn-link {
+            padding: 1rem 2rem;
+        }
+    }
+    .side-margin {
+        margin-inline: var(--side-margin);
+    }
+    .side-margin-left {
+        margin-left: var(--side-margin);
+    }
+    .side-margin-right {
+        margin-right: var(--side-margin);
     }
     .wrapper {
         display: flex;
@@ -52,6 +87,10 @@
         justify-content: center;
         align-items: center;
         width: 100%;
+        max-width: 1000px;
+    }
+    .footer .wrapper {
+        background-color: var(--color-background-1);
     }
     .flex-row-center {
         display: flex;
@@ -59,6 +98,32 @@
         align-items: center;
         flex-direction: row;
         width: 100%;
+    }
+    .logo-top {
+        padding: 1rem;
+    }
+    .logo-top img {
+        max-width: 150px;
+    }
+    .banner {
+        flex-direction: column;
+    }
+    .banner-img {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        object-position: 0% 30%;
+    }
+    .services {
+        gap: 2rem;
+    }
+    .services .service {
+        flex-grow: 1;
+        max-width: 25%;
+    }
+    .service .img {
+        width: 100%;
+        object-fit: cover;
     }
 </style>
 </head>
@@ -72,52 +137,62 @@
             </a>
         </div>
         <!-- Image and Heading 1 Banner -->
-        <div class="flex-row-center">
-            <img src="" alt="" class="banner-img">
-            <h1 class="heading1">Small Business Web Services</h1>
-            <img src="" alt="" class="banner-img2">
+        <div class="flex-row-center banner">
+            <img src="https://wischok.com/img/online-browsing1.jpg" alt="" class="banner-img">
+            <div class="flex-row-center">
+                <h1 class="heading1 side-margin-left">Small Business Web Services</h1>
+                <img src="https://wischok.com/img/small-business-open.jpg" alt="" class="banner-img2">
+            </div>
         </div>
         <!-- Description Text -->
-        <div class="flex-row-center">
+        <div class="flex-row-center side-margin">
             <p class="p2">I hope this email everybody at [Company] well. My name is Aaron Evans, and I represent Wischok Web
                 Services, a professional web design business dedicated to helping businesses like yours thrive online.</p>
             <p class="p2">I noticed your website [details here]. I would love the opportunity to help give your website a fresh new
                 look and design to help with user staying engaged. Here are a few things that set Wischok websites apart.</p>
         </div>
         <!-- Services -->
-        <div class="flex-row-center services">
+        <div class="flex-row-center services side-margin">
             <div class="service">
-                <img src="" alt="" class="img">
+                <img src="https://wischok.com/img/custom-icon.png" alt="" class="img">
                 <h3>Custom Websites</h3>
                 <p class="p2">Custom websites ready to represent your brand and identity.</p>
             </div>
             <div class="service">
-                <img src="" alt="" class="img">
+                <img src="https://wischok.com/img/product-launch-release-icon.png" alt="" class="img">
                 <h3>Modern Designs</h3>
                 <p class="p2">Modern designs with modern SEO practices to help you stand out.</p>
             </div>
             <div class="service">
-                <img src="" alt="" class="img">
+                <img src="https://wischok.com/img/responsive-design-icon.png" alt="" class="img">
                 <h3>Responsive Design</h3>
                 <p class="p2">Whether it’s a computer, tablet, or phone, your website will work on any screen.</p>
             </div>
         </div>
         <!-- Button -->
-        <div class="flex-row-center">
+        <div class="flex-row-center side-margin">
             <a href="" class="btn-link">Learn More</a>
         </div>
         <!-- Description Text 2 -->
-        <div class="flex-row-center">
+        <div class="flex-row-center side-margin">
             <p class="p2">We would love to schedule a call or meeting at your convenience to discuss how Wischok can elevate your
                 online presence and help you achieve your business goals. Please let me know a convenient time for you, or feel free
                 to reach out to me directly at 1 (909) 638-2889 or contact@wischok.com.</p>
         </div>
-        <!-- Footer -->
-        <div class="flex-row-center">
-
-        </div>
     </main>
     <footer role="contentinfo" class="footer">
+        <div class="wrapper">
+            <div class="flex-row-center">
+                <div class="img-wrapper">
 
+                </div>
+                <address class="contact">
+                    <p class="p1"></p>
+                    <a href="" class="website"></a>
+                    <a href="" class="email"></a>
+                    <a href="" class="tel"></a>
+                </address>
+            </div>
+        </div>
     </footer>
 </body>
