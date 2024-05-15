@@ -18,17 +18,18 @@
         --side-margin: 20px;
         --color-background-1: #212C58;
     }
-	body,footer {
+	body {
 		margin: 0;
 		background-color: #F1F6F5;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
 	}
-    main,footer {
+    .main {
         background-color: white;
         overflow: hidden;
+        max-width: 600px;
+        border-spacing: 0;
+        font-family: "Quicksand", sans-serif;
+        width: 100%;
+        margin: 0 auto;
     }
 	table {
 		border-spacing: 0;
@@ -48,28 +49,38 @@
         font-size: 1.17em;
         letter-spacing: 1px;
     }
-    p {
-        font-family: "Quicksand", sans-serif;
+    .p1 {
         margin-block-start: 1rem;
         margin-block-end: 1rem;
         margin-inline-start: 0px;
         margin-inline-end: 0px;
         color: #0D0D0D;
-        font-size: 1rem;
         letter-spacing: 1px;
         line-height: 220%;
         max-width: 100%;
+        font-size: 1rem;
         font-weight: 450;
-    }
-    .p1 {
         font-weight: 600;
         font-size: 1.1rem;
     }
     .p2 {
-        margin-block: 1rem;
+        margin-block-start: 1rem;
+        margin-block-end: 1rem;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        color: #0D0D0D;
+        letter-spacing: 1px;
+        line-height: 220%;
+        max-width: 100%;
+        font-size: 0.9rem;
+        font-weight: 450;
+        padding-block: 1rem;
+        padding-inline: var(--side-margin)
+    }
+    .p2.padding {
+        padding-top: 60px;
     }
     a {
-        font-family: "Quicksand", sans-serif;
         color: #0000EE;
     }
     .btn-link {
@@ -80,7 +91,6 @@
         font-size: 1.2rem;
         border-radius: 1.5rem;
         font-weight: 600;
-        margin-top: 2rem;
         cursor: pointer;
         text-decoration: none;
         display: block;
@@ -94,47 +104,24 @@
             padding: 1rem 2rem;
         }
     }
-    .btn {
-        z-index: 1;
-        position: relative;
-    }
-    .btn::before {
-        position: absolute;
-        content: "";
-        left: -2rem;
-        bottom: -1.5rem;
-        width: 4rem;
-        aspect-ratio: 1 / 1;
-        background-image: url("https://wischok.com/img/generic-dots.png");
-        z-index: -5;
+    .no-display {
+        display: none;
     }
     .side-margin {
-        margin-inline: var(--side-margin);
+        padding-inline: var(--side-margin);
     }
     .side-margin-left {
-        margin-left: var(--side-margin);
+        padding-left: var(--side-margin);
     }
     .side-margin-right {
-        margin-right: var(--side-margin);
+        padding-right: var(--side-margin);
     }
     .wrapper {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
         width: 100%;
-        max-width: 800px;
-    }
-    .footer.wrapper {
-        background-color: var(--color-background-1);
-        padding: 2rem;
+        table-layout: fixed;
+        background-color: #F1F6F5;
     }
     .flex-row-center {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: row;
-        width: 100%;
         position: relative;
     }
     .logo-banner {
@@ -149,10 +136,6 @@
     .banner {
         flex-direction: column;
     }
-    .banner .flex-row-center {
-        justify-content: start;
-        align-items: start;
-    }
     .banner-img {
         width: 100%;
         height: 350px;
@@ -160,7 +143,7 @@
         object-position: 0% 35%;
     }
     .heading1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
         max-width: 15ch;
         line-height: 167%;
         margin-bottom: 10px;
@@ -168,12 +151,7 @@
         z-index: 0;
         letter-spacing: 3px;
     }
-    @media (max-width: 720px) {
-        .heading1 {
-            font-size: 2rem;
-        }
-    }
-    @media (max-width: 600px) {
+    @media (max-width: 599px) {
         .heading1 {
             font-size: 1.5rem;
         }
@@ -184,16 +162,6 @@
             max-width: none;
             text-align: center;
         }
-    }
-    .heading1::before {
-        position: absolute;
-        content: "";
-        left: -1rem;
-        bottom: -1rem;
-        width: 4rem;
-        aspect-ratio: 1 / 1;
-        background-image: url("https://wischok.com/img/generic-dots.png");
-        z-index: -1;
     }
     .banner-img2 {
         width: 50%;
@@ -219,16 +187,18 @@
     .desc2 {
         margin-top: 40px;
     }
-    .services {
-        width: auto;
-        align-items: start;
-        margin-top: 40px;
-        justify-content: space-evenly;
+    .two-columns .column {
+        width: 100%;
+        max-width: 290px;
+        display: inline-block;
+        vertical-align: top;
+        text-align: center;
     }
-    @media (max-width: 500px) {
-        .services {
-            flex-wrap: wrap;
-        }
+    .three-columns .column {
+        width: 100%;
+        max-width: 195px;
+        display: inline-block;
+        vertical-align: top;
     }
     .services .service {
         min-width: 30%;
@@ -243,121 +213,165 @@
         }
     }
     .service .img {
-        width: 60%;
+        width: 100px;
         aspect-ratio: 1 / 1;
         object-fit: contain;
     }
-    .footer .flex-row-center {
-        gap: 40px;
+    .footer {
+        background-color: #212C58;
     }
-    @media (max-width: 500px) {
-        .footer .flex-row-center {
-            flex-wrap: wrap;
-        }
+    .footer .img {
+        max-width: 150px;
+        padding-inline: 20px;
     }
     .footer .p1 {
-        margin-bottom: 10px;
         color: white;
     }
     .footer a {
         color: white;
+        letter-spacing: 1px;
         display: inline-block;
         margin-block: 5px;
-        letter-spacing: 1px;
-        font-size: 1rem;
-        font-weight: 400;
-        font-style: normal;
-    }
-    .footer .tel {
-        text-decoration: none;
-    }
-    .footer .img-wrapper {
-        max-width: 150px;
-    }
-    .footer .img {
-        width: 100%;
-    }
-    .footer .contact {
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-    }
-    @media (max-width: 500px) {
-        .footer .contact {
-            align-items: center;
-        }
     }
 </style>
 </head>
 <body>
     <!-- Email wrapper -->
-    <main role="main" class="wrapper">
-        <!-- Top Logo Banner -->
-        <div class="flex-row-center logo-banner">
-            <a href="https://wischok.com/" class="logo-top" target="_blank" rel="noopener">
-                <img src="https://wischok.com/docs/assets/img/wischok-logo.png" alt="Wischok Log and Website Link">
-            </a>
-        </div>
-        <!-- Image and Heading 1 Banner -->
-        <div class="flex-row-center banner">
-            <img src="https://wischok.com/img/online-browsing1-highres.jpg" alt="" class="banner-img">
-            <div class="flex-row-center">
-                <h1 class="heading1 side-margin-left">Small Business Web Services</h1>
-                <img src="https://wischok.com/img/small-business-open.jpg" alt="" class="banner-img2">
-            </div>
-        </div>
-        <!-- Description Text -->
-        <div class="flex-row-center desc">
-            <p class="p2 side-margin">I hope this email everybody at [Company] well. My name is Aaron Evans, and I represent <a href="https://wischok.com/" target="_blank" rel="noopener">Wischok Web
-                Services</a>, a professional web design business dedicated to helping businesses like yours thrive online.</p>
-            <p class="p2 side-margin">I noticed your website [details here]. I would love the opportunity to help give your website a fresh new
-                look and design to help with user staying engaged. Here are a few things that set Wischok websites apart.</p>
-        </div>
-        <!-- Services -->
-        <div class="flex-row-center services side-margin">
-            <div class="service">
-                <img src="https://wischok.com/img/custom-icon.png" alt="" class="img">
-                <h2>Custom Websites</h2>
-                <p class="p2">Custom websites ready to represent your brand and identity.</p>
-            </div>
-            <div class="service">
-                <img src="https://wischok.com/img/product-launch-release-icon.png" alt="" class="img">
-                <h2>Modern Designs</h2>
-                <p class="p2">Modern designs with modern SEO practices to help you stand out.</p>
-            </div>
-            <div class="service">
-                <img src="https://wischok.com/img/responsive-design-icon.png" alt="" class="img">
-                <h2>Responsive Design</h2>
-                <p class="p2">Whether it’s a computer, tablet, or phone, your website will work on any screen.</p>
-            </div>
-        </div>
-        <!-- Button -->
-        <div class="flex-row-center side-margin">
-            <div class="btn">
-                <a href="https://wischok.com/" class="btn-link" target="_blank" rel="noopener">Learn More</a>
-            </div>
-        </div>
-        <!-- Description Text 2 -->
-        <div class="flex-row-center side-margin desc2">
-            <p class="p2 side-margin">We would love to schedule a call or meeting at your convenience to discuss how Wischok can elevate your
-                online presence and help you achieve your business goals. Please let me know a convenient time for you, or feel free
-                to reach out to me directly at <a href="tel:19096382889">1 (909) 638-2889</a> or <a href="mailto:contact@wischok.com">contact@wischok.com</a>.</p>
-        </div>
-    </main>
-    <footer role="contentinfo" class="footer wrapper">
-        <div class="flex-row-center">
-            <div class="img-wrapper">
-                <a href="https://wischok.com/">
-                    <img src="https://wischok.com/docs/assets/img/wischok-logo-top.png" alt="Wischok logo and website" class="img">
-                </a>
-            </div>
-            <address class="contact">
-                <p class="p1">Wischok Web Services</p>
-                <a href="https://wischok.com/contact/" class="website" target="_blank" rel="noopener">Wischok | Contact Us</a>
-                <a href="mailto:contact@wischok.com" class="email">contact@wischok.com</a>
-                <a href="https://wischok.com/digital-accessibility/" target="_blank" rel="noopener" class="website">Digital Accessibility Services</a>
-                <a href="tel:19096382889" class="tel">1 (909) 638 2889</a>
-            </address>
-        </div>
-    </footer>
+    <center class="wrapper">
+        <table class="main" width="100%">
+            <!-- top border -->
+            <tr>
+                <td height="8" width="100%" style="background-color: #212C58;"></td>
+            </tr>
+            <!-- Top Logo Banner -->
+            <tr class="flex-row-center logo-banner" align="center">
+                <td class="logo-top">
+                    <a href="https://wischok.com/" target="_blank" rel="noopener">
+                        <img src="https://wischok.com/docs/assets/img/wischok-logo.png" alt="Wischok Log and Website Link">
+                    </a>
+                </td>
+            </tr>
+            <!-- Image and Heading 1 Banner -->
+            <tr class="flex-row-center banner">
+                <td>
+                    <img src="https://wischok.com/img/online-browsing1-highres.jpg" alt="" class="banner-img">
+                    <div class="flex-row-center">
+                        <h1 class="heading1 side-margin-left">Small Business Web Services</h1>
+                        <img src="https://wischok.com/img/small-business-open.jpg" alt="" class="banner-img2">
+                    </div>
+                </td>
+            </tr>
+            <!-- Description Text -->
+            <tr class="flex-row-center desc">
+                <td class="p2 side-margin">
+                    I hope this email everybody at [Company] well. My name is Aaron Evans, and I represent <a
+                        href="https://wischok.com/" target="_blank" rel="noopener">Wischok Web
+                        Services</a>, a professional web design business dedicated to helping businesses like yours thrive
+                    online.
+                </td>
+            </tr>
+            <tr class="flex-row-center desc">
+                <td class="p2 side-margin">
+                    I noticed your website [details here]. I would love the opportunity to help give your website a fresh
+                    new
+                    look and design to help with user staying engaged. Here are a few things that set Wischok websites
+                    apart.
+                </td>
+            </tr>
+            <!-- Services -->
+            <tr class="flex-row-center services side-margin" align="center">
+                <td>
+                    <table>
+                        <tr width="100%" align="center">
+                           <td class="three-columns" style="padding-top: 60px;">
+                                <table class="column" >
+                                    <tr>
+                                        <td class="service">
+                                            <img src="https://wischok.com/img/custom-icon.png" alt="" class="img">
+                                            <h2>Custom Websites</h2>
+                                            <p class="p2">Custom websites ready to represent your brand and identity.</p>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table class="column">
+                                    <tr>
+                                        <td class="service">
+                                            <img src="https://wischok.com/img/product-launch-release-icon.png" alt="" class="img">
+                                            <h2>Modern Designs</h2>
+                                            <p class="p2">Modern designs with modern SEO practices to help you stand out.</p>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table class="column">
+                                    <tr>
+                                        <td class="service">
+                                            <img src="https://wischok.com/img/responsive-design-icon.png" alt="" class="img">
+                                            <h2>Responsive Design</h2>
+                                            <p class="p2">Whether it’s a computer, tablet, or phone, your website will work on any screen.</p>
+                                        </td>
+                                    </tr>
+                                </table>
+                           </td> 
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <!-- Button -->
+            <tr class="flex-row-center side-margin" align="center">
+                <td class="relative">
+                    <table>
+                        <tr>
+                            <td>
+                                <a href="https://wischok.com/" class="btn-link" target="_blank" rel="noopener">Learn More</a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <!-- Description Text 2 -->
+            <tr class="flex-row-center side-margin desc2">
+                <td class="p2 side-margin padding">
+                    We would love to schedule a call or meeting at your convenience to discuss how Wischok can elevate your
+                    online presence and help you achieve your business goals. Please let me know a convenient time for you,
+                    or feel free
+                    to reach out to me directly at <a href="tel:19096382889">1 (909) 638-2889</a> or <a
+                        href="mailto:contact@wischok.com">contact@wischok.com</a>.
+                </td>
+            </tr>
+            <!-- footer -->
+            <tr class="footer" align="center">
+                <td>
+                    <table width="100%" style="padding-block: 30px;">
+                        <tr align="center">
+                           <td class="two-columns">
+                                <table class="column"style="padding-inline: 75px; padding-block: 60px;">
+                                    <tr>
+                                        <td>
+                                            <a href="https://wischok.com/">
+                                                <img src="https://wischok.com/docs/assets/img/wischok-logo-top.png" alt="Wischok logo and website"
+                                                    class="img">
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table class="column">
+                                    <tr>
+                                        <td>
+                                            <p class="p1">Wischok Web Services</p>
+                                            <a href="https://wischok.com/contact/" class="website" target="_blank" rel="noopener">Wischok | Contact
+                                                Us</a>
+                                            <a href="mailto:contact@wischok.com" class="email">contact@wischok.com</a>
+                                            <a href="https://wischok.com/digital-accessibility/" target="_blank" rel="noopener" class="website">Digital
+                                                Accessibility Services</a>
+                                            <a href="tel:19096382889" class="tel">1 (909) 638 2889</a>
+                                        </td>
+                                    </tr>
+                                </table>
+                           </td> 
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </center>
 </body>
