@@ -677,6 +677,12 @@ button, a, div {
     width: max-content;
 }
 
+.menu .menu-button span {
+    display: inline;
+    min-width: 18ch;
+    height: max-content;
+}
+
 .menu .menu-button span::after {
     content: "";
     height: 1rem;
@@ -687,6 +693,11 @@ button, a, div {
     background-image: url(/img/caret-down.png);
     background-size: contain;
     background-repeat: no-repeat;
+}
+@media screen and (max-width: 900px) {
+    .menu .menu-button span::after {
+        background: none;
+    }
 }
 
 .menu .menu-button:hover + .sub-menu,
@@ -721,7 +732,7 @@ button, a, div {
         display: none;
     }
 
-    .nav .links-right .wrapper span {
+    .nav .links-right .wrapper .backdrop {
         width: 100%;
         position: absolute;
         display: block;
