@@ -214,7 +214,7 @@ Select.prototype.init = function() {
     //select option that is already set as aria selected
     this.options.forEach((el) => {
         if(el.getAttribute('aria-selected') === 'true') {
-            this.comboEl.innerHTML = el.innerHTML;
+            this.comboEl.setAttribute('placeholder', el.innerHTML);
         }
     })
 
@@ -379,7 +379,7 @@ Select.prototype.selectOption = function (index) {
 
     //update displayed value
     const selected = this.options[index];
-    this.comboEl.innerHTML = selected.innerHTML;
+    this.comboEl.setAttribute('placeholder', selected.innerHTML );
 
     //update aria-selected
     const options = this.el.querySelectorAll('[role=option]');
@@ -387,6 +387,7 @@ Select.prototype.selectOption = function (index) {
         optionEl.setAttribute('aria-selected', 'false');
     });
     options[index].setAttribute('aria-selected', 'true');
+    this.comboEl.setAttribute('value',selected.innerHTML);
 };
 
 Select.prototype.updateMenuState = function (open, callFocus = true) {

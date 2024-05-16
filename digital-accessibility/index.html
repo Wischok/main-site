@@ -23,6 +23,8 @@
     <!-- Javascript -->
     <script defer src="/docs/assets/scripts/nav.js"></script>
     <script defer src="/docs/assets/scripts/tabs-carousel.js"></script>
+    <script defer src="/docs/assets/scripts/combobox.js"></script>
+    <script defer src="/docs/assets/scripts/checkbox.js"></script>
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/docs/assets/img/wischok-favicon.svg">
@@ -53,22 +55,22 @@
                         <li role="none" class="menulistitem">
                              <button role="button" id="menu-button1" class="menu-button underline li caret" 
                              aria-haspopup="true" aria-controls="menu1" aria-expanded="false">
-                                 Web Design
+                                 <span>Web Design</span>
                              </button>
                              <ul id="menu1" role="menu" aria-labelledby="menu-button1" class="sub-menu">
                                  <li role="none"><a role="menuitem" href="/small-business-web-design/">Small Businesses</a></li>
-                                 <li role="none"><a role="menuitem" href="/web-design/services/" >Services</a></li>
+                                 <li role="none"><a role="menuitem" href="/web-design/website-maintenance/">Website Maintenance</a></li>
+                                 <li role="none"><a role="menuitem" href="/web-design/custom-site-development/">Custom Site Development</a></li>
                              </ul>
                          </li>
                          <li role="none" class="menulistitem">
                              <button role="button" id="menu-button2" class="menu-button underline li caret" 
                              aria-haspopup="true" aria-controls="menu2" aria-expanded="false">
-                                 Digital Accessibility
+                                <span>Digital Accessibility</span>
                              </button>
                              <ul id="menu2" role="menu" aria-labelledby="menu-button2" class="sub-menu">
                                  <li role="none"><a role="menuitem" href="/digital-accessibility/">ADA Website Remediation</a></li>
                                  <li role="none"><a role="menuitem" href="/digital-accessibility/file-remediation/">File Remediation</a></li>
-                                 <li role="none"><a role="menuitem" href="/digital-accessibility/ada-services/">ADA Services</a></li>
                              </ul>
                          </li>
                         <li role="none" class="li"><a role="menuitem" class="btn-link" href="/contact/">Free Quote</a></li>
@@ -381,51 +383,95 @@
                 </div>
             </section>
         </div>
-        <!-- Section | Digital Accessibility Services -->
-        <div class="sec-3-2">
-            <h2 class="heading2">Web Accessibility Services</h2>
-            <div class="content flex-row">
-                <div class="long-card card1">
-                    <div class="text-wrapper">
-                        <h3 class="heading3">Website Remediation Services</h3>
-                        <p class="desc">We'll get your website accessible and operable by everone.</p>
-                        <div class="link-wrapper">
-                            <a href="/digital-accessibility/ada-services/#card2">Make my website accessible</a>
+        <!-- Section | Free Proposal / Contact Form -->
+        <div class="section-contact margin-top-10">
+            <div class="form-region1" aria-labelledby="form-region1-lbl">
+                <div class="container">
+                    <h2 class="heading2">Contact us now for a free quote</h2>
+                    <form role="form" class="contact-form grid form-grid" action="https://wischok.us17.list-manage.com/subscribe/post" method="POST">
+                        <!-- Name Field -->
+                        <div class="field-wrapper flex">
+                            <div class="label-wrapper">
+                                <label for="MERGE1" class="lbl">Name<span aria-hidden="true">*</span></label>
+                            </div>
+                            <div class="input-wrapper">
+                                <input type="text" name="MERGE1" id="MERGE1" placeholder="Name" required>
+                            </div>
                         </div>
-                    </div>
-                    <div class="img-wrapper">
-                        <img class="img" src="/img/laptop-website.jpg" alt="">
-                    </div>
-                </div>
-                <div class="long-card card2">
-                    <div class="text-wrapper">
-                        <h3 class="heading3">Document Remediation Services</h3>
-                        <p class="desc">Whether its a PDF, Word, or video, we'll make your document accessible</p>
-                        <div class="link-wrapper">
-                            <a href="/digital-accessibility/ada-services/#card4">Fix my document</a>
+                        <!-- Email Field -->
+                        <div class="field-wrapper flex email-wrapper">
+                            <div class="label-wrapper">
+                                <label for="MERGE0" class="lbl">Email<span aria-hidden="true">*</span></label>
+                            </div>
+                            <div class="input-wrapper">
+                                <input type="email" name="MERGE0" id="MERGE0" placeholder="Email Address" required>
+                                <p class="error-desc">Improper email format. Example: 123@gmail.com</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="img-wrapper">
-                        <img class="img" src="/img/documents.jpg" alt="">
-                    </div>
-                </div>
-                <div class="long-card card3">
-                    <div class="text-wrapper">
-                        <h3 class="heading3">Accessibility Training Services</h3>
-                        <p class="desc">We offer training services for documents and websites.</p>
-                        <div class="link-wrapper">
-                            <a href="/contact/">ADA Training</a>
+                        <!-- Email marketing -->
+                        <div class="flex-row-center consent">
+                        <ul class="interestgroup_field checkbox-group">
+                            <li class="!margin-bottom--lv2"> <label class="checkbox flex-row-center" for="group_1"><input role="checkbox" type="checkbox"
+                                        data-dojo-type="dijit/form/CheckBox" id="group_1" name="group[22561][1]" value="1"
+                                        class="av-checkbox"><span>I would like to recieve promotions and offers from Wischok.</span> </label> </li>
+                        </ul>
                         </div>
-                    </div>
-                    <div class="img-wrapper">
-                        <img class="img" src="/img/accessibility-training.jpg" alt="">
-                    </div>
+                        <!-- Phone Field -->
+                        <div class="field-wrapper flex">
+                            <div class="label-wrapper">
+                                <label for="MERGE3" class="lbl">Phone</label>
+                            </div>
+                            <div class="input-wrapper">
+                                <input type="number" name="MERGE3" id="MERGE3" placeholder="Phone">
+                                <p class="error-desc">Improper phone format. Example: 012 345 6789</p>
+                            </div>
+                        </div>
+                        <!-- Project Type Field -->
+                        <div class="field-wrapper flex">
+                            <div class="label-wrapper">
+                                <label for="MERGE2" class="lbl" id="combo1-lbl">What are you most excited for?<span aria-hidden="true">*</span></label>
+                            </div>
+                            <div class="input-wrapper project-input-wrapper">
+                                <div class="combo combo-standard combo1">
+                                    <input class="combo-input" name="MERGE2" id="MERGE2" role="combobox" 
+                                    tabindex="0" aria-labelledby="combo1-lbl" type="text"
+                                    aria-haspopup="listbox" aria-controls="listbox1" value="" placeholder="Website Design">
+                                    <!-- Combo Menu | List of Options -->
+                                    <div class="combo-menu" role="listbox" id="listbox1" 
+                                    aria-labelledby="combo1-lbl" tabindex="-1">
+                                        <div role="option" id="combo1-0" class="combo-option"
+                                        aria-selected="true">VPAT / ACR Report</div>
+                                        <div role="option" id="combo1-1" class="combo-option"
+                                        aria-selected="false">ADA Audit</div>
+                                        <div role="option" id="combo1-2" class="combo-option"
+                                        aria-selected="false">File Remediation</div>
+                                        <div role="option" id="combo1-3" class="combo-option"
+                                        aria-selected="false">Canvas Course Review</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Submit Button -->
+                        <div class="field-wrapper flex ">
+                            <div class="label-wrapper submit-label-wrapper" aria-hidden="true">
+                            </div>
+                            <div class="input-wrapper submit">
+                                <input type="submit" value="Submit">
+                            </div>
+                        </div>
+                        <!-- Form API -->
+                        <input type="hidden" name="MERGE5" id="MERGE5" value="[Consultation]">
+                        <input type="hidden" name="MERGE4" id="MERGE4" value="Digital Accessibility">
+                        <input type="hidden" name="u" value="4fe28f4f3aca6cecc621180b3">
+                        <input type="hidden" name="id" value="2c790983bb">
+                        <!-- <div class="g-recaptcha" data-sitekey="6Lck_tcpAAAAAAExO7_cWzMFpTphZnVGi3Svp9mv" data-action="LOGIN"></div> -->
+                    </form>
                 </div>
             </div>
         </div>
     </main>
     <!-- Footer -->
-    <footer role="contentinfo" class="footer margin-top-15 view-width-constrain">
+    <footer role="contentinfo" class="footer view-width-constrain">
         <div class="wrapper flex-row-center">
             <div class="content-left">
                 <img src="/docs/assets/img/wischok-logo-top.png" alt="Wischok logo. Home Button" class="img">
@@ -435,36 +481,30 @@
                     <p id="footer-list1" class="p1">Web Design</p>
                     <hr class="line">
                     <li role="none" class="link">
-                        <a role="menuitem" href="">Small Businesses</a>
+                        <a role="menuitem" href="/small-business-web-design/">Small Business</a>
                     </li>
                     <li role="none" class="link">
-                        <a role="menuitem" href="">Services</a>
+                        <a role="menuitem" href="/web-design/website-maintenance/">Website Maintenance</a>
+                    </li>
+                    <li role="none" class="link">
+                        <a role="menuitem" href="/web-design/custom-site-development/">Custom Site Development</a>
                     </li>
                 </ul>
                 <ul class="menu-list" role="menu" aria-labelledby="footer-list2">
                     <p id="footer-list2" class="p1">Digital Accessibility</p>
                     <hr class="line">
                     <li role="none" class="link">
-                        <a role="menuitem" href="">ADA Website Remediation</a>
+                        <a role="menuitem" href="/digital-accessibility/">ADA Website Remediation</a>
                     </li>
                     <li role="none" class="link">
-                        <a role="menuitem" href="">File Remediation</a>
-                    </li>
-                    <li role="none" class="link">
-                        <a role="menuitem" href="">PDF Remediation Tutorial</a>
-                    </li>
-                    <li role="none" class="link">
-                        <a role="menuitem" href="">Services</a>
+                        <a role="menuitem" href="/digital-accessibility/file-remediation/">File Remediation</a>
                     </li>
                 </ul>
                 <ul class="menu-list" role="menu" aria-labelledby="footer-list3">
                     <p id="footer-list3" class="p1">Other</p>
                     <hr class="line">
                     <li role="none" class="link">
-                        <a role="menuitem" href="">Articles</a>
-                    </li>
-                    <li role="none" class="link">
-                        <a role="menuitem" href="">Contact</a>
+                        <a role="menuitem" href="/contact/">Contact</a>
                     </li>
                 </ul>
             </div>
