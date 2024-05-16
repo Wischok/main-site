@@ -4505,6 +4505,13 @@ span.bullet {
         height: 50vh;
     }
 }
+@supports (-webkit-overflow-scrolling: touch)  {
+    @media screen and (max-width: 900px) {
+        .parallax {
+            display: none;
+        }
+    } 
+}
 
 .parallax.parallax1 {
     background: url(/img/small-business-workers.jpg) repeat fixed 100%;
