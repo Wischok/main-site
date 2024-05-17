@@ -21,10 +21,11 @@ function Nav (el) {//define as class
     
     //element refs
     this.el = el;//navigation element
-    this.subMenuButtons = el.querySelectorAll('.menu-button')
-    this.subMenuListItems = el.querySelectorAll('.menulistitem')
+    this.subMenuButtons = el.querySelectorAll('.menu-button');
+    this.subMenuListItems = el.querySelectorAll('.menulistitem');
     this.hamburger = el.querySelector('.hamburger');
-    this.menuBackdrop = document.getElementById('menu-backdrop')
+    this.menuBackdrop = document.getElementById('menu-backdrop');
+    this.addressButton = document.getElementById('address-btn');
 
     //data
     this.currentActiveSubMenu = null;
@@ -47,6 +48,7 @@ Nav.prototype.init = function() {
 
     this.menuBackdrop.addEventListener('click', this.hamburgerSelect.bind(this));
     this.hamburger.addEventListener('click', this.hamburgerSelect.bind(this));
+    this.addressButton.addEventListener('click', this.addressToggle.bind(this));
 
     if(isMobile()) {
         this.subMenuButtons.forEach(btn => {
@@ -106,6 +108,15 @@ Nav.prototype.onWindowResize = function() {
         this.subMenuButtons.forEach(btn => {
             btn.setAttribute('aria-expanded', 'false');
         });
+    }
+}
+
+Nav.prototype.addressToggle = function() {
+    if(this.addressButton.getAttribute('aria-expanded') == 'false') {
+        this.addressButton.setAttribute('aria-expanded', 'true');
+    }
+    else {
+        this.addressButton.setAttribute('aria-expanded', 'false');
     }
 }
 

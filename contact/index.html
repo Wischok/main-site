@@ -24,8 +24,12 @@
    <script defer src="/docs/assets/scripts/combobox.js"></script>
    <script defer src="/docs/assets/scripts/checkbox.js"></script>
 
+   <!-- External Stylesheets -->
+   <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+
    <!-- External Javascript -->
    <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script>
+   <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 
    <!-- Favicon -->
    <link rel="icon" type="image/x-icon" href="/docs/assets/img/wischok-favicon.svg">
@@ -74,7 +78,7 @@
                                  <li role="none"><a role="menuitem" href="/digital-accessibility/file-remediation/">File Remediation</a></li>
                              </ul>
                          </li>
-                        <li role="none" class="li"><a role="menuitem" class="btn-link" href="/contact/">Free Quote</a></li>
+                         <li role="none" class="li"><a role="menuitem" href="" class="btn-link" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/wischok/30min'});return false;">Free Quote</a></li>
                      </ul>
                      <span id="menu-backdrop" class="backdrop"></span>
                 </div>
@@ -91,6 +95,47 @@
                 </button>
             </div>
         </div>
+        <address class="address" id="adress">
+            <ul class="contacts" id="contacts-widget">
+                <li class="li phone flex-row-center">
+                    <a href="tel:19096382889"  aria-label="Call Wischok.">
+                        <span>
+                            1 (909) 638-2889
+                        </span>
+                        <div>
+                            <img src="/img/phone-icon.png" alt="" class="icon">
+                        </div>
+                    </a>
+                </li>
+                <li class="li email flex-row-center">
+                    <a href="mailto:contact@wischok.com">
+                        <span>
+                            contact@wischok.com
+                        </span>
+                        <div aria-label="Email Wischok.">
+                            <img src="/img/mail-icon.png" alt="" class="icon">
+                        </div>
+                    </a>
+                </li>
+                <li class="li schedule flex-row-center">
+                    <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/wischok/30min'});return false;">
+                        <span>Schedule</span>
+                        <div aria-label="Schedule Appointment with Wischok.">
+                            <img src="/img/calendar-icon.png" alt="" class="icon">
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <button role="button" aria-expanded="false" aria-controls="contacts-widget" class="btn-link" id="address-btn" aria-haspopup="true">
+                <span>Contact</span>
+                <span class="icon">
+                    <svg viewbox="0 0 50 50" aria-hidden="true">
+                        <line class="vertical" x1="25" x2="25" y1="0" y2="50"></line>
+                        <line x1="0" x2="50" y1="25" y2="25"></line>
+                    </svg>
+                </span>
+            </button>
+        </address>
     </nav>
     <main role="main">
         <!-- Main Site Header -->
@@ -130,7 +175,7 @@
             </div>
         </header>
         <!-- Section | Free Proposal / Contact Form -->
-        <div class="section-contact margin-top-10">
+        <div class="section-contact margin-top-5">
             <div class="form-region1" aria-labelledby="form-region1-lbl">
                 <div class="container">
                     <h2 class="heading2">Contact us now for a free quote</h2>

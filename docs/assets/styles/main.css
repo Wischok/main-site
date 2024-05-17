@@ -850,6 +850,153 @@ button.btn-link {
     }
   }
 
+/* Address */
+
+.address {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+@media screen and (max-width: 900px) {
+   .address {
+        right: 1rem;
+    } 
+}
+
+.address .contacts {
+    padding-right: 10px;
+    position: relative;
+    z-index: -1;
+    visibility: hidden;
+}
+
+.address:has(button[aria-expanded="true"]) .contacts {
+    visibility: visible;
+}
+
+.address .contacts .li {
+    justify-content: end;
+    transform: translateY(2rem);
+    opacity: 0;
+}
+
+.address:has(button[aria-expanded="true"]) .contacts .li.phone {
+    animation: float-in1 forwards ease-in-out 500ms 500ms;
+    
+}
+
+.address:has(button[aria-expanded="true"]) .contacts .li.email {
+    animation: float-in1 forwards ease-in-out 500ms 300ms;
+}
+
+.address:has(button[aria-expanded="true"]) .contacts .li.schedule {
+    animation: float-in1 forwards ease-in-out 500ms 100ms;
+}
+
+@keyframes float-in1 {
+    from {
+        transform: translateY(2rem);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0rem);
+        opacity: 1;
+    }
+}
+
+.address .contacts a {
+    justify-content: end;
+    margin-block: .5rem;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    text-decoration: none;
+}
+
+.address .contacts a span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    background-color: white;
+    border-radius: 2rem;
+    color: var(--color-background-1);
+    color: #0000EE;
+}
+
+.address .contacts .schedule a {
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.address .contacts .li div {
+    height: 3rem;
+    width: 3rem;
+    padding: 10px;
+    border-radius: 50%;
+    margin-left: 1rem;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+.address .contacts .li.phone div,
+.address .contacts .li.schedule div {
+    background-color: var(--color-background-1);
+}
+
+.address .contacts .li.email div {
+    background-color: #C0CFFA;
+}
+
+.address .contacts .li img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.address svg {
+    height: 1.3rem;
+    width: 1.3rem;
+}
+
+.address .btn-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    transition: transform 100ms ease-in-out;
+}
+
+.address .btn-link:hover {
+    transform: scale(1.1);
+}
+
+.address .btn-link .icon {
+    height: 1.3rem;
+    padding-left: 10px;
+}
+
+.address .btn-link span {
+    display: inline-block;
+}
+
+.address line {
+    stroke-width: 5px;
+    stroke-linecap: round;
+    stroke: white;
+    transition: rotate 300ms ease-in-out;
+    transform-origin: center;
+}
+
+.address button[aria-expanded="true"] .vertical {
+    rotate: 90deg;
+}
+
 /* Footer */
 .footer {
     background-color: var(--color-background-1);
