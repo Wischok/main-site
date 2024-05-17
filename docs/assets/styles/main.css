@@ -302,6 +302,11 @@ button, a, div {
     }
 }
 
+button.btn-link {
+    border: none;
+    padding: .7rem 3rem;
+}
+
 .btn-blank {
     border: none;
     background: none;
@@ -4705,6 +4710,11 @@ span.bullet {
     background-color: var(--color-background-1);
     border-radius: 50%;
 }
+@media screen and (max-width: 650px) {
+    .section-text-right3 .circle {
+        top: -3rem;
+    }
+}
 
 .section-text-right3 .img {
     background-image: url(/img/integrations.jpg);
@@ -4735,6 +4745,12 @@ span.bullet {
     padding: 3rem;
 }
 
+@media screen and (max-width: 900px) {
+    .section-text-right3 .content-right {
+        padding: 1rem var(--side-margin);
+    }
+}
+
 .section-text-right3 .content-right .p2 {
     max-width: 50ch;
 }
@@ -4746,6 +4762,12 @@ span.bullet {
     position: relative;
     padding: 2rem;
     border-radius: 1rem;
+}
+@media screen and (max-width: 650px) {
+    .mini-form.content-form {
+        padding: 1rem;
+        margin-top: 5rem;
+    }
 }
 
 .mini-form .field-wrapper {
@@ -4776,6 +4798,11 @@ span.bullet {
     border-radius: 2rem;
     padding-left: 10px;
     font-size: .9rem;
+}
+@media screen and (max-width: 650px) {
+    .mini-form  .field-wrapper input {
+        width: 100%;
+    }
 }
 
 .mini-form  .input-wrapper {
