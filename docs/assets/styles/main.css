@@ -854,7 +854,7 @@ button.btn-link {
 
 .address {
     position: fixed;
-    bottom: 1rem;
+    bottom: 2rem;
     right: 1rem;
     display: flex;
     flex-direction: column;
@@ -863,6 +863,12 @@ button.btn-link {
 @media screen and (max-width: 900px) {
    .address {
         right: 1rem;
+    } 
+}
+@media screen and (max-width: 500px) {
+    .address {
+         right: 0;
+         bottom: 0;
     } 
 }
 
@@ -971,6 +977,18 @@ button.btn-link {
     border: 2px solid white;
     transition: transform 100ms ease-in-out;
 }
+@media screen and (max-width: 500px) {
+    .address .btn-link {
+        border: none;
+        border-top: 2px solid white;
+        border-left: 2px solid white;
+        border-radius: 0;
+        border-top-left-radius: 3rem;
+        padding: 1rem 1.5rem;
+        color: #0D0D0D;
+        background-color: #9DADDF;
+    } 
+}
 
 .address .btn-link:hover {
     transform: scale(1.1);
@@ -991,6 +1009,11 @@ button.btn-link {
     stroke: white;
     transition: rotate 300ms ease-in-out;
     transform-origin: center;
+}
+@media screen and (max-width: 500px) {
+    .address line {
+        stroke: #0D0D0D;
+    }
 }
 
 .address button[aria-expanded="true"] .vertical {
@@ -1608,8 +1631,8 @@ button.btn-link {
 @media screen and (max-width: 810px) {
     .main-header .top-content {
         width: 100%;
-        border-bottom-right-radius: 0;
-        padding-top: 7rem;
+        border-bottom-right-radius: 5rem;
+        padding-top: 4rem;
     }
 }
 
