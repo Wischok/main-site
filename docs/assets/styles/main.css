@@ -456,6 +456,8 @@ button.btn-link {
     margin-inline: var(--side-margin);
     width: 100%;
     border-radius: 5rem;
+    position: relative;
+    z-index: 1;
 }
 @media screen and (max-width: 900px) {
     .nav .content {
