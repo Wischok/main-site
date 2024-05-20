@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estimate Form | Wischok</title>
+    <meta name="description" content="Contact Wischok for one of our various web services available today.">
+
+    <!-- Meta 2 -->
+    <meta name="robots" content="max-image-preview:large">
+    
+   <!-- Fonts -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+   <!-- Stylesheets -->
+   <link rel="stylesheet" href="/docs/assets/styles/reset.css">
+   <link rel="stylesheet" href="/docs/assets/styles/main.css">
+
+   <!-- Javascript -->
+   <script defer src="/docs/assets/scripts/combobox.js"></script>
+   <script defer src="/docs/assets/scripts/checkbox.js"></script>
+   <script defer src="/docs/assets/scripts/new-estimate.js"></script>
+   <script defer src="/docs/assets/scripts/nav.js"></script>
+
+   <!-- Favicon -->
+   <link rel="icon" type="image/x-icon" href="/docs/assets/img/wischok-favicon.svg">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav role="navigation" class="nav" aria-label="Main menu.">
+        <div class="content flex-row-center">
+            <div class="logo-left">
+                <a href="/" aria-current="page" aria-label="Go to home page.">
+                    <img class="img img1" src="/docs/assets/img/wischok-logo.png" alt="Wischok Logo.">
+                    <img src="/docs/assets/img/wischok-favicon.svg" alt="" class="img img2">
+                </a>
+            </div>
+            <div class="links-right">
+                <div class="wrapper">
+                    <ul role="menu" class="flex-row-center menu">
+                        <li role="none" class="menulistitem">
+                             <button role="button" id="menu-button1" class="menu-button underline li caret" 
+                             aria-haspopup="true" aria-controls="menu1" aria-expanded="false">
+                                 <span>Web Design</span>
+                             </button>
+                             <ul id="menu1" role="menu" aria-labelledby="menu-button1" class="sub-menu">
+                                 <li role="none"><a role="menuitem" href="/small-business-web-design/">Small Businesses</a></li>
+                                 <li role="none"><a role="menuitem" href="/web-design/website-maintenance/">Website Maintenance</a></li>
+                                 <li role="none"><a role="menuitem" href="/web-design/custom-site-development/">Custom Site Development</a></li>
+                             </ul>
+                         </li>
+                         <li role="none" class="menulistitem">
+                             <button role="button" id="menu-button2" class="menu-button underline li caret" 
+                             aria-haspopup="true" aria-controls="menu2" aria-expanded="false">
+                                <span>Digital Accessibility</span>
+                             </button>
+                             <ul id="menu2" role="menu" aria-labelledby="menu-button2" class="sub-menu">
+                                 <li role="none"><a role="menuitem" href="/digital-accessibility/">ADA Website Remediation</a></li>
+                                 <li role="none"><a role="menuitem" href="/digital-accessibility/file-remediation/">File Remediation</a></li>
+                             </ul>
+                         </li>
+                        <li role="none" class="li"><a role="menuitem" href="" class="btn-link" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/wischok/30min'});return false;">Free Quote</a></li>
+                     </ul>
+                     <span id="menu-backdrop" class="backdrop"></span>
+                </div>
+                <button role="button" aria-expanded="false" class="hamburger">
+                    <svg class="svg" viewbox="0 0 100 100" aria-hidden="true">
+                        <line class="line top" x1="90" x2="10" y1="25" y2="25" stroke="black" stroke-width="10"
+                            stroke-linecap="round" stroke-dasharray="80" stroke-dashoffset="0"></line>
+                        <line class="line mid" x1="10" x2="90" y1="50" y2="50" stroke="black" stroke-width="10"
+                            stroke-linecap="round" stroke-dasharray="80" stroke-dashoffset="0"></line>
+                        <line class="line bot" x1="10" x2="90" y1="75" y2="75" stroke="black" stroke-width="10"
+                            stroke-linecap="round" stroke-dasharray="80" stroke-dashoffset="0">
+                        </line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <address class="address" id="adress">
+            <ul class="contacts" id="contacts-widget">
+                <li class="li phone flex-row-center">
+                    <a href="tel:19096382889"  aria-label="Call Wischok.">
+                        <span>
+                            1 (909) 638-2889
+                        </span>
+                        <div>
+                            <img src="/img/phone-icon.png" alt="" class="icon">
+                        </div>
+                    </a>
+                </li>
+                <li class="li email flex-row-center">
+                    <a href="mailto:contact@wischok.com">
+                        <span>
+                            contact@wischok.com
+                        </span>
+                        <div aria-label="Email Wischok.">
+                            <img src="/img/mail-icon.png" alt="" class="icon">
+                        </div>
+                    </a>
+                </li>
+                <li class="li schedule flex-row-center">
+                    <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/wischok/30min'});return false;">
+                        <span>Schedule</span>
+                        <div aria-label="Schedule Appointment with Wischok.">
+                            <img src="/img/calendar-icon.png" alt="" class="icon">
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <button role="button" aria-expanded="false" aria-controls="contacts-widget" class="btn-link" id="address-btn" aria-haspopup="true">
+                <span>Contact</span>
+                <span class="icon">
+                    <svg viewbox="0 0 50 50" aria-hidden="true">
+                        <line class="vertical" x1="25" x2="25" y1="0" y2="50"></line>
+                        <line x1="0" x2="50" y1="25" y2="25"></line>
+                    </svg>
+                </span>
+            </button>
+        </address>
+    </nav>
+    <!-- Main -->
+    <main role="main">
+        <!-- Main Site Header -->
+        <header class="main-header">
+            <div class="left-content">
+                <div class="top-content view-width-constrain-left">
+                    <h1 class="heading-1 less-width">Wischok Estimate Form</span></h1>
+                </div>
+                <div class="bottom-content view-width-constrain-left">
+                    <p class="p1 max-width-long"></p>
+                </div>
+            </div>
+            <div class="right-content">
+                <ul class="bubble-list" aria-label="List of web design images.">
+                    <li class="bubble bubble1">
+                        <img class="img" src="/img/pottery-maker.jpg" alt="A young potter maker standing in their shop.">
+                    </li>
+                    <li class="bubble bubble2">
+                        <img class="img" src="/img/small-bussiness-shop.jpg" alt="A barista welcoming customers into their small business cafe.">
+                    </li>
+                    <li class="bubble bubble3">
+                        <img class="img" src="/img/small-business-open.jpg" alt="Young woman opening up a store.">
+                    </li>
+                    <li class="bubble bubble4">
+                        <img class="img" src="/img/barber-shop.jpg" alt="A barber cutting a clients hair.">
+                    </li>
+                    <li class="bubble bubble5">
+                        <img class="img" src="/img/young-man-designing-websites.jpg" alt="A man designing their small business's website.">
+                    </li>
+                    <li class="bubble bubble6">
+                        <img class="img" src="/img/coffee-barista.jpg" alt="A barista making coffee for their small business.">
+                    </li>
+                    <li class="bubble bubble7">
+                        <img class="img" src="/img/cafe-employee.jpg" alt="A cafe employee handing coffee to a customer.">
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <!-- Section | Free Proposal / Contact Form -->
+        <div class="section-contact margin-top-5">
+            <div class="form-region1" aria-labelledby="form-region1-lbl">
+                <div class="container">
+                    <form role="form" name="estimateForm" id="estimate" class="contact-form grid estimate-form form-grid" action="" method="POST">
+                        <div class="main-content">
+                            <!-- First Name Field -->
+                            <div class="field-wrapper flex">
+                                <div class="label-wrapper">
+                                    <label for="fname" class="lbl">First Name<span aria-hidden="true">*</span></label>
+                                </div>
+                                <div class="input-wrapper">
+                                    <input type="text" name="fname" id="fname" placeholder="Name" required>
+                                </div>
+                            </div>
+                            <!-- Last Name Field -->
+                            <div class="field-wrapper flex">
+                                <div class="label-wrapper">
+                                    <label for="lname" class="lbl">Last Name<span aria-hidden="true">*</span></label>
+                                </div>
+                                <div class="input-wrapper">
+                                    <input type="text" name="lname" id="lname" placeholder="Name" required>
+                                </div>
+                            </div>
+                            <!-- Email Field -->
+                            <div class="field-wrapper flex email-wrapper">
+                                <div class="label-wrapper">
+                                    <label for="MERGE0" class="lbl">Email<span aria-hidden="true">*</span></label>
+                                </div>
+                                <div class="input-wrapper">
+                                    <input type="email" name="MERGE0" id="MERGE0" placeholder="Email Address" required>
+                                    <p class="error-desc">Improper email format. Example: 123@gmail.com</p>
+                                </div>
+                            </div>
+                            <!-- Email marketing -->
+                            <div class="flex-row-center consent">
+                            <ul class="interestgroup_field checkbox-group">
+                                <li class="!margin-bottom--lv2"> <label class="checkbox flex-row-center" for="group_1"><input role="checkbox" type="checkbox"
+                                            data-dojo-type="dijit/form/CheckBox" id="group_1" name="group[22561][1]" value="1"
+                                            class="av-checkbox"><span>I would like to recieve promotions and offers from Wischok.</span> </label> </li>
+                            </ul>
+                            </div>
+                            <!-- Phone Field -->
+                            <div class="field-wrapper flex">
+                                <div class="label-wrapper">
+                                    <label for="MERGE3" class="lbl">Phone<span aria-hidden="true">*</span></label>
+                                </div>
+                                <div class="input-wrapper">
+                                    <input type="number" name="MERGE3" id="MERGE3" placeholder="Phone">
+                                    <p class="error-desc">Improper phone format. Example: 012 345 6789</p>
+                                </div>
+                            </div>
+                            <!-- Project Type Field -->
+                            <div class="field-wrapper flex">
+                                <div class="label-wrapper">
+                                    <label for="MERGE2" class="lbl" id="combo1-lbl">What Service?<span aria-hidden="true">*</span></label>
+                                </div>
+                                <div class="input-wrapper project-input-wrapper">
+                                    <div class="combo combo-standard combo1">
+                                        <input class="combo-input" name="MERGE2" id="MERGE2" role="combobox" 
+                                        tabindex="0" aria-labelledby="combo1-lbl" type="text"
+                                        aria-haspopup="listbox" aria-controls="listbox1" value="" placeholder="Website Design" autocomplete="off">
+                                        <!-- Combo Menu | List of Options -->
+                                        <div class="combo-menu" role="listbox" id="listbox1" 
+                                        aria-labelledby="combo1-lbl" tabindex="-1">
+                                            <div role="option" id="combo1-0" class="combo-option"
+                                            aria-selected="true">Website Design</div>
+                                            <div role="option" id="combo1-1" class="combo-option"
+                                            aria-selected="false">Website Redesign</div>
+                                            <div role="option" id="combo1-2" class="combo-option"
+                                            aria-selected="false">Website Maintenance</div>
+                                            <div role="option" id="combo1-3" class="combo-option"
+                                            aria-selected="false">SEO / Marketing</div>
+                                            <div role="option" id="combo1-4" class="combo-option"
+                                            aria-selected="false">Digital Accessibility</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Old Website Field -->
+                            <div class="field-wrapper flex">
+                                <div class="label-wrapper">
+                                    <label for="-website" class="lbl">Website</label>
+                                </div>
+                                <div class="input-wrapper">
+                                    <input type="text" name="website" id="website" placeholder="Name">
+                                </div>
+                            </div>
+                            <!-- Business Type Field -->
+                            <div class="field-wrapper flex email-wrapper">
+                                <div class="label-wrapper">
+                                    <label for="MERGE4" class="lbl">Business<span aria-hidden="true">*</span></label>
+                                </div>
+                                <div class="input-wrapper">
+                                    <input type="text" name="MERGE4" id="MERGE4" placeholder="What Business?" required>
+                                    <p class="error-desc">Improper email format. Example: 123@gmail.com</p>
+                                </div>
+                            </div>
+                            <!-- Estimate Amount Field -->
+                            <div class="field-wrapper flex">
+                                <div class="label-wrapper">
+                                    <label for="estimate" class="lbl">Estimate Amount<span aria-hidden="true">*</span></label>
+                                </div>
+                                <div class="input-wrapper">
+                                    <input type="number" name="estimate" id="estimate" placeholder="Estimate" required>
+                                    <p class="error-desc">Improper phone format. Example: 012 345 6789</p>
+                                </div>
+                            </div>
+                            <!-- Discount Amount Field -->
+                            <div class="field-wrapper flex">
+                                <div class="label-wrapper">
+                                    <label for="discount" class="lbl">Discount %</label>
+                                </div>
+                                <div class="input-wrapper">
+                                    <input type="number" name="discount" id="discount" placeholder="Discount" value="0">
+                                    <p class="error-desc">Improper phone format. Example: 012 345 6789</p>
+                                </div>
+                            </div>
+                            <!-- Down Payment % Field -->
+                            <div class="field-wrapper flex">
+                                <div class="label-wrapper">
+                                    <label for="down" class="lbl">Down Payment %</label>
+                                </div>
+                                <div class="input-wrapper">
+                                    <input type="number" name="down" id="down" placeholder="Down Payment percentage" value="0">
+                                    <p class="error-desc">Improper phone format. Example: 012 345 6789</p>
+                                </div>
+                            </div>
+                            <!-- Business Type Field -->
+                            <div class="field-wrapper flex email-wrapper">
+                                <div class="label-wrapper">
+                                    <label for="notes" class="lbl">Notes</label>
+                                </div>
+                                <div class="input-wrapper">
+                                    <textarea  type="textarea" name="notes" id="notes" placeholder="Additional Notes" rows="8"></textarea>
+                                    <p class="error-desc">Improper email format. Example: 123@gmail.com</p>
+                                </div>
+                            </div>
+                            <!-- Submit Button -->
+                            <div class="field-wrapper flex ">
+                                <div class="label-wrapper submit-label-wrapper" aria-hidden="true">
+                                </div>
+                                <div class="input-wrapper submit">
+                                    <input type="submit" value="Submit">
+                                </div>
+                            </div>
+                            <!-- Form API -->
+                            <input type="hidden" name="MERGE5" id="MERGE5" value="in-progress"> <!-- Mailchimp category -->
+                            <input type="hidden" name="u" value="4fe28f4f3aca6cecc621180b3">
+                            <input type="hidden" name="id" value="2c790983bb">
+                            <!-- <div class="g-recaptcha" data-sitekey="6Lck_tcpAAAAAAExO7_cWzMFpTphZnVGi3Svp9mv" data-action="LOGIN"></div> -->
+                        </div>
+                        <div class="complete">
+                            <img src="/img/dog-dab.png" alt="A dabbing dog." class="dog">
+                            <h3 class="heading3">Got it!</h3>
+                            <p class="p2">Thank you for subscribing!</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer role="contentinfo" class="footer view-width-constrain">
+        <div class="wrapper flex-row-center">
+            <div class="content-left">
+                <img src="/docs/assets/img/wischok-logo-top.png" alt="Wischok logo. Home Button" class="img">
+            </div>
+            <div class="content-right flex-row flex-wrap">
+                <ul class="menu-list" role="menu" aria-labelledby="footer-list1">
+                    <p id="footer-list1" class="p1">Web Design</p>
+                    <hr class="line">
+                    <li role="none" class="link">
+                        <a role="menuitem" href="/small-business-web-design/">Small Business</a>
+                    </li>
+                    <li role="none" class="link">
+                        <a role="menuitem" href="/web-design/website-maintenance/">Website Maintenance</a>
+                    </li>
+                    <li role="none" class="link">
+                        <a role="menuitem" href="/web-design/custom-site-development/">Custom Site Development</a>
+                    </li>
+                </ul>
+                <ul class="menu-list" role="menu" aria-labelledby="footer-list2">
+                    <p id="footer-list2" class="p1">Digital Accessibility</p>
+                    <hr class="line">
+                    <li role="none" class="link">
+                        <a role="menuitem" href="/digital-accessibility/">ADA Website Remediation</a>
+                    </li>
+                    <li role="none" class="link">
+                        <a role="menuitem" href="/digital-accessibility/file-remediation/">File Remediation</a>
+                    </li>
+                </ul>
+                <ul class="menu-list" role="menu" aria-labelledby="footer-list3">
+                    <p id="footer-list3" class="p1">Other</p>
+                    <hr class="line">
+                    <li role="none" class="link">
+                        <a role="menuitem" href="/contact/">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

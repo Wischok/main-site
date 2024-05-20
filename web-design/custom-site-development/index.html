@@ -24,6 +24,7 @@
     <script defer src="/docs/assets/scripts/nav.js"></script>
     <script defer src="/docs/assets/scripts/combobox.js"></script>
     <script defer src="/docs/assets/scripts/checkbox.js"></script>
+    <script defer src="/docs/assets/scripts/form-subscribe.js"></script>
 
     <!-- External Stylesheets -->
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
@@ -232,26 +233,41 @@
                     </p>
                     <div class="mini-form content-form margin-top-5 dots">
                         <div class="circle"></div>
-                        <form role="form" action="https://wischok.us17.list-manage.com/subscribe/post" method="POST" class="form flex-column-center">
-                            <div class="field-wrapper">
-                                <label for="MERGE1">Name<span aria-hidden="true">*</span></label>
-                                <input type="text" name="MERGE1" id="MERGE1" placeholder=" ">
+                        <form role="form" id="subscribe" action="https://wischok.us17.list-manage.com/subscribe/post" method="POST" class="form form-subscribe flex-column-center">
+                            <div class="main-content">
+                                <!-- Name -->
+                                <div class="field-wrapper">
+                                    <label for="MERGE1">Name<span aria-hidden="true">*</span></label>
+                                    <input type="text" name="MERGE1" id="MERGE1" placeholder=" ">
+                                </div>
+                                <!-- Email -->
+                                <div class="field-wrapper">
+                                    <label for="MERGE0">Email<span aria-hidden="true">*</span></label>
+                                    <input type="text" name="MERGE0" id="MERGE0" placeholder=" ">
+                                </div>
+                                <!-- Email marketing -->
+                                <div class="flex-row-center consent">
+                                    <ul class="interestgroup_field checkbox-group">
+                                        <li class="!margin-bottom--lv2"> <label class="checkbox flex-row-center" for="group_1"><input role="checkbox" type="checkbox"
+                                                    data-dojo-type="dijit/form/CheckBox" id="group_1" name="group[22561][1]" value="1"
+                                                    class="av-checkbox" required><span>I would like to recieve promotions and offers from Wischok.</span> </label> </li>
+                                    </ul>
+                                </div>
+                                <!-- Submit Button -->
+                                <div class="input-wrapper submit">
+                                    <input type="submit" value="Submit">
+                                </div>
+                                <!-- Form API -->
+                                <input type="hidden" name="MERGE4" id="MERGE4" value="Custom Site Development">
+                                <input type="hidden" role="checkbox" type="checkbox" data-dojo-type="dijit/form/CheckBox" id="group_1" name="group[22561][1]" value="0" class="av-checkbox">
+                                <input type="hidden" name="u" value="4fe28f4f3aca6cecc621180b3">
+                                <input type="hidden" name="id" value="2c790983bb">
                             </div>
-                            <div class="field-wrapper">
-                                <label for="MERGE0">Email<span aria-hidden="true">*</span></label>
-                                <input type="text" name="MERGE0" id="MERGE0" placeholder=" ">
+                            <div class="complete">
+                                <img src="/img/dog-dab.png" alt="A dabbing dog." class="dog">
+                                <h3 class="heading3">Got it!</h3>
+                                <p class="p2">Thank you for subscribing!</p>
                             </div>
-                            <!-- Submit Button -->
-                            <div class="input-wrapper submit">
-                                <input type="submit" value="Submit">
-                            </div>
-                            <!-- Form API -->
-                            <input type="hidden" name="MERGE5" id="MERGE5" value="[Subscribe]">
-                            <input type="hidden" name="MERGE4" id="MERGE4" value="Custom Site Development">
-                            <input type="hidden" name="MERGE2" id="MERGE2" value="Custom Site Development">
-                            <input type="hidden" role="checkbox" type="checkbox" data-dojo-type="dijit/form/CheckBox" id="group_1" name="group[22561][1]" value="0" class="av-checkbox">
-                            <input type="hidden" name="u" value="4fe28f4f3aca6cecc621180b3">
-                            <input type="hidden" name="id" value="2c790983bb">
                         </form>
                     </div>
                 </div>

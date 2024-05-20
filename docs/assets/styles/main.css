@@ -346,6 +346,11 @@ button.btn-link {
     }
 }
 
+/* Form */
+
+input[role="checkbox"] {
+    margin-right: 1rem;
+}
 
 /* Margin tops for sections */
 
@@ -878,11 +883,11 @@ button.btn-link {
     padding-right: 10px;
     position: relative;
     z-index: -1;
-    visibility: hidden;
+    display: none;
 }
 
 .address:has(button[aria-expanded="true"]) .contacts {
-    visibility: visible;
+    display: block;
 }
 
 .address .contacts .li {
@@ -1413,6 +1418,11 @@ button.btn-link {
 .form-region1 .consent span {
     display: inline-block;
     padding-left: 10px;
+}
+
+.consent.padding {
+    padding-block: 1rem;
+    line-height: 167%;
 }
 
 .form-region1 .checkbox-group {
@@ -5103,4 +5113,66 @@ span.bullet {
     height: 100vh;
     background-color: var(--color-background-1);
     z-index: -1;
+}
+
+/* Subscribe form and thank you message */
+.form-subscribe.complete .main-content {
+    display: none;
+}
+
+.form-subscribe .complete {
+    display: none;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    opacity: 0;
+    animation: fade-in 400ms ease-in-out forwards;
+}
+
+.form-subscribe .field-wrapper {
+    margin-block: 2rem;
+}
+
+.form-subscribe.complete .complete {
+    display: flex;
+}
+
+.form-subscribe .dog {
+    height: 7rem;
+}
+
+/* Estimate Form */
+.estimate-form.complete .main-content {
+    display: none;
+}
+
+.estimate-form .complete {
+    display: none;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    opacity: 0;
+    animation: fade-in 400ms ease-in-out forwards;
+}
+
+.estimate-form.complete .complete {
+    display: flex;
+}
+
+.estimate-form .dog {
+    height: 7rem;
+}
+
+input[type="submit"] {
+    cursor: pointer;
 }
