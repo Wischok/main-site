@@ -5147,6 +5147,10 @@ span.bullet {
 }
 
 /* Estimate Form */
+.estimate-form.complete {
+    position: relative;
+}
+
 .estimate-form.complete .main-content {
     display: none;
 }
