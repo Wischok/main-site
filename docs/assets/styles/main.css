@@ -2070,12 +2070,6 @@ input[role="checkbox"] {
 
 .section-text-center1 .p2 {
     margin-top: 1.5rem;
-    max-width: 65%;
-}
-@media screen and (max-width: 810px) {
-    .section-text-center1 .p2 {
-        max-width: none;
-    }
 }
 
 .section-text-center1 .img-wrapper {
@@ -3159,8 +3153,10 @@ input[role="checkbox"] {
     font-size: 2.2rem;
     border-radius: 50%;
     min-width: 2.5rem;
+    width: 2.5rem;
     min-height: 2.5rem;
     max-width: 2.5rem;
+    height: 2.5rem;
     max-height: 2.5rem;
     margin-right: 2rem;
 }
@@ -5179,4 +5175,29 @@ span.bullet {
 
 input[type="submit"] {
     cursor: pointer;
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.modal .backdrop {
+    height: 100%;
+    width: 100%;
+    background-color: #0d0d0d95;
+}
+
+/* Free Quote Modal */
+.modal.free-quote [role="form"] {
+    display: none;
+}
+
+.modal.free-quote [role="form"].active {
+    display: block;
 }
