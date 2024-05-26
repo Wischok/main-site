@@ -1038,7 +1038,7 @@ input[role="checkbox"] {
     flex-wrap: wrap;
     padding: 4rem 0;
 }
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 900px) {
     .footer .wrapper {
         padding-bottom: 15rem;
     }
@@ -1049,7 +1049,7 @@ input[role="checkbox"] {
     width: 50%;
     min-width: 300px;
 }
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 900px) {
     .footer .content-left,
     .footer .content-right {
         flex-grow: 1;
@@ -1058,7 +1058,7 @@ input[role="checkbox"] {
     }
 }
 
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 900px) {
     .footer .content-left {
         position: absolute;
         display: flex;
@@ -5185,19 +5185,381 @@ input[type="submit"] {
     top: 0;
     left: 0;
     z-index: 1000;
+    display: none;
+}
+
+.modal.active {
+    display: block;
 }
 
 .modal .backdrop {
     height: 100%;
     width: 100%;
     background-color: #0d0d0d95;
+    opacity: 0;
+    animation: fade-in forwards 400ms ease-in-out
 }
 
 /* Free Quote Modal */
+body:has([role="dialog"].active) {
+    height: 100%;
+    overflow-y: hidden;
+}
+
 .modal.free-quote [role="form"] {
     display: none;
+    padding-inline: 2rem;
+}
+@media screen and (max-width: 600px) {
+    .modal.free-quote [role="form"] {
+        padding-inline: 1rem;
+    }
 }
 
 .modal.free-quote [role="form"].active {
     display: block;
+}
+
+.modal.free-quote .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+@media screen and (max-width: 800px) {
+    .modal.free-quote .content {
+        align-items: end;
+    }
+}
+
+.modal.free-quote .main-wrapper {
+    background-color: white;
+    max-width: 800px;
+    max-height: 80vh;
+    border-radius: 1.5rem;
+    position: relative;
+    padding-bottom: 2rem;
+}
+@media screen and (max-width: 800px) {
+    .modal.free-quote .main-wrapper {
+        overflow: scroll;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+}
+
+.modal.free-quote .heading2 {
+    padding-inline: 2rem;
+    margin-block: 1rem;
+}
+
+.modal.free-quote .steps {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    padding-inline: 2rem;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 2rem;
+}
+
+.modal.free-quote .steps .step[aria-pressed="true"] {
+    background-color: var(--color-background-1);
+    color: white;
+}
+
+.modal.free-quote .steps .progress-bar {
+    position: absolute;
+    top: 45%;
+    left: 2.5rem;
+    width: calc(100% - 5rem);
+    height: 10%;
+    background-color: #BFBFBF;
+    border-radius: 20px;
+    z-index: -1;
+}
+
+.modal.free-quote .steps button {
+    width: 2rem;
+    height: 2rem;
+    background-color: white;
+    color: #0d0d0d;
+    border-radius: 50%;
+    border: none;
+    -webkit-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.382);
+    -moz-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.382);
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.382);
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.modal.free-quote .steps .container {
+    flex-grow: 1; 
+    justify-content: space-between;
+    max-width: 300px;
+}
+
+.modal.free-quote .wrapper::-webkit-scrollbar {
+    position: absolute;
+    width: 10px;
+    height: 100px;
+    background-color: blue; /* or add it to the track */
+}
+
+.mostly-customized-scrollbar::-webkit-scrollbar-thumb {
+    background: #000;
+  }
+
+.modal.free-quote .banner {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--color-background-1);
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    position: relative;
+    top: -1px;
+    gap: 1rem;
+}
+
+.modal.free-quote .banner button {
+    background-color: transparent;
+    border: none;
+    padding-right: 2rem;
+}
+@media screen and (max-width: 600px) {
+    .modal.free-quote .banner button {
+        padding-right: 1rem;
+    }
+}
+
+.modal.free-quote .banner .img {
+    width: 1.3rem;
+    height: 1.3rem;
+    filter: invert(1);
+}
+
+.modal.free-quote .top-content .p1 {
+    color: white;
+    padding-left: 2rem;
+}
+@media screen and (max-width: 600px) {
+    .modal.free-quote .top-content .p1 {
+        padding-left: 1rem;
+    }
+}
+
+.modal.free-quote .label-wrapper {
+    max-width: none;
+}
+
+.modal.free-quote .btn-link {
+    position: absolute;
+    z-index: 1;
+    right: 10%;
+    bottom: -1.5rem;
+    display: none;
+}
+@media screen and (max-width: 800px) {
+    .modal.free-quote .btn-link {
+        position: relative;
+        right: 0;
+        bottom: 0;
+        margin-inline: auto;
+    }
+}
+
+.modal.free-quote .img-wrapper {
+
+}
+@media screen and (max-width: 800px) {
+    .modal.free-quote .img-wrapper {
+        display: none;
+    }
+}
+
+.modal.free-quote .btn-link.active {
+    display: block;
+}
+
+/* Free Quote Contact Section */
+.modal.free-quote .icon {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.modal.free-quote .contact {
+    height: max-content;
+}
+
+.modal.free-quote .contact .radiogroup {
+    gap: 2rem;
+    justify-content: space-evenly;
+    width: 100%;
+    flex-wrap: wrap;
+}
+@media screen and (max-width: 600px) {
+    .modal.free-quote .contact .radiogroup {
+        gap: 1rem;
+    }
+}
+
+.modal.free-quote .contact li {
+    position: static;
+    border: 3px solid #B1B1B1;
+    background-color: white;
+    height: 6rem;
+    padding: 10px 20px;
+    flex-grow: 1;
+    max-width: 21%;
+    border-radius: 22px;
+    font-weight: 600;
+    letter-spacing: .7px;
+    outline-offset: 3px;
+    cursor: pointer;
+    min-width: 155px;
+}
+
+.modal.free-quote .contact li label {
+    pointer-events: none;
+}
+
+.modal.free-quote .contact li:focus {
+    outline: 3px solid #121212;
+}
+
+.modal.free-quote .contact li[aria-checked="true"] {
+    background-color: #121212;
+    border: 3px solid #121212;
+    color: white;
+}
+
+.modal.free-quote .contact li[aria-checked="true"] .icon {
+    filter: invert(1);
+}
+
+.modal.free-quote .contact .radiogroup div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: start;
+}
+
+.modal.free-quote .contact li input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.modal.free-quote .contact .field-wrapper {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    min-height: auto;
+    margin-block: 1.5rem;
+}
+
+.modal.free-quote .contact .field-wrapper .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.modal.free-quote .contact .field-wrapper .wrapper .fname,
+.modal.free-quote .contact .field-wrapper .wrapper .lname {
+    flex-grow: 1;
+}
+
+.modal.free-quote .contact .field-wrapper .wrapper .fname input,
+.modal.free-quote .contact .field-wrapper .wrapper .lname input{
+    width: 100%;
+}
+@media screen and (max-width: 600px) {
+    
+}
+
+.modal.free-quote .contact .field-wrapper .wrapper.container {
+    overflow: visible;
+}
+
+.modal.free-quote .contact .field-wrapper .container {
+    position: relative;
+    gap: 2rem;
+}
+@media screen and (max-width: 600px) {
+    .modal.free-quote .contact .field-wrapper .container {
+        flex-wrap: wrap;
+    }
+}
+
+.modal.free-quote .contact .field-wrapper .container label {
+    position: absolute;
+    top: .7rem;
+    left: 1rem;
+    width: 100%;
+    pointer-events: none;
+    background-color: white;
+    width: fit-content;
+    z-index: 1;
+    font-weight: 600;
+    transition: top 200ms ease-in-out,
+    padding 200ms ease-in-out,
+    font-size 200ms ease-in-out;
+}
+
+.modal.free-quote .contact .field-wrapper .container input {
+    position: relative;
+    border: 2px solid #121212;
+    border-radius: 2rem;
+    padding: .5rem;
+    padding-left: 1rem;
+    font-size: 1rem;
+}
+
+.modal.free-quote .contact .field-wrapper .container input:focus {
+    outline-offset: 3px;
+    outline: 2px solid #121212;
+}
+
+.modal.free-quote .contact .field-wrapper .container label:has( + input:focus),
+.modal.free-quote .contact .field-wrapper .container label:has( + input:not(:placeholder-shown)) {
+    top: -0.7rem;
+    padding: 4px;
+    font-size: .8rem;
+}
+
+.modal.free-quote .contact .field-wrapper .email {
+    width: 66%;
+    min-width: 250px;
+}
+@media screen and (max-width: 600px) {
+    .modal.free-quote .contact .field-wrapper .email {
+        width: 100%;
+    }
+}
+
+.modal.free-quote .contact .field-wrapper .phone {
+    width: 33%;
+    min-width: 250px;
+}
+@media screen and (max-width: 600px) {
+    .modal.free-quote .contact .field-wrapper .phone {
+        width: 100%;
+    }
+}
+
+.modal.free-quote .contact .field-wrapper .email input,
+.modal.free-quote .contact .field-wrapper .phone input {
+    width: 100%;
 }
