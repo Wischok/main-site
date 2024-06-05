@@ -302,6 +302,10 @@ button, a, div {
     }
 }
 
+.no-click {
+    pointer-events: none !important;
+}
+
 button.btn-link {
     border: none;
     padding: .7rem 3rem;
@@ -1111,10 +1115,6 @@ input[role="checkbox"] {
 
 
 /* Contact page */
-.combo input {
-    all: unset;
-}
-
 .main-contact {
     margin-top: 5rem;
     position: relative;
@@ -1182,6 +1182,10 @@ input[role="checkbox"] {
     position: relative;
     flex-grow: 1;
     display: flex;
+}
+
+.field-wrapper .input-wrapper.full {
+    width: 100%;
 }
 
 .input-wrapper input {
@@ -5186,18 +5190,37 @@ input[type="submit"] {
     left: 0;
     z-index: 1000;
     display: none;
+    justify-content: center;
+    align-items: center;
 }
-
 .modal.active {
-    display: block;
+    animation: modal-open;
+    display: flex;
+}
+.modal.active .outer-main-wrapper {
+    animation: scaleUp .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
 }
 
 .modal .backdrop {
     height: 100%;
     width: 100%;
-    background-color: #0d0d0d95;
+    background-color: #0d0d0dc7;
     opacity: 0;
-    animation: fade-in forwards 400ms ease-in-out
+    animation: fade-in forwards 400ms ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@keyframes scaleUp {
+    0% {
+      transform:scale(.8) translateY(1000px);
+      opacity:0;
+    }
+    100% {
+      transform:scale(1) translateY(0px);
+      opacity:1;
+    }
 }
 
 /* Free Quote Modal */
@@ -5206,13 +5229,63 @@ body:has([role="dialog"].active) {
     overflow-y: hidden;
 }
 
+.modal.free-quote .forms {
+    position: relative;
+    z-index: 2;
+}
+
 .modal.free-quote [role="form"] {
     display: none;
+    min-width: 100%;
+    max-width: 100%;
     padding-inline: 2rem;
+    transition: display 0ms 500ms;
+    position: relative;
+    padding-top: 1rem;
+    margin-bottom: 3rem;
 }
 @media screen and (max-width: 600px) {
     .modal.free-quote [role="form"] {
         padding-inline: 1rem;
+    }
+}
+
+.modal.free-quote [role="form"] .form-content {
+    position: relative;
+    top: 1rem;
+    opacity: 0;
+    animation: modal-contentOut forwards ease-in-out 500ms;
+}
+
+.modal.free-quote [role="form"].active .form-content {
+    position: relative;
+    animation: modal-contentIn forwards ease-in-out 1000ms 300ms;
+}
+
+.modal.free-quote [role="form"].active {
+    display: block;
+}
+
+@keyframes modal-contentIn {
+    from {
+        opacity: 0;
+        top: 1rem;
+    }
+    to {
+        opacity: 1;
+        top: 0rem;
+    }
+}
+
+
+@keyframes modal-contentOut {
+    from {
+        opacity: 1;
+        top: 0;
+    }
+    to {
+        opacity: 0;
+        top: 1rem;
     }
 }
 
@@ -5221,10 +5294,9 @@ body:has([role="dialog"].active) {
 }
 
 .modal.free-quote .content {
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
-    width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -5237,17 +5309,37 @@ body:has([role="dialog"].active) {
     }
 }
 
+.modal.free-quote .outer-main-wrapper {
+    position: relative;
+    background-color: white;
+    border-radius: 2rem;
+}
+@media screen and (max-width: 800px) {
+    .modal.free-quote .outer-main-wrapper {
+        
+        border-top-left-radius: 2rem;
+        border-top-right-radius: 2rem;
+    }
+}
+
 .modal.free-quote .main-wrapper {
     background-color: white;
     max-width: 800px;
     max-height: 80vh;
     border-radius: 1.5rem;
     position: relative;
-    padding-bottom: 2rem;
+    min-height: max-content;
+    max-height: 80vh;
+    height: 100%;
+    
+}
+@media screen and (max-height: 830px) {
+    .modal.free-quote .main-wrapper {
+        overflow-y: scroll;
+    }
 }
 @media screen and (max-width: 800px) {
     .modal.free-quote .main-wrapper {
-        overflow: scroll;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
     }
@@ -5265,12 +5357,20 @@ body:has([role="dialog"].active) {
     padding-inline: 2rem;
     position: relative;
     z-index: 1;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
-.modal.free-quote .steps .step[aria-pressed="true"] {
+.modal.free-quote .steps .step {
+    transition: transform 400ms ease-in-out;
+}
+
+.modal.free-quote .steps .step.active {
     background-color: var(--color-background-1);
     color: white;
+}
+
+.modal.free-quote .steps .step[aria-current='step']{
+    transform: scale(1.2);
 }
 
 .modal.free-quote .steps .progress-bar {
@@ -5282,6 +5382,57 @@ body:has([role="dialog"].active) {
     background-color: #BFBFBF;
     border-radius: 20px;
     z-index: -1;
+}
+
+.modal.free-quote .steps .progress-bar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #226e69;
+    transition: width 1000ms ease-out;
+}
+
+.modal.free-quote .steps:has(.step2.active) .progress-bar::before {
+    width: calc(100px + 2rem);
+}
+
+.modal.free-quote .steps:has(.step3.active) .progress-bar::before {
+    width: calc(200px + 4rem);
+}
+
+.modal.free-quote .steps .step[aria-disabled='true'] {
+    position: relative;
+    animation: step-exit 400ms ease-in forwards;
+}
+
+.modal.free-quote .steps .step[aria-disabled='false'] {
+    position: relative;
+    animation: step-enter 400ms ease-in forwards;
+}
+
+@keyframes step-exit {
+    from {
+        top: 0rem;
+        opacity: 1;
+    }
+    to {
+        top: 1rem;
+        opacity: 0;
+    }
+}
+
+@keyframes step-enter {
+    from {
+        top: 1rem;
+        opacity: 0;
+    }
+    to {
+        top: 0rem;
+        opacity: 1;
+    }
 }
 
 .modal.free-quote .steps button {
@@ -5297,6 +5448,7 @@ body:has([role="dialog"].active) {
     font-weight: 600;
     font-size: 1.1rem;
     cursor: pointer;
+    outline-offset: 5px;
 }
 
 .modal.free-quote .steps .container {
@@ -5332,11 +5484,17 @@ body:has([role="dialog"].active) {
     background-color: transparent;
     border: none;
     padding-right: 2rem;
+    cursor: pointer;
 }
 @media screen and (max-width: 600px) {
     .modal.free-quote .banner button {
         padding-right: 1rem;
     }
+}
+
+.modal.free-quote .banner button:focus img {
+    outline: 2px solid black;
+    outline-offset: 5px;
 }
 
 .modal.free-quote .banner .img {
@@ -5361,10 +5519,10 @@ body:has([role="dialog"].active) {
 
 .modal.free-quote .btn-link {
     position: absolute;
-    z-index: 1;
     right: 10%;
-    bottom: -1.5rem;
+    bottom: -2.5rem;
     display: none;
+    margin-bottom: 1rem;
 }
 @media screen and (max-width: 800px) {
     .modal.free-quote .btn-link {
@@ -5372,15 +5530,6 @@ body:has([role="dialog"].active) {
         right: 0;
         bottom: 0;
         margin-inline: auto;
-    }
-}
-
-.modal.free-quote .img-wrapper {
-
-}
-@media screen and (max-width: 800px) {
-    .modal.free-quote .img-wrapper {
-        display: none;
     }
 }
 
@@ -5426,7 +5575,7 @@ body:has([role="dialog"].active) {
     min-width: 155px;
 }
 
-.modal.free-quote .contact li label {
+.modal.free-quote .contact li div {
     pointer-events: none;
 }
 
@@ -5466,7 +5615,7 @@ body:has([role="dialog"].active) {
     align-items: center;
     width: 100%;
     min-height: auto;
-    margin-block: 1.5rem;
+    margin-block: 1rem;
 }
 
 .modal.free-quote .contact .field-wrapper .wrapper {
@@ -5510,12 +5659,15 @@ body:has([role="dialog"].active) {
     width: 100%;
     pointer-events: none;
     background-color: white;
+    width: -moz-fit-content;
     width: fit-content;
     z-index: 1;
     font-weight: 600;
     transition: top 200ms ease-in-out,
     padding 200ms ease-in-out,
     font-size 200ms ease-in-out;
+    line-height: 100%;
+    padding: .5 0;
 }
 
 .modal.free-quote .contact .field-wrapper .container input {
@@ -5527,14 +5679,14 @@ body:has([role="dialog"].active) {
     font-size: 1rem;
 }
 
-.modal.free-quote .contact .field-wrapper .container input:focus {
+.modal.free-quote .field-wrapper input:focus {
     outline-offset: 3px;
     outline: 2px solid #121212;
 }
 
 .modal.free-quote .contact .field-wrapper .container label:has( + input:focus),
 .modal.free-quote .contact .field-wrapper .container label:has( + input:not(:placeholder-shown)) {
-    top: -0.7rem;
+    top: -0.8rem;
     padding: 4px;
     font-size: .8rem;
 }
@@ -5562,4 +5714,67 @@ body:has([role="dialog"].active) {
 .modal.free-quote .contact .field-wrapper .email input,
 .modal.free-quote .contact .field-wrapper .phone input {
     width: 100%;
+}
+
+.modal.free-quote [role="checkbox"] {
+    margin-left: .5rem;
+    margin-block: 1rem;
+    padding: .5rem;
+    padding-left: 2.5rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.modal.free-quote [role="checkbox"]:focus {
+    border: #121212 2px solid;
+    border-radius: 2rem;
+    background-color: #bfd1ed;
+}
+
+.modal.free-quote [role="checkbox"]::after {
+    position: absolute;
+    content: "";
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid #121212;
+    top: .5rem;
+    left: .5rem;
+}
+
+.modal.free-quote [role="checkbox"][aria-checked="true"]::after {
+    background-image: url('/img/checkmark.png');
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+.modal.free-quote .field-wrapper.flex-column {
+    flex-direction: column;
+    align-items: start;
+}
+
+.modal.free-quote #form6 .p1 {
+    font-size: .95rem;
+    margin-top: 3rem;
+    max-width: 100%;
+}
+
+/* Additonal Quote Forms */
+.modal.free-quote .field-wrapper label {
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 167%;
+}
+
+.modal.free-quote .field-wrapper input {
+    font-size: 1rem;
+    border-radius: 2rem;
+    padding: .5rem;
+    padding-left: 1rem;
+    border: 2px solid #121212;
+}
+
+.modal.free-quote .field-wrapper input.combo-input {
+    padding: 0;
+    padding-left: 1rem;
 }
