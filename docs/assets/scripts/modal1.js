@@ -95,6 +95,14 @@ function Dialog (el) {
         }
     }
 
+    RadioGroup.prototype.returnIndex = function() {
+        for(let i = 0; i < this.radios.length; i++) {
+            if(this.radios[i].getAttribute('aria-checked') === 'true') {
+                return i;
+            }
+        }
+    }
+
     //element refs
     this.dialog = el;//dialog element
     this.triggers = document.querySelectorAll(".modal1_trigger");
@@ -105,9 +113,11 @@ function Dialog (el) {
     this.continueButton = document.getElementById('modal1-continue');
     this.submitButton = document.getElementById('modal1-submit');
     this.stepButtons = document.getElementById('modal1-steps').querySelectorAll('button');
+    this.baseForm = document.getElementById('form1');
+    this.r_groups = [];
     //set up radio groups
     document.querySelectorAll('[role=radiogroup]').forEach((el) => {
-        let t = new RadioGroup(el, this);
+        this.r_groups.push(new RadioGroup(el, this));
     })
 
     //data
@@ -138,7 +148,8 @@ Dialog.prototype.init = function() {
     this.submitButton.addEventListener('click', this.onSubmit.bind(this));
     this.continueButton.addEventListener('click', this.onContinue.bind(this));
 
-    this.formGroup = this.formGroups[0];//web design form group by default
+    this.selectService(this.r_groups[0].returnIndex());
+
     this.firstForm = document.getElementById('form1')
     this.activeForm = this.firstForm;
 
@@ -204,6 +215,19 @@ Dialog.prototype.onKeyDown = function(event) {
 
     if(key === 'Escape') {
         this.close();
+        event.stopPropagation();
+        return;
+    }
+
+    if(key === 'Enter') {
+        if(this.continueButton.classList.contains('active')) {
+            this.onContinue();
+        }
+        else if(this.submitButton.classList.contains('active')) {
+            this.onSubmit();
+        }
+        event.stopPropagation();
+        event.preventDefault();
     }
 }
 
@@ -225,6 +249,12 @@ Dialog.prototype.onStepSelect = function(e) {
     indexOf(document.getElementById('modal1-steps').querySelectorAll('button'), e.target);
     if(btnIndex === this.index) {return;}//skip function if on current form
 
+    if(btnIndex > this.index) {
+        if(!this.validateForm()) {
+            return;
+        }
+    }
+
     this.index = btnIndex;
 
     if(this.index === 0) {
@@ -237,14 +267,65 @@ Dialog.prototype.onStepSelect = function(e) {
 
 //continue button
 Dialog.prototype.onContinue = function(event) {
+    if(!this.validateForm()) {
+        return;
+    }
+
     let forms = this.formGroup.querySelectorAll('[role=form]');
     this.index++;
     this.selectForm(forms[this.index - 1]);
 }
 
+//check entries of form before continuing or submitting
+Dialog.prototype.validateForm = function() {
+    if(this.activeForm.checkValidity() === false) {
+        this.activeForm.reportValidity();
+        return false;
+    }
+
+    return true;
+}
+
 //submit button
-Dialog.prototype.onSubmit = function(event) {
-    console.log('submitted');
+Dialog.prototype.onSubmit = function() {
+    if(!this.validateForm()) {
+        return;
+    }
+
+    //create form element
+    let formData = new FormData();
+    formData.set('service', this.formGroup.getAttribute('data-name'));
+
+    //add selected form data
+    let group = this.dialog.querySelectorAll('[role=form]');
+    group.forEach((form) => {
+        let tempformData = new FormData(form);
+
+        tempformData.entries().forEach((entry) => {
+            formData.append(entry[0], entry[1])
+        
+            console.log(entry[0]);
+            console.log(entry[1]);
+        });
+    });
+    
+    //send webhook
+    this.sendFormData(formData);    
+
+    //change form visual
+    this.dialog.classList.add('complete');
+}
+
+Dialog.prototype.sendFormData = async function(formData) {
+    try {
+        const response = await fetch("https://hook.us1.make.com/2pkubr6boxpoeg1donbth15raovbo3wv", {
+            method: "POST",
+            body: formData,
+        });
+        console.log(await response.json());
+    } catch (e) {
+        console.error(e);
+    }
 }
 
 //init

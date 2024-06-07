@@ -24,7 +24,7 @@
     <script defer src="/docs/assets/scripts/nav.js"></script>
     <script defer src="/docs/assets/scripts/combobox.js"></script>
     <script defer src="/docs/assets/scripts/checkbox.js"></script>
-    <script defer src="/docs/assets/scripts/modal.js"></script>
+    <script defer src="/docs/assets/scripts/modal1.js"></script>
 
     <!-- External Stylesheets -->
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
@@ -80,7 +80,7 @@
                                  <li role="none"><a role="menuitem" href="/digital-accessibility/file-remediation/">File Remediation</a></li>
                              </ul>
                          </li>
-                        <li role="none" class="li"><button class="btn-link modal1-trigger" role="menuitem" aria-controls="modal1">Free Quote</button></li>
+                        <li role="none" class="li"><button class="btn-link modal1-trigger" role="menuitem" aria-controls="modal1" aria-label="Open Free Quote Modal">Free Quote</button></li>
                      </ul>
                      <span id="menu-backdrop" class="backdrop"></span>
                 </div>
@@ -100,7 +100,7 @@
         <address class="address" id="adress">
             <ul class="contacts" id="contacts-widget">
                 <li class="li phone flex-row-center">
-                    <a href="tel:19096382889"  aria-label="Call Wischok.">
+                    <a href="tel:19096382889"  aria-label="Call Wischok." id="address1">
                         <span>
                             1 (909) 638-2889
                         </span>
@@ -120,12 +120,12 @@
                     </a>
                 </li>
                 <li class="li schedule flex-row-center">
-                    <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/wischok/30min'});return false;">
-                        <span>Schedule</span>
+                    <button href="" class="modal1-trigger">
+                        <span>Get Quote</span>
                         <div aria-label="Schedule Appointment with Wischok.">
                             <img src="/img/calendar-icon.png" alt="" class="icon">
                         </div>
-                    </a>
+                    </button>
                 </li>
             </ul>
             <button role="button" aria-expanded="false" aria-controls="contacts-widget" class="btn-link" id="address-btn" aria-haspopup="true">
@@ -149,7 +149,7 @@
                 <div class="bottom-content view-width-constrain-left">
                     <p class="p1 max-width-long">Discover the magic of bringing your perfect website to life with Wischok, crafting
                         captivating websites for businesses and brands.</p>
-                    <a href="" class="btn-link" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/wischok/30min'});return false;">Get a Free Proposal</a>
+                    <button class="btn-link modal1-trigger">Get a Free Quote</button>
                 </div>
             </div>
             <div class="right-content">
@@ -457,34 +457,34 @@
                         </div>
                     </div>
                     <!-- Contact Form and Project Selection -->
-                    <form role="form" id="form1" class="form2 active" name="Contact Information" value-focusNext="fname1">
+                    <form role="form" id="form1" class="form2 active" name="Contact Information" value-focusNext="contact_fname1">
                         <!-- Content Info -->
                         <div class="contact form-content">
                             <!-- Name -->
                             <div class="field-wrapper float name-wrapper">
                                 <div class="wrapper container">
                                     <div class="fname container">
-                                        <label for="fname1">First Name<span aria-hidden="true">*</span></label>
-                                        <input type="text" id="fname1" name="fname1" required placeholder=" ">
+                                        <label for="contact_fname1">First Name<span aria-hidden="true">*</span></label>
+                                        <input type="text" id="contact_fname1" name="first name" required placeholder=" ">
                                     </div>
                                     <div class="lname container">
-                                        <label for="lname1">Last Name<span aria-hidden="true">*</span></label>
-                                        <input type="text" id="lname1" name="lname1" required placeholder=" ">
+                                        <label for="contact_lname1">Last Name<span aria-hidden="true">*</span></label>
+                                        <input type="text" id="contact_lname1" name="last name" required placeholder=" ">
                                     </div>
                                 </div>
                             </div>
                             <!-- Email Field -->
                             <div class="field-wrapper float email-wrapper">
                                 <div class="container email">
-                                    <label for="email1" class="lbl">Email<span aria-hidden="true">*</span></label>
-                                    <input type="email" name="email1" id="email1" required placeholder=" ">
+                                    <label for="contact_email1" class="lbl">Email<span aria-hidden="true">*</span></label>
+                                    <input type="email" name="email" id="contact_email1" required placeholder=" ">
                                 </div>
                             </div>
                             <!-- Phone Field -->
                             <div class="field-wrapper float">
                                 <div class="container phone">
-                                    <label for="phone1" class="lbl">Phone<span aria-hidden="true">*</span></label>
-                                    <input type="number" name="phone1" id="phone1" required placeholder=" ">
+                                    <label for="contact_phone1" class="lbl">Phone<span aria-hidden="true">*</span></label>
+                                    <input type="number" name="phone number" id="contact_phone1" required placeholder=" ">
                                 </div>
                             </div>
                             <!-- What are we working on field -->
@@ -493,7 +493,7 @@
                                     <p class="p1" id="group-label2" style="margin-top: 0rem;">What are we working on?</p>
                                 </div>
                                 <div class="input-wrapper">
-                                    <ul class="radiogroup flex-row-center" role="radiogroup" aria-labelledby="group-label2" value="Website Design">
+                                    <ul class="radiogroup flex-row-center" role="radiogroup" aria-labelledby="group-label2" value="Website Design" id="modal1_service">
                                         <li role="radio" name="radio1_1" id="radio1_1" tabindex="0" aria-checked="true">
                                             <div for="radio1_1" class="flex-column">
                                                 <img src="/img/computer-icon.png" alt="" class="icon">
@@ -525,37 +525,37 @@
                     </form>
                     <!-- Web Design Fields -->
                     <div class="forms web-design" id="webdesign-forms" data-name="Web Design">
-                        <form role="form" id="form2" value-focusNext="company1">
+                        <form role="form" id="form2" value-focusNext="webDesign_company1">
                             <div class="form-content">
                                 <!-- Organization / Company Field -->
                                 <div class="field-wrapper flex email-wrapper">
                                     <div class="label-wrapper">
-                                        <label for="company1" class="lbl">Organization / Company Name<span aria-hidden="true">*</span></label>
+                                        <label for="webDesign_company1" class="lbl">Organization / Company Name<span aria-hidden="true">*</span></label>
                                     </div>
                                     <div class="input-wrapper">
-                                        <input type="text" name="company1" id="company1" placeholder="My Company" required>
+                                        <input type="text" name="Company Name" id="webDesign_company1" placeholder="My Company" required>
                                         <p class="error-desc">Improper email format. Example: 123@gmail.com</p>
                                     </div>
                                 </div>
                                 <!-- What Industry / Business? -->
                                 <div class="field-wrapper flex email-wrapper">
                                     <div class="label-wrapper">
-                                        <label for="industry1" class="lbl">What Industry / Business?<span aria-hidden="true">*</span></label>
+                                        <label for="webDesign_industry1" class="lbl">What Industry / Business?<span aria-hidden="true">*</span></label>
                                     </div>
                                     <div class="input-wrapper">
-                                        <input type="text" name="industry1" id="industry1" placeholder="ex: Restaurant" required>
+                                        <input type="text" name="Industry" id="webDesign_industry1" placeholder="ex: Restaurant" required>
                                         <p class="error-desc">Improper email format. Example: 123@gmail.com</p>
                                     </div>
                                 </div>
                                 <!-- What's the goal? -->
                                 <div class="field-wrapper flex" id="1_step2">
                                     <div class="label-wrapper">
-                                        <label for="goal1" class="lbl" id="combo1-lbl">What's the Goal?<span
+                                        <label for="webDesign_goal1" class="lbl" id="combo1-lbl">What's the Goal?<span
                                                 aria-hidden="true">*</span></label>
                                     </div>
                                     <div class="input-wrapper project-input-wrapper">
                                         <div class="combo combo-standard combo1">
-                                            <input class="combo-input" name="goal1" id="goal1" role="combobox" tabindex="0"
+                                            <input class="combo-input" name="Website Goal (Design)" id="webDesign_goal1" role="combobox" tabindex="0"
                                                 aria-labelledby="combo1-lbl" type="text" aria-haspopup="listbox" aria-controls="listbox1"
                                                 value="" autocomplete="off">
                                             <!-- Combo Menu | List of Options -->
@@ -572,20 +572,20 @@
                                 </div>
                             </div>
                         </form>
-                        <form role="form" id="form3" value-focusNext="other-sites">
+                        <form role="form" id="form3" value-focusNext="webDesign_other-sites">
                             <div class="form-content">
                                 <!-- other sites -->
                                 <div class="field-wrapper flex-column email-wrapper">
                                     <div class="label-wrapper">
-                                        <label for="other-sites" class="lbl">Any websites that you like and want to use for
+                                        <label for="webDesign_other-sites" class="lbl">Any websites that you like and want to use for
                                             reference?<span aria-hidden="true">*</span></label>
                                     </div>
                                     <div class="input-wrapper full">
-                                        <input type="text" name="other-sites" id="other-sites" placeholder="Reference Sites" required>
+                                        <input type="text" name="Reference Sites" id="webDesign_other-sites" placeholder="Reference Sites">
                                     </div>
                                 </div>
                                 <!-- What Functionality -->
-                                <div class="field-wrapper flex-column email-wrapper">
+                                <!-- <div class="field-wrapper flex-column email-wrapper">
                                     <div class="label-wrapper" style="margin-top: 1rem;">
                                         <label for="industry" class="lbl" id="group-label1">Is there any functionality you want
                                             included?<span aria-hidden="true">*</span></label>
@@ -616,32 +616,32 @@
                                             </ul>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         </form>
                     </div>
                     <!-- SEO / Marketing Fields -->
                     <div class="forms marketing" id="marketing-forms" data-name="SEO">
-                        <form role="form" id="form4" value-focusNext="my-website1">
+                        <form role="form" id="form4" value-focusNext="seo_my-website1">
                             <div class="form-content">
                                 <!-- Current Company Website Field -->
                                 <div class="field-wrapper flex email-wrapper">
                                     <div class="label-wrapper">
-                                        <label for="my-website1" class="lbl">Current Website<span aria-hidden="true">*</span></label>
+                                        <label for="seo_my-website1" class="lbl">Current Website<span aria-hidden="true">*</span></label>
                                     </div>
                                     <div class="input-wrapper">
-                                        <input type="text" name="my-website1" id="my-website1" placeholder="My Website" required>
+                                        <input type="text" name="Website URL (SEO)" id="seo_my-website1" placeholder="My Website" required>
                                     </div>
                                 </div>
                                 <!-- What's the goal? -->
                                 <div class="field-wrapper flex" id="1_step2">
                                     <div class="label-wrapper">
-                                        <label for="goal2" class="lbl" id="combo1-lbl">What's the Goal?<span
+                                        <label for="seo_goal2" class="lbl" id="combo1-lbl">What's the Goal?<span
                                                 aria-hidden="true">*</span></label>
                                     </div>
                                     <div class="input-wrapper project-input-wrapper">
                                         <div class="combo combo-standard combo1">
-                                            <input class="combo-input" name="goal2" id="goal2" role="combobox" tabindex="0"
+                                            <input class="combo-input" name="Website Goal (SEO)" id="seo_goal2" role="combobox" tabindex="0"
                                                 aria-labelledby="combo1-lbl" type="text" aria-haspopup="listbox" aria-controls="listbox1"
                                                 value="" placeholder="Website Design" autocomplete="off">
                                             <!-- Combo Menu | List of Options -->
@@ -662,15 +662,15 @@
                     </div>
                     <!-- Digital Accessibility -->
                     <div class="forms accessibility" id="accessibility-forms" data-name="Accessibility">
-                        <form role="form" id="form6" value-focusNext="my-website3">
+                        <form role="form" id="form6" value-focusNext="accessibility_my-website3">
                             <div class="form-content">
                                 <!-- Current Company Website Field -->
                                 <div class="field-wrapper flex email-wrapper">
                                     <div class="label-wrapper">
-                                        <label for="my-website3" class="lbl">Current Website<span aria-hidden="true">*</span></label>
+                                        <label for="accessibility_my-website3" class="lbl">Current Website<span aria-hidden="true">*</span></label>
                                     </div>
                                     <div class="input-wrapper">
-                                        <input type="text" name="my-website3" id="my-website3" placeholder="My Website" required>
+                                        <input type="text" name="Website URL (Accessibility)" id="accessibility_my-website3" placeholder="My Website" required>
                                     </div>
                                     <p class="p1"><span aria-hidden="true">*</span>Our testers and Digital Accessibility specialists hold multiple certifications,
                                         including the Trust Tester Certification with the Department of Homeland Security.</p>
@@ -680,15 +680,15 @@
                     </div>
                     <!-- Website Maintenance -->
                     <div class="forms maintenance" id="maintenance-forms" data-name="Maintenance">
-                        <form role="form" id="form5" value-focusNext="my-website2">
+                        <form role="form" id="form5" value-focusNext="maintenance_my-website2">
                             <div class="form-content">
                                 <!-- Current Company Website Field -->
                                 <div class="field-wrapper flex email-wrapper">
                                     <div class="label-wrapper">
-                                        <label for="my-website2" class="lbl">Current Website<span aria-hidden="true">*</span></label>
+                                        <label for="maintenance_my-website2" class="lbl">Current Website<span aria-hidden="true">*</span></label>
                                     </div>
                                     <div class="input-wrapper">
-                                        <input type="text" name="my-website2" id="my-website2" placeholder="My Website" required>
+                                        <input type="text" name="Website URL (Maintenance)" id="maintenance_my-website2" placeholder="My Website" required>
                                     </div>
                                 </div>
                             </div>
@@ -696,7 +696,12 @@
                     </div>
                 </div>
                 <button id="modal1-continue" class="btn-link active" role="" class="continue">Continue</button>
-                    <button id="modal1-submit" class="btn-link" role="" class="submit">Submit</button>
+                <button id="modal1-submit" class="btn-link" role="" class="submit">Submit</button>
+                <div class="complete1">
+                    <img src="/img/dog-dab.png" alt="A dabbing dog." class="dog">
+                    <h3 class="heading3">Got it!</h3>
+                    <p class="p2">We'll get back to you with your quote soon!</p>
+                </div>
             </div>
         </div>
     </div>

@@ -114,6 +114,7 @@ Nav.prototype.onWindowResize = function() {
 Nav.prototype.addressToggle = function() {
     if(this.addressButton.getAttribute('aria-expanded') == 'false') {
         this.addressButton.setAttribute('aria-expanded', 'true');
+        document.getElementById('address1').focus();
     }
     else {
         this.addressButton.setAttribute('aria-expanded', 'false');

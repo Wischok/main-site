@@ -886,12 +886,43 @@ input[role="checkbox"] {
 .address .contacts {
     padding-right: 10px;
     position: relative;
+    border-radius: 2rem;
     z-index: -1;
     display: none;
+    background-color: white;
+    padding: 0;
+    width: 2ch;
+    height: 0;
+    margin-bottom: 1rem;
+    margin-right: 2rem;
+    -webkit-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.382);
+    -moz-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.382);
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.382);
+    animation: address-expand 400ms ease-in-out forwards;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+@media screen and (max-width: 500px) {
+    .address .contacts {
+        margin-bottom: 0rem;
+        margin-right: 1.5rem;
+    }
+}
+
+@keyframes address-expand {
+    from {
+        height: 2ch;
+        padding: 0;
+    }
+    to {
+        
+        height: 15rem;
+    }
 }
 
 .address:has(button[aria-expanded="true"]) .contacts {
-    display: block;
+    display: flex;
 }
 
 .address .contacts .li {
@@ -901,21 +932,21 @@ input[role="checkbox"] {
 }
 
 .address:has(button[aria-expanded="true"]) .contacts .li.phone {
-    animation: float-in1 forwards ease-in-out 500ms 500ms;
+    animation: float-in1 forwards ease-out 800ms 900ms;
     
 }
 
 .address:has(button[aria-expanded="true"]) .contacts .li.email {
-    animation: float-in1 forwards ease-in-out 500ms 300ms;
+    animation: float-in1 forwards ease-out 800ms 700ms;
 }
 
 .address:has(button[aria-expanded="true"]) .contacts .li.schedule {
-    animation: float-in1 forwards ease-in-out 500ms 100ms;
+    animation: float-in1 forwards ease-out 800ms 500ms;
 }
 
 @keyframes float-in1 {
     from {
-        transform: translateY(2rem);
+        transform: translateY(1rem);
         opacity: 0;
     }
     to {
@@ -935,18 +966,137 @@ input[role="checkbox"] {
     text-decoration: none;
 }
 
+.address .contacts button:has(span) {
+    justify-content: end;
+    margin-block: .5rem;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    text-decoration: none;
+    border: none;
+    background: none;
+}
+
+.address .contacts .phone a:hover span,
+.address .contacts .phone a:focus span{
+    animation: slide-expand-1 forwards 500ms ease-out;
+}
+
+@keyframes slide-expand-1 {
+    from {
+        width: 0;
+    }
+    to {
+        width: 21ch;
+        padding-right: 3rem;
+        padding-left: 1rem;
+    }
+}
+
+.address .contacts .email a:hover span,
+.address .contacts .email a:focus span {
+    animation: slide-expand-2 forwards 500ms ease-out;
+}
+
+@keyframes slide-expand-2 {
+    from {
+        width: 0;
+    }
+    to {
+        width: 26ch;
+        padding-right: 3rem;
+        padding-left: 1rem;
+    }
+}
+.address .contacts .schedule button:hover span,
+.address .contacts .schedule button:focus span {
+    animation: slide-expand-3 forwards 500ms ease-out;
+}
+
+@keyframes slide-expand-3 {
+    from {
+        width: 0;
+    }
+    to {
+        width: 17ch;
+        padding-right: 3rem;
+        padding-left: 1rem;
+    }
+}
+
 .address .contacts a span {
+    right: 0rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 10px;
-    background-color: white;
     border-radius: 2rem;
+    margin-right: .2rem;
     color: var(--color-background-1);
-    color: #0000EE;
+    position: absolute;
+    height: 3rem;
+    background-color: white;
+    -webkit-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.382);
+    -moz-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.382);
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.382);
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+
+    /* visually hidden */
+    visibility: hidden;
 }
 
-.address .contacts .schedule a {
+.address .contacts button span {
+    right: 0rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+    margin-right: .2rem;
+    color: var(--color-background-1);
+    position: absolute;
+    height: 3rem;
+    background-color: white;
+    -webkit-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.382);
+    -moz-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.382);
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.382);
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    font-size: 1rem;
+
+    /* visually hidden */
+    visibility: hidden;
+}
+
+.address .contacts a:hover span,
+.address .contacts a:focus span {
+    visibility: visible;
+}
+
+.address .contacts a:hover,
+.address .contacts a:focus {
+    outline: none;
+}
+
+.address .contacts button:hover span,
+.address .contacts button:focus span {
+    visibility: visible;
+}
+
+.address .contacts button:hover,
+.address .contacts button:focus {
+    outline: none;
+}
+
+.address .contacts a {
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.address .contacts button:has(span) {
     text-decoration: none;
     font-weight: 600;
 }
@@ -956,9 +1106,9 @@ input[role="checkbox"] {
     width: 3rem;
     padding: 10px;
     border-radius: 50%;
-    margin-left: 1rem;
     border: 2px solid white;
     cursor: pointer;
+    z-index: 1;
 }
 
 .address .contacts .li.phone div,
@@ -982,6 +1132,7 @@ input[role="checkbox"] {
 }
 
 .address .btn-link {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -990,14 +1141,9 @@ input[role="checkbox"] {
 }
 @media screen and (max-width: 500px) {
     .address .btn-link {
-        border: none;
-        border-top: 2px solid white;
-        border-left: 2px solid white;
-        border-radius: 0;
-        border-top-left-radius: 3rem;
-        padding: 1.5rem 1.5rem;
-        color: #0D0D0D;
-        background-color: #9DADDF;
+        padding-right: 3rem;
+        right: -2rem;
+        bottom:1rem;
     } 
 }
 
@@ -1020,11 +1166,6 @@ input[role="checkbox"] {
     stroke: white;
     transition: rotate 300ms ease-in-out;
     transform-origin: center;
-}
-@media screen and (max-width: 500px) {
-    .address line {
-        stroke: #0D0D0D;
-    }
 }
 
 .address button[aria-expanded="true"] .vertical {
@@ -5537,6 +5678,18 @@ body:has([role="dialog"].active) {
     display: block;
 }
 
+.modal.free-quote.complete .btn-link {
+    display: none;
+}
+
+.modal.free-quote.complete .steps button {
+    pointer-events: none;
+}
+
+.modal.free-quote input:invalid {
+    border: rgb(158, 5, 5) 2px dashed;
+}
+
 /* Free Quote Contact Section */
 .modal.free-quote .icon {
     width: 1.5rem;
@@ -5777,4 +5930,28 @@ body:has([role="dialog"].active) {
 .modal.free-quote .field-wrapper input.combo-input {
     padding: 0;
     padding-left: 1rem;
+}
+
+/* Form Complete version 1 | Dog */
+.complete1 {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-block: 4rem;
+    display: none;
+    animation: fade-in 700ms ease-in-out forwards;
+    opacity: 0;
+}
+
+.dog {
+    height: 7rem;
+}
+
+.complete .complete1 {
+    display: flex;
+}
+
+.modal.free-quote.complete [role="form"] {
+    display: none;
 }
