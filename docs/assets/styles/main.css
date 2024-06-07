@@ -5671,6 +5671,8 @@ body:has([role="dialog"].active) {
         right: 0;
         bottom: 0;
         margin-inline: auto;
+        margin-bottom: 3.5rem;
+        margin-top: 1rem;
     }
 }
 
