@@ -64,7 +64,7 @@ async function newSale() {
     formData.set("estimate_noDeposit", (formData.get("fullEstimate") - formData.get("downPayment")))
 
     try {
-        const response = await fetch("https://hooks.zapier.com/hooks/catch/18878383/3vha5ec/", {
+        const response = await fetch("https://hook.us1.make.com/5kvvti7bkxtp1ukfvcs76jopeylsf7q2", {
             method: "POST",
             body: formData,
         });
