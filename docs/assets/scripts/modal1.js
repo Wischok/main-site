@@ -138,9 +138,6 @@ function Dialog (el) {
 
 //dialog int
 Dialog.prototype.init = function() {
-    document.querySelectorAll("." + this.dialog.id + "-trigger").forEach((trigger) => {
-        trigger.addEventListener('click', this.open.bind(this));
-    });
     
     this.exit.addEventListener('click', this.close.bind(this));
     this.backdrop.addEventListener('click', this.close.bind(this));
@@ -156,10 +153,31 @@ Dialog.prototype.init = function() {
     this.stepButtons.forEach((button) => {
         button.addEventListener('click', this.onStepSelect.bind(this));
     });
+
+    //check for modal open on load query
+    const searchParams = new URLSearchParams(window.location.search);
+    let firstTrigger = null;
+    document.querySelectorAll("." + this.dialog.id + "-trigger").forEach((trigger) => {
+        trigger.addEventListener('click', this.open.bind(this));
+
+        //open after half a second
+        if(searchParams.get('modal1') === 'open') {
+            if(!firstTrigger) {
+                setTimeout(() => {
+                    trigger.click();
+                }, 500);
+                firstTrigger = trigger;
+            }
+        }
+    });
 }
 
 //open dialog
 Dialog.prototype.open = function(event) {
+    if(this.dialog.classList.contains("active")) {
+        return;
+    }
+
     this.dialog.classList.add("active");
 
     this.trigger = event.target;
