@@ -1,0 +1,2147 @@
+/* root */
+:root {
+    --radius: 70vh;
+    --record-diameter: 50vh;
+    --color-secondary: #340507;
+    --color-primary: 2;
+    --gradient: linear-gradient(-20deg, #0D0304 ,#340507 , #2B1009, #37190B);
+    --text-opposing: #0d0d0d;
+    --black: #0d0d0d;
+    --record-image: url('../img/godless-woman.png');
+    --filter: none;
+    /* --radius: 30vh;
+    --record-diameter: 10vh; */
+}
+@media screen and (max-width: 1280px) {
+    :root {
+        --radius: 65vh;
+        --record-diameter: 45vh;
+    }
+}
+@media screen and (max-width: 1280px) {
+    :root {
+        --radius: 60vh;
+        --record-diameter: 40vh;
+    }
+}
+@media screen and (orientation: portrait) {
+    :root {
+        --radius: 170vw;
+        --record-diameter: 120vw;
+    }
+}
+
+/* godless woman */
+:root:has(.record1.active) {
+    --gradient: linear-gradient(-20deg, #0D0304 ,#340507 , #2B1009, #37190B);
+    --color-secondary: #340507;
+    --text-opposing: white;
+    --filter: invert();
+}
+
+/* memories */
+:root:has(.record2.active) {
+    --gradient: linear-gradient(-20deg, #95270F, #BC3314, #D1711D, #D78927);
+    --color-secondary: #BC3314;
+    --record-image: url('../img/memories.png');
+    --text-opposing: white;
+    --filter: invert();
+}
+
+/* clouds */
+:root:has(.record3.active) {
+    --gradient: linear-gradient(-20deg, #2B293F, #57334F, #814B73,
+  #BA7297, #E58194);
+    --color-secondary: #421E30;
+    --record-image: url('../img/clouds-ex.png');
+    --text-opposing: white;
+    --filter: invert();
+}
+
+/* Dust */
+:root:has(.record4.active) {
+    --gradient: linear-gradient(-20deg, #c6b365, #ba7642, #7F7557, #2b1c18);
+    --color-secondary: #6D654A;
+    --record-image: url('../img/dust.png');
+}
+
+/* spiffeon */
+:root:has(.record5.active) {
+    --gradient: linear-gradient(-20deg , #231621, #241D4F , #37184A, #620315, #710102, #680102);
+    --color-secondary: #0F4F86;
+    --record-image: url('../img/spiffeon.png');
+    --text-opposing: white;
+    --filter: invert();
+}
+
+/* relapsing */
+:root:has(.record6.active) {
+    --gradient: linear-gradient(-20deg, #194d5b, #bcba99, #f8edd7, #fae4d3,
+    #e9aa8c, #a4575d);
+    --color-secondary: #317873;
+    --record-image: url('../img/relapsing.png');
+}
+
+/* miniature people */
+:root:has(.record7.active) {
+    --gradient: linear-gradient(-20deg,#011A1A , #013A3A, #016F6F, #2BCACA);
+    --color-secondary: #3a2301;
+    --text-opposing: white;
+    --record-image: url('../img/mini-people.png');
+    --filter: invert();
+}
+
+/* cave */
+:root:has(.record8.active) {
+    --gradient: linear-gradient(-20deg,#070f11 , #05171d, #4e260c );
+    --color-secondary: #0B2E37;
+    --text-opposing: white;
+    --record-image: url('../img/cave.png');
+    --filter: invert();
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    width: 100%;
+}
+@media screen and (orientation: portrait) {
+    body {
+        overflow-y: hidden;
+    }
+}
+
+main {
+    flex-grow: 1;
+    position: relative;
+}
+@media screen and (orientation: portrait) {
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+main ::-webkit-scrollbar {
+    width: 10px;
+}
+
+main ::-webkit-scrollbar-track {
+    margin-block: 5rem;
+}
+
+main ::-webkit-scrollbar-thumb {
+    background-color: var(--color-secondary);
+    border-radius: 2rem;
+}
+
+.main1 {
+    display: flex;
+    overflow: hidden;
+}
+
+.close {
+    display: none !important;
+}
+
+.no-pointer-events {
+    pointer-events: none !important;
+}
+
+/* fonts */
+p, h1, h2, h3, h4, h5 ,h6, a  {
+    color: var(--black);
+}
+h1,h2 {
+    font-family: "Archivo Black", sans-serif;
+}
+h3 {
+    font-family: "Inter", sans-serif;
+}
+/* inter */
+.inter {
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+}
+.inter.light {
+    font-weight: 300;
+}
+.inter.regular {
+    font-weight: 400;
+}
+.inter.bold {
+    font-weight: 600;
+}
+.inter.bolder {
+    font-weight: 700;
+}
+.inter.boldest {
+    font-weight: 900;
+}
+/* abel */
+.abel {
+    font-family: "Abel", sans-serif;
+    font-style: normal;
+}
+.abel.light {
+    font-weight: 300;
+}
+.abel.regular {
+    font-weight: 400;
+}
+.abel.bold {
+    font-weight: 600;
+}
+.abel.bolder {
+    font-weight: 700;
+}
+.abel.boldest {
+    font-weight: 900;
+}
+/* archivo */
+.archivo-black {
+    font-family: "Archivo Black", sans-serif;
+    font-style: normal;
+}
+.archivo-black.light {
+    font-weight: 300;
+}
+.archivo-black.regular {
+    font-weight: 400;
+}
+.archivo-black.bold {
+    font-weight: 600;
+}
+.archivo-black.bolder {
+    font-weight: 700;
+}
+.archivo-black.boldest {
+    font-weight: 900;
+}
+
+/* nav */
+.nav {
+    position: absolute;
+    display: flex;
+    height: calc(100vh - 6rem);
+    justify-content: center;
+    align-items: end;
+    padding-right: 2rem;
+    flex-direction: column;
+    top: 0;
+    right: 0;
+    z-index: 9;
+}
+@media screen and (orientation: portrait) {
+    .nav {
+        position: relative;
+        height: auto;
+        width: 30ch;
+        padding: 1rem;
+        height: 5rem;
+        justify-content: start;
+        transition: height 300ms ease-out;
+        align-self: flex-end;
+    }
+
+    .nav:has(.hamburger[aria-expanded="true"]) {
+        height: 30rem;
+    }
+}
+
+.nav .banner {
+    display: none;
+}
+@media screen and (orientation: portrait) {
+    .nav .banner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100vw;
+        padding-left: 2rem;
+        position: relative;
+        top: 0;
+        transition: top 500ms linear;
+    }
+}
+@media screen and (orientation: portrait) {
+    main:has(.carousel.open) .nav .banner {
+        top: -5rem;
+    }
+}
+
+.nav .banner .img {
+    max-height: 2.5rem;
+    filter: var(--filter);
+}
+
+.nav:has(.hamburger[aria-expanded="true"]) .menubar-navigation {
+    display: flex;
+}
+
+/* nav footer content */
+.nav .content-right {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: .7rem;
+    display: none;
+    max-width: 30ch;
+}
+
+.nav:has(.hamburger[aria-expanded="true"]) .content-right {
+    display: flex;
+}
+
+.nav .footer-content {
+    width: 35ch;
+    display: none;
+}
+@media screen and (orientation: portrait) {
+    .nav .footer-content {
+        display: block;
+    }
+}
+
+.nav .social-links {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 1rem;
+    opacity: 0;
+    animation: slide-up2 600ms ease-out forwards 1300ms;
+    position: relative;
+    top: 10px;
+    padding-right: 10px;
+}
+
+.nav .footer-content .link {
+    position: relative;
+    height: 2rem;
+    filter: var(--filter);
+    top: 0;
+    transition: top 300ms ease-out;
+}
+
+.nav .footer-content .link:hover {
+    top: -7px;
+}
+
+.nav .footer-content .link a {
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.nav .footer-content .link img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+/* end nav footer content */
+
+.nav .menubar-navigation {
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: end;
+    flex-direction: column;
+}
+@media screen and (orientation: portrait) {
+    .nav .menubar-navigation {
+        justify-content: start;
+        display: none;
+        position: static;
+        gap: 20px;
+    }
+
+    .nav:has(.hamburger[aria-expanded="true"]) .menubar-navigation {
+        display: flex;
+    }
+}
+
+.nav .menu-button {
+    font-family: "Archivo Black", sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 7rem;
+    background: none;
+    border: none;
+    letter-spacing: 2px;
+    cursor: pointer;
+    position: relative;
+    transition: color 100ms ease-out;
+}
+@media screen and (max-width: 1536px) {
+    .nav .menu-button {
+        font-size: 6rem;
+    }
+}
+@media screen and (max-width: 1280px) {
+    .nav .menu-button {
+        font-size: 5rem;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .nav .menu-button {
+        font-size: 4rem;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .nav .menu-button {
+        font-size: 2rem;
+    }
+}
+@media screen and (max-width: 800px) {
+    .nav .menu-button {
+        font-size: 1.7rem;
+    }
+}
+@media screen and (orientation: portrait) {
+    .nav .menu-button {
+        color: var(--text-opposing);
+        font-weight: 500;
+        opacity: 0;
+        top: -10px;
+    }
+}
+
+/* Home */
+@media screen and (orientation: portrait) {
+    .nav:has(.hamburger[aria-expanded="true"]) #home {
+        animation: slide-up2 600ms ease-out forwards 300ms;
+    }
+}
+
+/* Music */
+@media screen and (orientation: portrait) {
+    .nav:has(.hamburger[aria-expanded="true"]) #music {
+        animation: slide-up2 600ms ease-out forwards 500ms;
+    }
+}
+
+/* Shop */
+@media screen and (orientation: portrait) {
+    .nav:has(.hamburger[aria-expanded="true"]) #shop {
+        animation: slide-up2 600ms ease-out forwards 700ms;
+    }
+}
+
+/* Touring */
+@media screen and (orientation: portrait) {
+    .nav:has(.hamburger[aria-expanded="true"]) #touring {
+        animation: slide-up2 600ms ease-out forwards 900ms;
+    }
+}
+
+/* Subscribe */
+@media screen and (orientation: portrait) {
+    .nav:has(.hamburger[aria-expanded="true"]) #subscribe {
+        animation: slide-up2 600ms ease-out forwards 1100ms;
+    }
+}
+
+
+@keyframes slide-up2 {
+    from {
+        opacity: 0;
+        top: 10px;
+    }
+    to {
+        opacity: 1;
+        top: 0;
+    }
+}
+
+.nav .menu-button:hover,
+.nav .menu-button:focus,
+.nav .menu-button:not(:has(.music))[aria-current="true"],
+.nav .menu-button:has(.music)[aria-pressed="true"] {
+    color: var(--color-secondary);
+}
+@media screen and (orientation: portrait) {
+    .nav .menu-button:hover,
+    .nav .menu-button:focus,
+    .nav .menu-button:not(:has(.music))[aria-current="true"],
+    .nav .menu-button:has(.music)[aria-pressed="true"] {
+        color: var(--text-opposing);
+    }
+}
+
+.nav .menu-button .text {
+    position: relative;
+    z-index: 1;
+}
+
+.nav .menu-button .underline {
+    height: 1rem;
+    width: 100%;
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    z-index: 0;
+    transform: scaleX(-1);
+}
+@media screen and (max-width: 1280px) {
+    .nav .menu-button .underline {
+        height: 0rem;
+    }
+}
+
+.nav .menu-button .underline::after {
+    content: "";
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 1rem;
+    width: 0%;
+    background-color: var(--color-secondary);
+    display: block;
+    transition: width 200ms ease-out;
+}
+@media screen and (max-width: 1280px) {
+    .nav .menu-button .underline::after {
+        height: .5rem;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .nav .menu-button .underline::after {
+        height: .3rem;
+    }
+}
+@media screen and (orientation: portrait) {
+    .nav .menu-button .underline::after {
+        background-color: var(--text-opposing);
+    }
+}
+
+.nav .menu-button:hover .underline::after,
+.nav .menu-button:focus .underline::after,
+.nav .menu-button:not(:has(.music))[aria-current="true"] .underline::after,
+.menu-button:has(.music)[aria-pressed="true"] .underline::after{
+    width: 100%;
+}
+
+.menu-button span {
+    pointer-events: none;
+}
+
+/* hamburger */
+
+.nav .hamburger {
+    width: 3rem;
+    aspect-ratio: 1 / 1;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 888;
+    justify-self: end;
+}
+
+.nav .hamburger svg {
+    pointer-events: none;
+}
+
+.nav .hamburger line {
+    stroke: var(--text-opposing);
+}
+
+.hamburger .line {
+    stroke: white;
+    animation: to-open-icon 0.5s forwards;
+}
+
+.hamburger .line.top {
+    --rotation: -45deg;
+    transform-origin: 80% 38%;
+}
+
+.hamburger .line.bot {
+    --rotation: 45deg;
+    transform-origin: 78% 62%;
+}
+
+.hamburger[aria-expanded=true] .line {
+    animation: to-close-icon 0.5s forwards;
+}
+
+.hamburger[aria-expanded=true] .mid {
+    opacity: 0;
+}
+
+@keyframes to-close-icon {
+    0% {
+        stroke-dashoffset: 0;
+    }
+
+    40% {
+        stroke-dashoffset: 79.9;
+    }
+
+    60% {
+        stroke-dashoffset: 79.9;
+        rotate: var(--rotation);
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+        rotate: var(--rotation);
+    }
+}
+
+@keyframes to-open-icon {
+    0% {
+        stroke-dashoffset: 79.9;
+    }
+
+    40% {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* filler */
+.filler {
+    font-size: 7rem;
+    font-family: "Archivo Black", sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    padding-right: 2rem;
+    padding-left: 1rem;
+    width: 10ch;
+    pointer-events: none;
+}
+@media screen and (max-width: 1536px) {
+    .filler {
+        font-size: 6rem;
+    }
+}
+@media screen and (max-width: 1280px) {
+    main:has(.shop.close) .filler {
+        font-size: 5rem;
+    }
+}
+@media screen and (max-width: 1024px) {
+    main:has(.shop.close) .filler {
+        font-size: 4rem;
+    }
+}
+@media screen and (orientation: portrait) {
+    .filler {
+        display: none;
+    }
+}
+
+
+/* footer */
+.footer {
+    position: relative;
+    height: 6rem;
+    width: 100%;
+    z-index: 10;
+    background: var(--gradient);
+    animation: gradient 30s ease infinite;
+    background-size: 200% 200%;
+    overflow: hidden;
+}
+@media screen and (orientation: portrait) {
+    .footer {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        height: 100vh; 
+    }
+}
+
+@keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}
+
+.footer .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 3rem;
+    height: 100%;
+}
+@media screen and (orientation: portrait) {
+    .footer .wrapper {
+        display: none;
+    }
+}
+
+.footer .img {
+    max-height: 2.3rem;
+    filter: var(--filter);
+}
+@media screen and (max-width: 1366px) {
+    .footer .img {
+        max-height: 1.8rem;
+    }
+}
+
+.footer .content-right {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: .5rem;
+}
+
+.footer .heading2 {
+    font-size: 1.3rem;
+    text-align: end;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    color: var(--text-opposing);
+}
+
+.footer .social-links {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+    gap: 2rem;
+}
+@media screen and (max-width: 1366px) {
+    .footer .social-links {
+        gap: 1.3rem;
+    }
+}
+
+.footer .link {
+    position: relative;
+    height: 2rem;
+    width: 2rem;
+    filter: var(--filter);
+    top: 0;
+    transition: top 300ms ease-out;
+}
+@media screen and (max-width: 1366px) {
+    .footer .link {
+        height: 1.5rem;
+    }
+}
+
+.footer .link:hover {
+    top: -7px;
+}
+
+.footer .link a {
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+}
+
+.footer .link img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+  
+/* slider carousel */
+.carousel {
+    position: relative;
+    flex-grow: 1;
+    /* top: 50%;
+    left: 50%; */
+    transition: top 300ms ease-out;
+    top: 0;
+}
+
+@media screen and (orientation: portrait) {
+    main:has(.hamburger[aria-expanded="true"]) .carousel {
+        top: 5rem;
+    }
+}
+
+.carousel-items img {
+    width: var(--record-diameter);
+    height: var(--record-diameter);
+    pointer-events: all;
+    border-radius: 50%;
+    overflow: clip;
+}
+@media screen and (orientation: portrait) {
+    .carousel-items img {
+        -webkit-animation: rotating 120s linear infinite;
+        -moz-animation: rotating 120s linear infinite;
+        -ms-animation: rotating 120s linear infinite;
+        -o-animation: rotating 120s linear infinite;
+        animation: rotating 120s linear infinite;
+    }
+}
+
+.carousel-inner {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: calc(-1 * (var(--record-diameter) / 2));
+    top: calc(-1 * (var(--record-diameter) / 2));
+}
+@media screen and (orientation: portrait) {
+    .carousel-inner {
+        top: auto;
+        left: -10%;
+        transition: bottom 500ms ease-out;
+        bottom: calc(-1 * (var(--record-diameter) * 1.8));
+    }
+
+    .carousel.open .carousel-inner {
+        bottom: calc(-1 * ((var(--record-diameter) * 1.8)) + 65vh);
+    }
+}
+@media screen and (orientation: portrait) and (max-height: 1000px) {
+    .carousel.open .carousel-inner {
+        bottom: calc(-1 * ((var(--record-diameter) * 1.8)) + 70vh);
+    }
+}
+
+.carousel .controls {
+    position: absolute;
+    top: 0;
+    left: 0 ;
+    width: calc(var(--record-diameter));
+    height: calc(var(--record-diameter));
+    transform: rotate(355deg);
+    pointer-events: none;
+}
+@media screen and (orientation: portrait) {
+    .carousel .controls {
+        position: fixed;
+        width: 100vw;
+        height: auto;
+        transform: none;
+    }
+}
+
+
+.carousel .controls button {
+    width: 2.3rem;
+    height: 2.3rem;
+    border-radius: 50%;
+    background-color: var(--black);
+    position: absolute;
+    cursor: pointer;
+    pointer-events: all;
+    outline-offset: 3px;
+}
+@media screen and (max-height: 800px) and (orientation: landscape) {
+    .carousel .controls button {
+        height: 1.8rem;
+        width: 1.8rem;
+    }
+}
+@media screen and (max-width: 800px) and (orientation: landscape) {
+    .carousel .controls button {
+        height: 20px;
+        width: 20px;
+    }
+}
+@media screen and (orientation: portrait) {
+    .carousel .controls button {
+        position: static;
+    }
+}
+
+.carousel .controls button:focus,
+.carousel .controls button:hover {
+    border: solid var(--black) 2px;
+    color: var(--text-opposing);
+    background-color: var(--color-secondary);
+}
+@media screen and (orientation: portrait) {
+    .carousel .controls button:focus,
+    .carousel .controls button:hover {
+        border: solid var(--black) 2px;
+        filter: none;
+    }
+    .carousel .controls1 button:focus,
+    .carousel .controls1 button:hover {
+        background-color: var(--black);
+        outline-offset: 5px;
+        outline: 2px solid var(--black);
+    }
+}
+
+.carousel.open .controls button {
+    display: block;
+}
+
+.carousel .controls1 .off {
+    display: none;
+}
+.carousel .controls1 button[aria-pressed="true"] .off {
+    display: block;
+}
+.carousel .controls1 button[aria-pressed="true"] .on {
+    display: none;
+}
+
+.carousel .controls2 button {
+}
+@media screen and (orientation: portrait) {
+    .carousel .controls2 button {
+        background: none;
+        border-radius: 2rem;
+        height: 8%;
+        width: 60%;
+        object-fit: contain;
+        filter: invert();
+        padding: 1rem 3rem;
+        border: 3px solid white;
+    }
+}
+@media screen and (orientation: portrait) and (max-height: 800px) {
+    .carousel .controls2 button {
+        padding: 10px 1.5rem;
+    }
+}
+@media screen and (orientation: portrait) {
+    .carousel .controls2 .short {
+        display: none;
+    }
+    .carousel .controls2 .long {
+        display: block;
+    }
+}
+
+.carousel .controls2 button ,
+.carousel .controls1 button {
+    display: none;
+}
+@media screen and (max-width: 600px) and (orientation: landscape) {
+    .carousel .controls2 button ,
+    .carousel .controls1 button {
+        padding: 0;
+    }
+}
+
+.carousel .controls2 button img,
+.carousel .controls1 button img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.carousel .controls3 button {
+    background: none;
+    border-radius: 0;
+    position: static;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: none;
+}
+@media screen and (max-width: 1600px) {
+    .carousel .controls3 button {
+        width: 2rem;
+        height: 2rem;
+    }
+}
+@media screen and (max-width: 1280px) {
+    .carousel .controls3 button {
+        height: 1.7rem;
+        width: 1.7rem;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .carousel .controls3 button {
+        height: 1.4rem;
+        width: 1.4rem;
+    }
+}
+@media screen and (orientation: portrait) {
+    .carousel .controls3 button {
+        height: 3rem;
+        width: 3rem;
+        filter: var(--filter);
+        min-width: 5ch;
+    }
+}
+@media screen and (orientation: portrait) {
+    .carousel.open .controls3 button {
+        filter: none;
+        color: var(--black);
+    }
+}
+@media screen and (orientation: portrait) and (max-width: 600px) {
+    .carousel .controls3 button {
+        height: 2rem;
+        width: 2rem;
+    }
+}
+
+.carousel .next {
+    margin-left: 2rem;
+}
+@media screen and (orientation: portrait) {
+    .carousel .next {
+        margin-left: 0;
+        transform: translateX(0);
+        transition: transform 300ms ease-out;
+    }
+
+    main:has(.hamburger[aria-expanded="true"]) .carousel .next {
+        transform: translateX(20vw);
+    }
+}
+
+.carousel .prev {
+    margin-right: 2rem;;
+}
+@media screen and (orientation: portrait) {
+    .carousel .prev {
+        margin-right: 0;
+        transform: translateX(0);
+        transition: transform 300ms ease-out;
+    }
+
+    main:has(.hamburger[aria-expanded="true"]) .carousel .prev {
+        transform: translateX(-20vw);
+    }
+}
+
+
+.carousel .controls3 button img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.carousel:has(.record1.active) .controls3 button:hover img,
+.carousel:has(.record7.active) .controls3 button:hover img,
+.carousel:has(.record8.active) .controls3 button:hover img,
+.carousel:has(.record1.active) .controls3 button:focus img,
+.carousel:has(.record7.active) .controls3 button:focus img,
+.carousel:has(.record8.active) .controls3 button:focus img,
+.carousel:has(.record3.active) .controls3 button:focus img,
+.carousel:has(.record3.active) .controls3 button:hover img,
+.carousel:has(.record2.active) .controls3 button:focus img,
+.carousel:has(.record2.active) .controls3 button:hover img {
+    filter: invert();
+}
+
+.carousel .controls3 button.next img {
+    transform: scaleX(-1);
+}
+
+.carousel .controls3 .wrapper .content {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: -15%;
+    left: 5%;
+    display: none;
+}
+@media screen and (orientation: portrait) {
+    .carousel .controls3 .wrapper .content {
+        bottom: auto;
+        top: 37vh;
+        left: 0;
+        padding-inline: 2rem;
+        display: flex;
+        position: relative;
+        transition: top 300ms ease-out;
+    }
+}
+
+.carousel.open .controls3 .wrapper .content {
+    display: flex;
+}
+
+.carousel .controls3 .song-title {
+    font-size: 2.5rem;
+    font-family: "Abel", sans-serif;
+    font-style: normal;
+    letter-spacing: 2px;
+    white-space: nowrap;
+    width: 13ch;
+    text-align: center;
+}
+@media screen and (max-width: 1366px) {
+    .carousel .controls3 .song-title {
+        font-size: 1.8rem;
+        flex-grow: 1;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .carousel .controls3 .song-title {
+        font-size: 1.4rem;
+        flex-grow: 1;
+    }
+}
+@media screen and (orientation: portrait) {
+    .carousel .controls3 .song-title {
+        font-size: 3rem;
+        visibility: hidden;
+        position: relative;
+    }
+}
+@media screen and (orientation: portrait) {
+    .carousel.open .controls3 .song-title {
+        visibility: visible;
+        top: 13vh;
+    }
+}
+@media screen and (orientation: portrait) and (max-height: 1000px) {
+    .carousel.open .controls3 .song-title {
+        top: 10vh;
+    }
+}
+@media screen and (orientation: portrait) and (max-height: 800px) {
+    .carousel.open .controls3 .song-title {
+        top: 7vh;
+    }
+}
+@media screen and (max-width: 500px) and (orientation: portrait) {
+    .carousel .controls3 .song-title {
+        font-size: 2.2rem;
+    }
+}
+@media screen and (max-width: 400px) and (orientation: portrait)  {
+    .carousel .controls3 .song-title {
+        font-size: 2rem;
+    }
+}
+
+.carousel .controls .exit {
+    top: 25%;
+    left: 15%;
+}
+.carousel.open .controls .exit {
+    top: 15%;
+    left: -2%;
+}
+@media screen and (orientation: portrait) {
+    .carousel.open .controls .exit {
+        position: relative;
+        top: 6vh;
+        left: 4vh;
+        height: 3rem;
+        width: 3rem;
+    }
+}
+@media screen and (orientation: portrait) and (max-width: 650px) {
+    .carousel.open .controls .exit {
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+}
+@media screen and (orientation: portrait) and (max-width: 500px) {
+    .carousel.open .controls .exit {
+        height: 2rem;
+        width: 2rem;
+    }
+}
+
+.carousel .controls .mute {
+    left: 27%;
+    top: 15%;
+}
+.carousel.open .controls .mute {
+    left: 7%;
+    top: 5%;
+}
+@media screen and (orientation: portrait) {
+    .carousel.open .controls .mute {
+        position: relative;
+        top: 2.5vh;
+        left: 6vh;
+        height: 3rem;
+        width: 3rem;
+    }
+}
+@media screen and (orientation: portrait) and (max-width: 650px)  {
+    .carousel.open .controls .mute {
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+}
+@media screen and (orientation: portrait) and (max-width: 500px)  {
+    .carousel.open .controls .mute {
+        height: 2rem;
+        width: 2rem;
+    }
+}
+
+.carousel .controls .link1 {
+    bottom: 45%;
+    right: 8%;
+}
+.carousel.open .controls .link1 {
+    bottom: 40%;
+    right: -12%;
+}
+@media screen and (max-width: 1280px) and (orientation: landscape) {
+    .carousel.open .controls .link1 {
+        bottom: 42%;
+        right: -12%;
+    }
+}
+@media screen and (orientation: portrait) {
+    .carousel .controls .link1 {
+        transform: translateY(-10px);
+        opacity: 0;
+        animation: slide-up3 700ms ease-out forwards 600ms;
+    }
+}
+
+@keyframes slide-up3 {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.carousel .controls .link2 {
+    bottom: 35%;
+    right: 10%;
+}
+.carousel.open .controls .link2 {
+    bottom: 30%;
+    right: -10%;
+}
+@media screen and (max-width: 1280px) and (orientation: landscape) {
+    .carousel.open .controls .link2 {
+        bottom: 31%;
+        right: -10%;
+    }
+}
+@media screen and (orientation: portrait) {
+    .carousel .controls .link2 {
+        transform: translateY(-10px);
+        opacity: 0;
+        animation: slide-up3 700ms ease-out forwards 800ms;
+    }
+}
+
+.carousel .controls .link3 {
+    bottom: 25%;
+    right: 14%;
+}
+.carousel.open .controls .link3 {
+    bottom: 20%;
+    right: -6%;
+}
+@media screen and (orientation: portrait) {
+    .carousel .controls .link3 {
+        transform: translateY(-10px);
+        opacity: 0;
+        animation: slide-up3 700ms ease-out forwards 1000ms;
+    }
+}
+
+.carousel .controls .link4 {
+    bottom: 15%;
+    right: 20%;
+}
+.carousel.open .controls .link4 {
+    bottom: 10%;
+    right: -0%;
+}
+@media screen and (orientation: portrait) {
+    .carousel .controls .link4 {
+        transform: translateY(-10px);
+        opacity: 0;
+        animation: slide-up3 700ms ease-out forwards 1200ms;
+    }
+}
+
+
+.carousel .controls .wrapper {
+    position: absolute;
+    top: calc(var(--radius) * sin(45deg));
+    left: calc(var(--radius) * cos(45deg));
+    width: var(--record-diameter);
+    height: var(--record-diameter);
+    transform: scale(1.3) rotate(5deg);
+    pointer-events: none;
+}
+@media screen and (orientation: portrait) {
+    .carousel .controls .wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        transform: none;
+        pointer-events: none;
+        display: flex;
+    }
+}
+/* carousel controls2 .wrapper */
+@media screen and (orientation: portrait) {
+    .carousel .controls2 .wrapper {
+        position: fixed;
+        top: auto;
+        left: 0;
+        width: 100%;
+        bottom: 0;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: end;
+        align-items: center;
+        padding-bottom: 2rem;
+        gap: 1.5rem;
+        opacity: 0;
+        background: linear-gradient(rgba(255, 255, 255, 0), rgb(255, 255, 255) 70%);
+        animation: fade-in 600ms ease-out reverse;
+        visibility: hidden;
+    }
+}
+@media screen and (orientation: portrait) {
+    .carousel.open .controls2 .wrapper {
+        visibility: visible;
+        animation: fade-in 300ms ease-out forwards;
+    }
+}
+
+.carousel .carousel-items {
+    width: var(--record-diameter);
+    height: var(--record-diameter);
+    transform-origin: center;
+    transition: transform 600ms ease-out;
+    pointer-events: none;
+}
+@media screen and (orientation: portrait) {
+    .carousel .carousel-items {
+        transform: none !important;
+    }
+}
+
+/* rotation2 */
+@media screen and (orientation: landscape) {
+    .carousel .carousel-items .rotation2 {
+        transform: none !important;
+    }
+}
+@media screen and (orientation: portrait) {
+    .carousel .carousel-items .rotation2 {
+        transition: transform 600ms ease-out;
+        transform: rotate(45deg);
+        transform-origin: center;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+    }
+}
+
+
+.carousel .carousel-items .wrapper {
+    pointer-events: none;
+}
+
+.carousel .carousel-item {
+    position: absolute;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: transform 600ms ease-out;
+}
+@media screen and (orientation: portrait) {
+    .carousel .carousel-item {
+        transition: transform 500ms ease-out;
+    }
+}
+
+/* record 1 rotate position 38deg (38deg = 0deg) */
+.carousel .record1 {
+    top: calc(var(--radius) * sin(0deg));
+    left: calc(var(--radius) * cos(0deg));  
+
+}
+
+.carousel .record2 {
+    top: calc(var(--radius) * sin(45deg));
+    left: calc(var(--radius) * cos(45deg));
+}
+
+.carousel .record3 {
+    top: calc(var(--radius) * sin(90deg));
+    left: calc(var(--radius) * cos(90deg));
+}
+
+.carousel .record4 {
+    top: calc(var(--radius) * sin(135deg));
+    left: calc(var(--radius) * cos(135deg));
+}
+
+.carousel .record5 {
+    top: calc(var(--radius) * sin(180deg));
+    left: calc(var(--radius) * cos(180deg));
+}
+
+.carousel .record6 {
+    top: calc(var(--radius) * sin(225deg));
+    left: calc(var(--radius) * cos(225deg));
+}
+
+.carousel .record7 {
+    top: calc(var(--radius) * sin(270deg));
+    left: calc(var(--radius) * cos(270deg));
+}
+
+.carousel .record8 {
+    top: calc(var(--radius) * sin(315deg));
+    left: calc(var(--radius) * cos(315deg));
+}
+
+.carousel.open .carousel-item.active {
+    transform: scale(1.3);
+}
+@media screen and (orientation: portrait) {
+    .carousel.open .carousel-item.active {
+        transform: scale(.5);
+    }
+}
+@media screen and (orientation: portrait) and (max-width: 601px) {
+    .carousel.open .carousel-item.active {
+        transform: scale(.55);
+    }
+}
+
+.carousel.open .carousel-item.active img {
+    -webkit-animation: rotating 60s linear infinite;
+    -moz-animation: rotating 60s linear infinite;
+    -ms-animation: rotating 60s linear infinite;
+    -o-animation: rotating 60s linear infinite;
+    animation: rotating 60s linear infinite;
+}
+
+.carousel.open  .carousel-item:has( + .active),
+.carousel.open  .carousel-item.active + .carousel-item {
+    transform: scale(0.7);
+}
+@media screen and (orientation: portrait) {
+    .carousel.open  .carousel-item:has( + .active),
+    .carousel.open  .carousel-item.active + .carousel-item {
+        transform: scale(0.5);
+    }
+}
+@media screen and (orientation: portrait) and (max-width: 601px) {
+    .carousel.open  .carousel-item:has( + .active),
+    .carousel.open  .carousel-item.active + .carousel-item {
+        transform: scale(0.55);
+    }
+}
+
+.carousel.open:has(.record1.active) .record8,
+.carousel.open:has(.record8.active) .record1 {
+    transform: scale(0.7);
+}
+@media screen and (orientation: portrait) {
+    .carousel.open:has(.record1.active) .record8,
+    .carousel.open:has(.record8.active) .record1 {
+        transform: scale(0.5);
+    }
+}
+@media screen and (orientation: portrait) and (max-width: 601px)  {
+    .carousel.open:has(.record1.active) .record8,
+    .carousel.open:has(.record8.active) .record1 {
+        transform: scale(0.55);
+    }
+}
+
+.carousel .carousel-controls {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    bottom: 0;
+}
+
+.carousel .carousel-controls .wrapper {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+}
+
+.carousel .carousel-controls button {
+    background: none;
+    border: none;
+    height: 3rem;
+    width: 3rem;
+    margin-inline: 2rem;
+}
+
+.carousel .carousel-controls .song-title {
+    font-size: 2rem;
+    font-family: "Abel", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+    from {
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+}
+@keyframes rotating {
+    from {
+      -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -ms-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+}
+.rotating {
+    -webkit-animation: rotating 120s linear infinite;
+    -moz-animation: rotating 120s linear infinite;
+    -ms-animation: rotating 120s linear infinite;
+    -o-animation: rotating 120s linear infinite;
+    animation: rotating 120s linear infinite;
+}
+
+
+/* shop */
+.shop {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    position: relative;
+}
+
+.shop:before {
+    content: "";
+    height: 10px;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    background-color: white;
+    z-index: 1;
+}
+
+.shop .wrapper {
+    width: 100%;
+    height: 100%;
+    max-width: 900px;
+    max-height: calc(100vh - 6rem);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: relative;
+    padding-bottom: 10vh;
+}
+
+.shop .heading2 {
+    text-align: center;
+    padding-block: 2rem;
+    font-weight: 300;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    -webkit-box-shadow: 0px 29px 45px -25px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 29px 45px -25px rgba(0,0,0,0.5);
+    box-shadow: 0px 29px 45px -25px rgba(0,0,0,0.5);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    z-index: 1;
+}
+@media screen and (max-width: 700px) {
+    .shop .heading2 {
+        font-size: 2rem;
+        width: 100%;
+    }
+}
+
+.shop .heading2 .text {
+    min-width: 12ch;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shop .heading2 span {
+    display: inline-block;
+    max-width: 4rem;
+    margin-inline: 2rem;
+}
+@media screen and (max-width: 1366px) {
+    .shop .heading2 span {
+        margin-inline: 1rem;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .shop .heading2 span {
+        display: none;
+    }
+}
+@media screen and (orientation: portrait) {
+    .shop .heading2 span {
+        display: inline-block;
+    }
+}
+@media screen and (max-width: 400px) {
+    .shop .heading2 span {
+        display: none;
+    }
+}
+
+.shop .heading2 span img {
+    width: 100%;
+    -webkit-animation: rotating 60s linear infinite;
+    -moz-animation: rotating 60s linear infinite;
+    -ms-animation: rotating 60s linear infinite;
+    -o-animation: rotating 60s linear infinite;
+    animation: rotating 60s linear infinite;
+}
+
+.shop .heading2 span .img2 {
+    -webkit-animation: rotating 60s linear infinite reverse;
+    -moz-animation: rotating 60s linear infinite reverse;
+    -ms-animation: rotating 60s linear infinite reverse;
+    -o-animation: rotating 60s linear infinite reverse;
+    animation: rotating 60s linear infinite reverse;
+}
+
+.shop .item-list {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-inline: 1rem;
+    margin-top: 5rem;
+    
+}
+
+.shop .item {
+    flex-grow: 1;
+    min-width: 150px;
+    width: 100%;
+    max-width:  max(250px, 30%);
+    cursor: pointer;
+    position: relative;
+}
+
+.shop .item:after {
+    content: "";
+    position: absolute;
+    right: 1rem;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background-image: url('../img/add-to-shopping-bag.png');
+    background-repeat: no-repeat;
+    background-size: 75%;
+    background-position:  75% 50%;
+    background-color: var(--black);
+    visibility: hidden;
+    opacity: 0;
+    bottom: 5.5rem;
+}
+
+.shop .item:hover::after {
+    visibility: visible;
+    animation: slide-up forwards 400ms ease-out;
+}
+
+@keyframes slide-up {
+    from {
+        opacity: 0;
+        bottom: 5.2rem;
+    }
+    to {
+        opacity: 1;
+        bottom: 6rem;
+    }
+}
+
+.shop .item img {
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    border-radius: 1rem;
+    position: relative;
+}
+
+.shop .heading3,
+.shop .p1 {
+    margin-block: 1rem;
+    text-align: center;
+}
+
+/* touring */
+.touring {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    position: relative;
+}
+
+.touring:before {
+    content: "";
+    height: 10px;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    background-color: white;
+    z-index: 1;
+}
+
+.touring h3, .touring p, .touring a {
+    font-family: "Inter", sans-serif;
+}
+
+.touring .wrapper {
+    width: 100%;
+    height: 100%;
+    max-width: 900px;
+    max-height: calc(100vh - 6rem);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: relative;
+    padding-bottom: 10vh;
+}
+
+.touring .heading2 {
+    text-align: center;
+    padding-block: 2rem;
+    font-weight: 300;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    -webkit-box-shadow: 0px 29px 45px -25px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 29px 45px -25px rgba(0,0,0,0.5);
+    box-shadow: 0px 29px 45px -25px rgba(0,0,0,0.5);
+    z-index: 1;
+}
+@media screen and (max-width: 500px) {
+    .touring .heading2 {
+        font-size: 2rem;
+    }
+}
+
+.touring .tour-list {
+    margin-top: 4rem;
+}
+
+.touring .tour-list .item {
+    padding-block: 1rem;
+    display: flex;
+    align-items: center;
+    padding-inline: 1rem;
+    transition: background-color 200ms ease-out;
+}
+
+.touring .tour-list .item .content {
+    flex-grow: 1;
+    padding-inline: 1rem;
+}
+
+.touring .tour-list .item .inner {
+    width: max-content;
+    position: relative;
+    transition: left 300ms ease-out;
+    left: 0;
+}
+
+.touring .tour-list .item:hover .inner {
+    left: 15ch;
+}
+
+.touring .tour-list .item .inner::before {
+    content: "";
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: var(--record-image);
+    aspect-ratio: 1 / 1;
+    background-color: teal;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: -120%;
+}
+
+.touring .tour-list .item:hover .inner::before {
+    -webkit-animation: rotating 30s linear infinite;
+    -moz-animation: rotating 30s linear infinite;
+    -ms-animation: rotating 30s linear infinite;
+    -o-animation: rotating 30s linear infinite;
+    animation: rotating 30s linear infinite;
+}
+
+
+.touring .tour-list .item .links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.touring .tour-list .item .links a {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    text-decoration: none;
+    padding: 14px 40px;
+    border: 2px solid var(--black);
+    cursor: pointer;
+}
+
+.touring .tour-list .item .link1 {
+    background-color: var(--black);
+    color: white;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: color 200ms ease-out,
+    background-color 200ms ease-out;
+}
+
+.touring .tour-list .item .link1:hover,
+.touring .tour-list .item .link1:focus {
+    background-color: var(--color-secondary);
+    color: var(--text-opposing);
+}
+
+.touring .tour-list .item .heading3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.touring .tour-list .item .p1 {
+    font-size: 1.1rem;
+    margin-block: 10px;
+}
+
+/* Menu Button transitions */
+
+.transitions {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    pointer-events: none;
+    isolation: isolate;
+    text-align: left;
+}
+@media screen and (orientation: portrait) {
+    .transitions {
+        transform: rotate(90deg);
+    }   
+}
+
+.transitions .row {
+    display: block;
+    position: relative;
+    left: -10%;
+    height: 20%;
+    width: 120%;
+    transform: scaleY(1.01) scaleX(-1);
+}
+@media screen and (orientation: portrait) {
+    .transitions .row {
+        height: 20%;
+        width: 140vh;
+        left: -35vh;
+    }
+}
+
+.transitions .row .inner {
+    overflow: clip;
+}
+
+.transitions .row .img {
+    position: relative;
+    height: 60vh;
+    aspect-ratio: 1 / 1;
+    left: 35%;
+    mix-blend-mode: multiply;
+    background-image: var(--record-image);
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0;
+    animation: fade-in 1000ms ease-out forwards 500ms;
+    transform: scaleX(-1);
+}
+@media screen and (orientation: portrait) {
+    .transitions .row .img {
+        left: 40vh;
+    }
+}
+
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.transitions .row2 .img {
+    background-position: 0 0;
+}
+
+.transitions .row3 .img {
+    background-position: 0 -20vh;
+}
+
+.transitions .row4 .img {
+    background-position: 0 -40vh;
+}
+
+.transitions .row .inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--color-secondary);
+    width: 100%;
+    height: 100%;
+    border-radius: 100vw;
+    padding: 0;
+    margin: 0;
+}
+
+.transitions .row3 .inner {
+    border-radius: 0;
+    border-top-right-radius: 100vw;
+    border-bottom-right-radius: 100vw;
+}
+
+.transitions .row2 .inner,
+.transitions .row4 .inner {
+    border-radius: 0;
+    border-top-right-radius: 100vw;
+    border-bottom-right-radius: 100vw;
+}
+
+.transitions.slide-out .row .inner {
+    width: 0%;
+}
+
+/* slide in */
+.transitions .row1 .inner {
+    transition: width linear 250ms;
+}
+
+.transitions .row2 .inner {
+    transition: width linear 250ms 400ms;
+}
+
+.transitions .row3 .inner {
+    transition: width linear 250ms 200ms;
+}
+
+.transitions .row4 .inner {
+    transition: width linear 250ms 300ms;
+}
+
+.transitions .row5 .inner {
+    transition: width linear 250ms 500ms;
+}
+
+/* slide out */
+.transitions.slide-in .row1 .inner {
+    transition: width linear reverse 250ms 200ms;
+}
+
+.transitions.slide-in .row2 .inner {
+    transition: width linear reverse 250ms 500ms;
+}
+
+.transitions.slide-in .row3 .inner {
+    transition: width linear reverse 250ms 300ms;
+}
+
+.transitions.slide-in .row4 .inner {
+    transition: width linear reverse 250ms 400ms;
+}
+
+.transitions.slide-in .row5 .inner {
+    transition: width linear reverse 250ms 600ms;
+}
+
+
+@keyframes slide-in-out {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.transitions .rows {
+    height: 100%;
+    width: 100%;
+}
+
+/* dialog | subscribe */
+.dialog {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.834);
+    z-index: 1001;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    display: none;
+}
+
+.dialog.open {
+    display: flex;
+    animation: fade-in 300ms ease-out forwards;
+}
+
+.dialog .content {
+    position: relative;
+    z-index: 1;
+    background-color: white;
+    max-width: 600px;
+    padding: 2rem;
+    padding-top: 5rem;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dialog .exit {
+    position: absolute;
+    background-color: var(--black);
+    border-radius: 50%;
+    padding: 5px;
+    height: 2rem;
+    width: 2rem;
+    top: 1rem;
+    right: 2rem;
+}
+
+.dialog .exit:focus {
+    outline: 2px solid var(--black);
+    outline-offset: 5px;
+}
+
+.dialog .exit img {
+    height: 100%;
+    width: 100%;
+}
+
+.dialog img {
+    height: 4rem;
+}
+
+.dialog h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-block: 2rem;
+    line-height: 167%;
+}
+
+.dialog form .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dialog.submit .wrapper {
+    display: none;
+}
+
+.dialog .thanks {
+    opacity: 0;
+    animation: fade-in 300ms ease-out forwards;
+    text-align: center;
+    display: none;
+}
+
+.dialog.submit .thanks {
+    display: block;
+}
+
+.dialog .form-field {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.dialog label {
+    font-size: 1.3rem;
+    margin-right: 1rem;
+}
+
+.dialog .form-field input {
+    flex-grow: 1;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    border: 2px solid var(--black);
+    padding-left: 10px;
+    padding-block: 3px;
+}
+
+.dialog input:focus {
+    outline: 2px solid var(--black);
+    outline-offset: 5px;
+}
+
+.dialog p {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    line-height: 167%;
+    margin-block: 1rem;
+}
+
+.dialog input[type="submit"] {
+    padding: 5px 2rem;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    border-radius: 5px;
+    border: 2px solid var(--black);
+    background-color: var(--color-secondary);
+    color: var(--text-opposing);
+}
+
+body:has(.record6.active) .dialog input[type="submit"] {
+    color: white;
+}
