@@ -414,6 +414,8 @@ h3 {
         font-weight: 500;
         opacity: 0;
         top: -10px;
+        padding: 0;
+        margin-right: 10px;
     }
 }
 
@@ -517,7 +519,7 @@ h3 {
 }
 @media screen and (max-width: 1000px) {
     .nav .menu-button .underline::after {
-        height: .3rem;
+        height: 7px;
     }
 }
 @media screen and (orientation: portrait) {
@@ -815,6 +817,11 @@ h3 {
         bottom: calc(-1 * ((var(--record-diameter) * 1.8)) + 70vh);
     }
 }
+@media screen and (orientation: portrait) and (max-height: 800px) {
+    .carousel.open .carousel-inner {
+        bottom: calc(-1 * ((var(--record-diameter) * 1.8)) + 65vh);
+    }
+}
 
 .carousel .controls {
     position: absolute;
@@ -1100,12 +1107,22 @@ h3 {
 }
 @media screen and (orientation: portrait) and (max-height: 1000px) {
     .carousel.open .controls3 .song-title {
-        top: 10vh;
+        top: 8vh;
+    }
+}
+@media screen and (orientation: portrait) and (max-height: 900px) {
+    .carousel.open .controls3 .song-title {
+        top: 5vh;
     }
 }
 @media screen and (orientation: portrait) and (max-height: 800px) {
     .carousel.open .controls3 .song-title {
-        top: 7vh;
+        top: 8vh;
+    }
+}
+@media screen and (orientation: portrait) and (max-height: 700px) {
+    .carousel.open .controls3 .song-title {
+        top: 10vh;
     }
 }
 @media screen and (max-width: 500px) and (orientation: portrait) {
