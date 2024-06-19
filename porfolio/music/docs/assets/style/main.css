@@ -382,6 +382,7 @@ h3 {
     cursor: pointer;
     position: relative;
     transition: color 100ms ease-out;
+    color: var(--black);
 }
 @media screen and (max-width: 1536px) {
     .nav .menu-button {
