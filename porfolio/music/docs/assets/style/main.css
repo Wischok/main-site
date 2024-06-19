@@ -973,12 +973,6 @@ h3 {
         width: 1.7rem;
     }
 }
-@media screen and (max-width: 1024px) {
-    .carousel .controls3 button {
-        height: 1.4rem;
-        width: 1.4rem;
-    }
-}
 @media screen and (orientation: portrait) {
     .carousel .controls3 button {
         height: 3rem;
