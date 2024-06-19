@@ -144,14 +144,6 @@ a {
         display: block;
     }
 }
-@media screen and (max-width: 601px) {
-    .nav .toggle {
-        height: 2rem;
-        width: 2rem;
-        outline: 2px solid var(--color-primary);
-        transform: scale(0.9);
-    }
-}
 
 /* vertical bar */
 .nav .toggle[aria-expanded="true"] {
@@ -286,16 +278,11 @@ a {
 @media screen and (max-width: 1250px) {
     .nav .heading1 {
         visibility: hidden;
-        margin-top: 2rem;
+        margin-top: 0;
     }
 
     .nav:has(.toggle[aria-expanded="true"]) .heading1 {
         visibility: visible;
-    }
-}
-@media screen and (max-width: 1024px) {
-    .nav .heading1 {
-        margin-top: 0;
     }
 }
 
