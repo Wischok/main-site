@@ -103,8 +103,11 @@
 body {
     display: flex;
     min-height: 100vh;
+    min-height: 100svh;
+    min-height: 100dvh;
     flex-direction: column;
     width: 100%;
+    position: relative;
 }
 @media screen and (orientation: portrait) {
     body {
@@ -247,6 +250,11 @@ h3 {
 
     .nav:has(.hamburger[aria-expanded="true"]) {
         height: 30rem;
+    }
+}
+@media screen and (orientation: portrait) and (min-height: 1080px) {
+    .nav:has(.hamburger[aria-expanded="true"]) {
+        height: 60vh;
     }
 }
 
@@ -973,12 +981,6 @@ h3 {
     .carousel.open .controls3 button {
         filter: none;
         color: var(--black);
-    }
-}
-@media screen and (orientation: portrait) and (max-width: 600px) {
-    .carousel .controls3 button {
-        height: 2rem;
-        width: 2rem;
     }
 }
 
