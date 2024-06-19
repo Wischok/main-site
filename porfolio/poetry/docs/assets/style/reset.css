@@ -56,9 +56,28 @@ table {
 * {
   box-sizing: border-box;
 }
+/* 
+  Default Styles for site
+*/
+p {
+    font-family: "Open Sans", sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Laila", serif;
+}
+h2 {
+    font-size: 4rem;
+    letter-spacing: 3px;
+    margin: 7px 0 7px 0;
+    padding: 0;
+}
+body::-webkit-scrollbar {
+    /* display: none; */
+}
 /*
   End Reset Styles
 */
+
 .hide-visually {
     position: absolute;
     width: 1px;
@@ -68,4 +87,46 @@ table {
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
     border: 0;
+}
+
+.no-display {
+  display: none;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-row-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-column-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+}
+
+.flex {
+  display: flex;
 }
