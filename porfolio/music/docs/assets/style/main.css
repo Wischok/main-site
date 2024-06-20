@@ -281,7 +281,8 @@ h3 {
 
 .nav .banner .img {
     max-height: 2.5rem;
-    filter: var(--filter);
+    -webkit-filter: var(--filter);
+            filter: var(--filter);
 }
 
 .nav:has(.hamburger[aria-expanded="true"]) .menubar-navigation {
@@ -318,7 +319,8 @@ h3 {
     align-items: center;
     gap: 1rem;
     opacity: 0;
-    animation: slide-up2 600ms ease-out forwards 1300ms;
+    -webkit-animation: slide-up2 600ms ease-out forwards 1300ms;
+            animation: slide-up2 600ms ease-out forwards 1300ms;
     position: relative;
     top: 10px;
     padding-right: 10px;
@@ -327,7 +329,8 @@ h3 {
 .nav .footer-content .link {
     position: relative;
     height: 2rem;
-    filter: var(--filter);
+    -webkit-filter: var(--filter);
+            filter: var(--filter);
     top: 0;
     transition: top 300ms ease-out;
 }
@@ -346,7 +349,8 @@ h3 {
 .nav .footer-content .link img {
     height: 100%;
     width: 100%;
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
 }
 
 /* end nav footer content */
@@ -424,35 +428,52 @@ h3 {
 /* Home */
 @media screen and (orientation: portrait) {
     .nav:has(.hamburger[aria-expanded="true"]) #home {
-        animation: slide-up2 600ms ease-out forwards 300ms;
+        -webkit-animation: slide-up2 600ms ease-out forwards 300ms;
+                animation: slide-up2 600ms ease-out forwards 300ms;
     }
 }
 
 /* Music */
 @media screen and (orientation: portrait) {
     .nav:has(.hamburger[aria-expanded="true"]) #music {
-        animation: slide-up2 600ms ease-out forwards 500ms;
+        -webkit-animation: slide-up2 600ms ease-out forwards 500ms;
+                animation: slide-up2 600ms ease-out forwards 500ms;
     }
 }
 
 /* Shop */
 @media screen and (orientation: portrait) {
     .nav:has(.hamburger[aria-expanded="true"]) #shop {
-        animation: slide-up2 600ms ease-out forwards 700ms;
+        -webkit-animation: slide-up2 600ms ease-out forwards 700ms;
+                animation: slide-up2 600ms ease-out forwards 700ms;
     }
 }
 
 /* Touring */
 @media screen and (orientation: portrait) {
     .nav:has(.hamburger[aria-expanded="true"]) #touring {
-        animation: slide-up2 600ms ease-out forwards 900ms;
+        -webkit-animation: slide-up2 600ms ease-out forwards 900ms;
+                animation: slide-up2 600ms ease-out forwards 900ms;
     }
 }
 
 /* Subscribe */
 @media screen and (orientation: portrait) {
     .nav:has(.hamburger[aria-expanded="true"]) #subscribe {
-        animation: slide-up2 600ms ease-out forwards 1100ms;
+        -webkit-animation: slide-up2 600ms ease-out forwards 1100ms;
+                animation: slide-up2 600ms ease-out forwards 1100ms;
+    }
+}
+
+
+@-webkit-keyframes slide-up2 {
+    from {
+        opacity: 0;
+        top: 10px;
+    }
+    to {
+        opacity: 1;
+        top: 0;
     }
 }
 
@@ -564,7 +585,8 @@ h3 {
 
 .hamburger .line {
     stroke: white;
-    animation: to-open-icon 0.5s forwards;
+    -webkit-animation: to-open-icon 0.5s forwards;
+            animation: to-open-icon 0.5s forwards;
 }
 
 .hamburger .line.top {
@@ -578,11 +600,32 @@ h3 {
 }
 
 .hamburger[aria-expanded=true] .line {
-    animation: to-close-icon 0.5s forwards;
+    -webkit-animation: to-close-icon 0.5s forwards;
+            animation: to-close-icon 0.5s forwards;
 }
 
 .hamburger[aria-expanded=true] .mid {
     opacity: 0;
+}
+
+@-webkit-keyframes to-close-icon {
+    0% {
+        stroke-dashoffset: 0;
+    }
+
+    40% {
+        stroke-dashoffset: 79.9;
+    }
+
+    60% {
+        stroke-dashoffset: 79.9;
+        rotate: var(--rotation);
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+        rotate: var(--rotation);
+    }
 }
 
 @keyframes to-close-icon {
@@ -602,6 +645,16 @@ h3 {
     100% {
         stroke-dashoffset: 0;
         rotate: var(--rotation);
+    }
+}
+
+@-webkit-keyframes to-open-icon {
+    0% {
+        stroke-dashoffset: 79.9;
+    }
+
+    40% {
+        stroke-dashoffset: 0;
     }
 }
 
@@ -655,7 +708,8 @@ h3 {
     width: 100%;
     z-index: 10;
     background: var(--gradient);
-    animation: gradient 30s ease infinite;
+    -webkit-animation: gradient 30s ease infinite;
+            animation: gradient 30s ease infinite;
     background-size: 200% 200%;
     overflow: hidden;
 }
@@ -666,6 +720,18 @@ h3 {
         left: 0;
         z-index: -1;
         height: 100vh; 
+    }
+}
+
+@-webkit-keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
     }
 }
 
@@ -696,7 +762,8 @@ h3 {
 
 .footer .img {
     max-height: 2.3rem;
-    filter: var(--filter);
+    -webkit-filter: var(--filter);
+            filter: var(--filter);
 }
 @media screen and (max-width: 1366px) {
     .footer .img {
@@ -736,7 +803,8 @@ h3 {
     position: relative;
     height: 2rem;
     width: 2rem;
-    filter: var(--filter);
+    -webkit-filter: var(--filter);
+            filter: var(--filter);
     top: 0;
     transition: top 300ms ease-out;
 }
@@ -759,7 +827,8 @@ h3 {
 .footer .link img {
     height: 100%;
     width: 100%;
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
 }
   
 /* slider carousel */
@@ -788,9 +857,6 @@ h3 {
 @media screen and (orientation: portrait) {
     .carousel-items img {
         -webkit-animation: rotating 120s linear infinite;
-        -moz-animation: rotating 120s linear infinite;
-        -ms-animation: rotating 120s linear infinite;
-        -o-animation: rotating 120s linear infinite;
         animation: rotating 120s linear infinite;
     }
 }
@@ -880,7 +946,8 @@ h3 {
     .carousel .controls button:focus,
     .carousel .controls button:hover {
         border: solid var(--black) 2px;
-        filter: none;
+        -webkit-filter: none;
+                filter: none;
     }
     .carousel .controls1 button:focus,
     .carousel .controls1 button:hover {
@@ -912,8 +979,10 @@ h3 {
         border-radius: 2rem;
         height: 8%;
         width: 60%;
-        object-fit: contain;
-        filter: invert();
+        -o-object-fit: contain;
+           object-fit: contain;
+        -webkit-filter: invert();
+                filter: invert();
         padding: 1rem 3rem;
         border: 3px solid white;
     }
@@ -947,7 +1016,8 @@ h3 {
 .carousel .controls1 button img{
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
 }
 
 .carousel .controls3 button {
@@ -974,13 +1044,15 @@ h3 {
     .carousel .controls3 button {
         height: 3rem;
         width: 3rem;
-        filter: var(--filter);
+        -webkit-filter: var(--filter);
+                filter: var(--filter);
         min-width: 5ch;
     }
 }
 @media screen and (orientation: portrait) {
     .carousel.open .controls3 button {
-        filter: none;
+        -webkit-filter: none;
+                filter: none;
         color: var(--black);
     }
 }
@@ -1019,7 +1091,8 @@ h3 {
 .carousel .controls3 button img {
     max-height: 100%;
     max-width: 100%;
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
 }
 
 .carousel:has(.record1.active) .controls3 button:hover img,
@@ -1032,7 +1105,8 @@ h3 {
 .carousel:has(.record3.active) .controls3 button:hover img,
 .carousel:has(.record2.active) .controls3 button:focus img,
 .carousel:has(.record2.active) .controls3 button:hover img {
-    filter: invert();
+    -webkit-filter: invert();
+            filter: invert();
 }
 
 .carousel .controls3 button.next img {
@@ -1198,7 +1272,19 @@ h3 {
     .carousel .controls .link1 {
         transform: translateY(-10px);
         opacity: 0;
-        animation: slide-up3 700ms ease-out forwards 600ms;
+        -webkit-animation: slide-up3 700ms ease-out forwards 600ms;
+                animation: slide-up3 700ms ease-out forwards 600ms;
+    }
+}
+
+@-webkit-keyframes slide-up3 {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
     }
 }
 
@@ -1231,7 +1317,8 @@ h3 {
     .carousel .controls .link2 {
         transform: translateY(-10px);
         opacity: 0;
-        animation: slide-up3 700ms ease-out forwards 800ms;
+        -webkit-animation: slide-up3 700ms ease-out forwards 800ms;
+                animation: slide-up3 700ms ease-out forwards 800ms;
     }
 }
 
@@ -1247,7 +1334,8 @@ h3 {
     .carousel .controls .link3 {
         transform: translateY(-10px);
         opacity: 0;
-        animation: slide-up3 700ms ease-out forwards 1000ms;
+        -webkit-animation: slide-up3 700ms ease-out forwards 1000ms;
+                animation: slide-up3 700ms ease-out forwards 1000ms;
     }
 }
 
@@ -1263,7 +1351,8 @@ h3 {
     .carousel .controls .link4 {
         transform: translateY(-10px);
         opacity: 0;
-        animation: slide-up3 700ms ease-out forwards 1200ms;
+        -webkit-animation: slide-up3 700ms ease-out forwards 1200ms;
+                animation: slide-up3 700ms ease-out forwards 1200ms;
     }
 }
 
@@ -1312,7 +1401,8 @@ h3 {
 @media screen and (orientation: portrait) {
     .carousel.open .controls2 .wrapper {
         visibility: visible;
-        animation: fade-in 300ms ease-out forwards;
+        -webkit-animation: fade-in 300ms ease-out forwards;
+                animation: fade-in 300ms ease-out forwards;
     }
 }
 
@@ -1421,9 +1511,6 @@ h3 {
 
 .carousel.open .carousel-item.active img {
     -webkit-animation: rotating 60s linear infinite;
-    -moz-animation: rotating 60s linear infinite;
-    -ms-animation: rotating 60s linear infinite;
-    -o-animation: rotating 60s linear infinite;
     animation: rotating 60s linear infinite;
 }
 
@@ -1495,37 +1582,22 @@ h3 {
 
 @-webkit-keyframes rotating /* Safari and Chrome */ {
     from {
-      -webkit-transform: rotate(0deg);
-      -o-transform: rotate(0deg);
       transform: rotate(0deg);
     }
     to {
-      -webkit-transform: rotate(360deg);
-      -o-transform: rotate(360deg);
       transform: rotate(360deg);
     }
 }
 @keyframes rotating {
     from {
-      -ms-transform: rotate(0deg);
-      -moz-transform: rotate(0deg);
-      -webkit-transform: rotate(0deg);
-      -o-transform: rotate(0deg);
       transform: rotate(0deg);
     }
     to {
-      -ms-transform: rotate(360deg);
-      -moz-transform: rotate(360deg);
-      -webkit-transform: rotate(360deg);
-      -o-transform: rotate(360deg);
       transform: rotate(360deg);
     }
 }
 .rotating {
     -webkit-animation: rotating 120s linear infinite;
-    -moz-animation: rotating 120s linear infinite;
-    -ms-animation: rotating 120s linear infinite;
-    -o-animation: rotating 120s linear infinite;
     animation: rotating 120s linear infinite;
 }
 
@@ -1566,11 +1638,10 @@ h3 {
     text-align: center;
     padding-block: 2rem;
     font-weight: 300;
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
     background-color: white;
-    -webkit-box-shadow: 0px 29px 45px -25px rgba(0,0,0,0.5);
-    -moz-box-shadow: 0px 29px 45px -25px rgba(0,0,0,0.5);
     box-shadow: 0px 29px 45px -25px rgba(0,0,0,0.5);
     display: flex;
     align-content: center;
@@ -1620,17 +1691,11 @@ h3 {
 .shop .heading2 span img {
     width: 100%;
     -webkit-animation: rotating 60s linear infinite;
-    -moz-animation: rotating 60s linear infinite;
-    -ms-animation: rotating 60s linear infinite;
-    -o-animation: rotating 60s linear infinite;
     animation: rotating 60s linear infinite;
 }
 
 .shop .heading2 span .img2 {
     -webkit-animation: rotating 60s linear infinite reverse;
-    -moz-animation: rotating 60s linear infinite reverse;
-    -ms-animation: rotating 60s linear infinite reverse;
-    -o-animation: rotating 60s linear infinite reverse;
     animation: rotating 60s linear infinite reverse;
 }
 
@@ -1672,7 +1737,19 @@ h3 {
 
 .shop .item:hover::after {
     visibility: visible;
-    animation: slide-up forwards 400ms ease-out;
+    -webkit-animation: slide-up forwards 400ms ease-out;
+            animation: slide-up forwards 400ms ease-out;
+}
+
+@-webkit-keyframes slide-up {
+    from {
+        opacity: 0;
+        bottom: 5.2rem;
+    }
+    to {
+        opacity: 1;
+        bottom: 6rem;
+    }
 }
 
 @keyframes slide-up {
@@ -1689,7 +1766,8 @@ h3 {
 .shop .item img {
     width: 100%;
     aspect-ratio: 2 / 3;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     border-radius: 1rem;
     position: relative;
 }
@@ -1740,11 +1818,10 @@ h3 {
     text-align: center;
     padding-block: 2rem;
     font-weight: 300;
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
     background-color: white;
-    -webkit-box-shadow: 0px 29px 45px -25px rgba(0,0,0,0.5);
-    -moz-box-shadow: 0px 29px 45px -25px rgba(0,0,0,0.5);
     box-shadow: 0px 29px 45px -25px rgba(0,0,0,0.5);
     z-index: 1;
 }
@@ -1772,6 +1849,8 @@ h3 {
 }
 
 .touring .tour-list .item .inner {
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
     position: relative;
     transition: left 300ms ease-out;
@@ -1798,9 +1877,6 @@ h3 {
 
 .touring .tour-list .item:hover .inner::before {
     -webkit-animation: rotating 30s linear infinite;
-    -moz-animation: rotating 30s linear infinite;
-    -ms-animation: rotating 30s linear infinite;
-    -o-animation: rotating 30s linear infinite;
     animation: rotating 30s linear infinite;
 }
 
@@ -1912,7 +1988,8 @@ h3 {
     background-size: 60vh;
     background-size: 60dvh;
     opacity: 0;
-    animation: fade-in 1000ms ease-out forwards 500ms;
+    -webkit-animation: fade-in 1000ms ease-out forwards 500ms;
+            animation: fade-in 1000ms ease-out forwards 500ms;
     transform: scaleX(-1);
     background-size: contain;
 }
@@ -1923,6 +2000,16 @@ h3 {
         top: 65dvh;
         width: 60vw;
         height: 60vw;
+    }
+}
+
+
+@-webkit-keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }
 
@@ -2040,6 +2127,16 @@ h3 {
 }
 
 
+@-webkit-keyframes slide-in-out {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+
 @keyframes slide-in-out {
     from {
         width: 0%;
@@ -2072,7 +2169,8 @@ h3 {
 
 .dialog.open {
     display: flex;
-    animation: fade-in 300ms ease-out forwards;
+    -webkit-animation: fade-in 300ms ease-out forwards;
+            animation: fade-in 300ms ease-out forwards;
 }
 
 .dialog .content {
@@ -2132,7 +2230,8 @@ h3 {
 
 .dialog .thanks {
     opacity: 0;
-    animation: fade-in 300ms ease-out forwards;
+    -webkit-animation: fade-in 300ms ease-out forwards;
+            animation: fade-in 300ms ease-out forwards;
     text-align: center;
     display: none;
 }
