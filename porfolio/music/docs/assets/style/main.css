@@ -813,11 +813,13 @@ h3 {
 
     .carousel.open .carousel-inner {
         bottom: calc(-1 * ((var(--record-diameter) * 1.8)) + 65vh);
+        bottom: calc(-1 * ((var(--record-diameter) * 1.8)) + 65dvh);
     }
 }
 @media screen and (orientation: portrait) and (max-height: 1000px) {
     .carousel.open .carousel-inner {
         bottom: calc(-1 * ((var(--record-diameter) * 1.8)) + 70vh);
+        bottom: calc(-1 * ((var(--record-diameter) * 1.8)) + 70dvh);
     }
 }
 .carousel .controls {
@@ -1095,11 +1097,13 @@ h3 {
     .carousel.open .controls3 .song-title {
         visibility: visible;
         top: 13vh;
+        top: 13dvh;
     }
 }
 @media screen and (orientation: portrait) and (max-height: 1000px) {
     .carousel.open .controls3 .song-title {
         top: 8vh;
+        top: 8dvh;
     }
 }
 /* @media screen and (orientation: portrait) and (max-height: 900px) {
