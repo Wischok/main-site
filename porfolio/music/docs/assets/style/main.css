@@ -1106,17 +1106,7 @@ h3 {
 }
 @media screen and (orientation: portrait) and (max-height: 900px) {
     .carousel.open .controls3 .song-title {
-        top: 5vh;
-    }
-}
-@media screen and (orientation: portrait) and (max-height: 800px) {
-    .carousel.open .controls3 .song-title {
-        top: 8vh;
-    }
-}
-@media screen and (orientation: portrait) and (max-height: 700px) {
-    .carousel.open .controls3 .song-title {
-        top: 9vh;
+        top: 3vh;
     }
 }
 @media screen and (max-width: 500px) and (orientation: portrait) {
