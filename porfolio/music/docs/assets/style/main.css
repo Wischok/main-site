@@ -1097,16 +1097,14 @@ h3 {
     .carousel.open .controls3 .song-title {
         visibility: visible;
         top: 13vh;
-        top: 13dvh;
     }
 }
 @media screen and (orientation: portrait) and (max-height: 1000px) {
     .carousel.open .controls3 .song-title {
         top: 8vh;
-        top: 8dvh;
     }
 }
-/* @media screen and (orientation: portrait) and (max-height: 900px) {
+@media screen and (orientation: portrait) and (max-height: 900px) {
     .carousel.open .controls3 .song-title {
         top: 5vh;
     }
@@ -1118,9 +1116,9 @@ h3 {
 }
 @media screen and (orientation: portrait) and (max-height: 700px) {
     .carousel.open .controls3 .song-title {
-        top: 10vh;
+        top: 9vh;
     }
-} */
+}
 @media screen and (max-width: 500px) and (orientation: portrait) {
     .carousel .controls3 .song-title {
         font-size: 2.2rem;
