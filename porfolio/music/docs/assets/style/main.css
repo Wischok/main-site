@@ -860,6 +860,12 @@ h3 {
         animation: rotating 120s linear infinite;
     }
 }
+@supports not (overflow: clip) {
+    .carousel-items img {
+        overflow: hidden;
+    }
+}
+
 
 .carousel-inner {
     position: absolute;
@@ -1972,7 +1978,7 @@ h3 {
 }
 
 .transitions .row .inner {
-    overflow: clip;
+    overflow: hidden;
 }
 
 .transitions .row .img {
@@ -2002,7 +2008,6 @@ h3 {
         height: 60vw;
     }
 }
-
 
 @-webkit-keyframes fade-in {
     from {
