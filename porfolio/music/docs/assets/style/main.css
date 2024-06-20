@@ -527,6 +527,7 @@ h3 {
 @media screen and (orientation: portrait) {
     .nav .menu-button .underline::after {
         background-color: var(--text-opposing);
+        height: 4px;
     }
 }
 
