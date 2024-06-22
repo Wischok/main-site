@@ -354,7 +354,7 @@ h3 {
 }
 
 .nav p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     line-height: 167%;
     text-align: end;
     font-weight: 600;
@@ -388,7 +388,7 @@ h3 {
         justify-content: start;
         display: none;
         position: static;
-        gap: 20px;
+        gap: 18px;
     }
 
     .nav:has(.hamburger[aria-expanded="true"]) .menubar-navigation {
