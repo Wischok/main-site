@@ -368,6 +368,12 @@ h3 {
     -webkit-animation: slide-up2 600ms ease-out forwards 1500ms;
             animation: slide-up2 600ms ease-out forwards 1500ms;
     color: var(--text-opposing);
+    display: none;
+}
+@media screen and (orientation: portrait) {
+    .nav p {
+        display: block;
+    }
 }
 
 .nav p > a {
