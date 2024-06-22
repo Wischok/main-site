@@ -46,9 +46,10 @@ function loadSection(section, event) {
         //if music, do different
         if(activeButton.id === 'music') {
             document.getElementById('home').setAttribute('aria-current', 'false');
+            activeButton.setAttribute('aria-current', 'false');
         }
         else {
-            activeButton.setAttribute('aria-current', 'false')
+            activeButton.setAttribute('aria-current', 'false');
         }
 
         activeButton = event.target;

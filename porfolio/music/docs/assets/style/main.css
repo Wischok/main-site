@@ -1907,6 +1907,11 @@ h3 {
 .touring .tour-list .item:hover .inner {
     left: 15ch;
 }
+@media screen and (max-width: 600px) {
+    .touring .tour-list .item:hover .inner {
+        left: 9ch;
+    }
+}
 
 .touring .tour-list .item .inner::before {
     content: "";
@@ -1920,6 +1925,13 @@ h3 {
     position: absolute;
     top: 0;
     left: -120%;
+}
+@media screen and (max-width: 600px) {
+    .touring .tour-list .item .inner::before {
+        left: -90%;
+        height: 80%;
+        top: 10%;
+    }
 }
 
 .touring .tour-list .item:hover .inner::before {
