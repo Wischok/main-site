@@ -695,6 +695,7 @@ input[role="checkbox"] {
 
 .menu .menu-button span {
     display: inline;
+    position: relative;
     min-width: 18ch;
     height: max-content;
 }
@@ -704,7 +705,7 @@ input[role="checkbox"] {
     height: 1rem;
     width: 1rem;
     position: absolute;
-    right: -1rem;
+    right: -30px;
     top: 8px;
     background-image: url(/img/caret-down.png);
     background-size: contain;
@@ -815,51 +816,55 @@ input[role="checkbox"] {
 .hamburger .line {
     stroke: white;
     animation: to-open-icon 0.5s forwards;
-  }
-  
-  .hamburger .line.top {
+}
+
+.hamburger .line.top {
     --rotation: -45deg;
     transform-origin: 80% 38%;
-  }
-  
-  .hamburger .line.bot {
+}
+
+.hamburger .line.bot {
     --rotation: 45deg;
     transform-origin: 78% 62%;
-  }
+}
 
-  .hamburger[aria-expanded=true] .line {
+.hamburger[aria-expanded=true] .line {
     animation: to-close-icon 0.5s forwards;
-  }
+}
 
-  .hamburger[aria-expanded=true] .mid {
+.hamburger[aria-expanded=true] .mid {
     opacity: 0;
-  }
-  
-  @keyframes to-close-icon {
+}
+
+@keyframes to-close-icon {
     0% {
-      stroke-dashoffset: 0;
+        stroke-dashoffset: 0;
     }
+
     40% {
-      stroke-dashoffset: 79.9;
+        stroke-dashoffset: 79.9;
     }
+
     60% {
-      stroke-dashoffset: 79.9;
-      rotate: var(--rotation);
+        stroke-dashoffset: 79.9;
+        rotate: var(--rotation);
     }
+
     100% {
-      stroke-dashoffset: 0;
-      rotate: var(--rotation);
+        stroke-dashoffset: 0;
+        rotate: var(--rotation);
     }
-  }
-  
-  @keyframes to-open-icon {
+}
+
+@keyframes to-open-icon {
     0% {
-      stroke-dashoffset: 79.9;
+        stroke-dashoffset: 79.9;
     }
+
     40% {
-      stroke-dashoffset: 0;
+        stroke-dashoffset: 0;
     }
-  }
+}
 
 /* Address */
 
