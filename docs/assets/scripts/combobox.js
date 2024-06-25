@@ -399,7 +399,7 @@ Select.prototype.updateMenuState = function (open, callFocus = true) {
     this.open = open;
 
     //update aria-expanded and styles
-    this.comboEl.setAttribute('ariaexpanded', `${open}`);
+    this.comboEl.setAttribute('aria-expanded', `${open}`);
     open ? this.el.classList.add('open') : this.el.classList.remove('open');
 
     //update activedescendent

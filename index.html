@@ -350,7 +350,7 @@
                             <div class="input-wrapper project-input-wrapper">
                                 <div class="combo combo-standard combo1">
                                     <input class="combo-input" name="MERGE2" id="MERGE2" role="combobox" 
-                                    tabindex="0" aria-labelledby="combo1-lbl" type="text"
+                                    tabindex="0" aria-labelledby="combo1-lbl" type="text" aria-expanded="false"
                                     aria-haspopup="listbox" aria-controls="listbox1" value="" placeholder="Website Design" autocomplete="off">
                                     <!-- Combo Menu | List of Options -->
                                     <div class="combo-menu" role="listbox" id="listbox1" 
@@ -361,7 +361,7 @@
                                         aria-selected="false">Fresh Designs</div>
                                         <div role="option" id="combo1-2" class="combo-option"
                                         aria-selected="false">Custom Interactions</div>
-                                        <div role="option" id="combo1-5" class="combo-option"
+                                        <div role="option" id="combo1-3" class="combo-option"
                                         aria-selected="false">Digital Accessibility</div>
                                     </div>
                                 </div>
@@ -456,7 +456,7 @@
                         </div>
                     </div>
                     <!-- Contact Form and Project Selection -->
-                    <form  id="form1" class="form2 active" name="Contact Information" focusNext="contact_fname1">
+                    <form  id="form1" class="form2 active" name="Contact Information">
                         <!-- Content Info -->
                         <div class="contact form-content">
                             <!-- Name -->
@@ -492,7 +492,7 @@
                                     <p class="p1" id="group-label2" style="margin-top: 0rem;">What are we working on?</p>
                                 </div>
                                 <div class="input-wrapper">
-                                    <ul class="radiogroup flex-row-center" role="radiogroup" aria-labelledby="group-label2" value="Website Design" id="modal1_service">
+                                    <ul class="radiogroup flex-row-center" role="radiogroup" aria-labelledby="group-label2" id="modal1_service">
                                         <li role="radio" id="radio1_1" tabindex="0" aria-checked="true" class="flex-column">
                                             <img src="/img/computer-icon.png" alt="" class="icon">
                                             <span>Website<br>Design</span>
@@ -515,8 +515,8 @@
                         </div>
                     </form>
                     <!-- Web Design Fields -->
-                    <div class="forms web-design" id="webdesign-forms" data-name="Web Design">
-                        <form  id="form2" focusNext="webDesign_company1">
+                    <div class="forms web-design" id="webdesign-forms">
+                        <form  id="form2">
                             <div class="form-content">
                                 <!-- Organization / Company Field -->
                                 <div class="field-wrapper flex email-wrapper">
@@ -548,14 +548,14 @@
                                         <div class="combo combo-standard combo2">
                                             <input class="combo-input" name="Website Goal (Design)" id="webDesign_goal1" role="combobox" tabindex="0"
                                                 aria-labelledby="combo2-lbl" type="text" aria-haspopup="listbox" aria-controls="listbox2"
-                                                value="" autocomplete="off">
+                                                value="" autocomplete="off" aria-expanded="false">
                                             <!-- Combo Menu | List of Options -->
                                             <div class="combo-menu" role="listbox" id="listbox2" aria-labelledby="combo2-lbl" tabindex="-1">
                                                 <div role="option" id="combo2-0" class="combo-option" aria-selected="true">Brand Awareness</div>
                                                 <div role="option" id="combo2-1" class="combo-option" aria-selected="false">Portfolio</div>
                                                 <div role="option" id="combo2-2" class="combo-option" aria-selected="false">Sell Products</div>
-                                                <div role="option" id="combo2-5" class="combo-option" aria-selected="false">Consultations / Appointments</div>
-                                                <div role="option" id="combo2-5" class="combo-option" aria-selected="false">Quotes</div>
+                                                <div role="option" id="combo2-3" class="combo-option" aria-selected="false">Consultations / Appointments</div>
+                                                <div role="option" id="combo2-4" class="combo-option" aria-selected="false">Quotes</div>
                                                 <div role="option" id="combo2-5" class="combo-option" aria-selected="false">Other</div>
                                             </div>
                                         </div>
@@ -563,7 +563,7 @@
                                 </div>
                             </div>
                         </form>
-                        <form  id="form3" focusNext="webDesign_other-sites">
+                        <form  id="form3">
                             <div class="form-content">
                                 <!-- other sites -->
                                 <div class="field-wrapper flex-column email-wrapper">
@@ -613,7 +613,7 @@
                     </div>
                     <!-- SEO / Marketing Fields -->
                     <div class="forms marketing" id="marketing-forms" data-name="SEO">
-                        <form id="form4" focusNext="seo_my-website1">
+                        <form id="form4">
                             <div class="form-content">
                                 <!-- Current Company Website Field -->
                                 <div class="field-wrapper flex email-wrapper">
@@ -634,16 +634,16 @@
                                         <div class="combo combo-standard combo3">
                                             <input class="combo-input" name="Website Goal (SEO)" id="seo_goal2" role="combobox" tabindex="0"
                                                 aria-labelledby="combo3-lbl" type="text" aria-haspopup="listbox" aria-controls="listbox3"
-                                                value="" placeholder="Website Design" autocomplete="off">
+                                                value="" placeholder="Website Design" autocomplete="off" aria-expanded="false">
                                             <!-- Combo Menu | List of Options -->
                                             <div class="combo-menu" role="listbox" id="listbox3" aria-labelledby="combo3-lbl" tabindex="-1">
                                                 <div role="option" id="combo3-0" class="combo-option" aria-selected="true">Brands Awareness</div>
                                                 <div role="option" id="combo3-1" class="combo-option" aria-selected="false">Portfolio</div>
                                                 <div role="option" id="combo3-2" class="combo-option" aria-selected="false">Sell Products</div>
-                                                <div role="option" id="combo3-5" class="combo-option" aria-selected="false">Consultations</div>
-                                                <div role="option" id="combo3-5" class="combo-option" aria-selected="false">Give Quotes</div>
+                                                <div role="option" id="combo3-3" class="combo-option" aria-selected="false">Consultations</div>
+                                                <div role="option" id="combo3-4" class="combo-option" aria-selected="false">Give Quotes</div>
                                                 <div role="option" id="combo3-5" class="combo-option" aria-selected="false">Books Appointments</div>
-                                                <div role="option" id="combo3-5" class="combo-option" aria-selected="false">Other</div>
+                                                <div role="option" id="combo3-6" class="combo-option" aria-selected="false">Other</div>
                                             </div>
                                         </div>
                                     </div>
@@ -653,7 +653,7 @@
                     </div>
                     <!-- Digital Accessibility -->
                     <div class="forms accessibility" id="accessibility-forms" data-name="Accessibility">
-                        <form  id="form6" focusNext="accessibility_my-website3">
+                        <form  id="form6">
                             <div class="form-content">
                                 <!-- Current Company Website Field -->
                                 <div class="field-wrapper flex email-wrapper">
@@ -671,7 +671,7 @@
                     </div>
                     <!-- Website Maintenance -->
                     <div class="forms maintenance" id="maintenance-forms" data-name="Maintenance">
-                        <form  id="form5" focusNext="maintenance_my-website2">
+                        <form  id="form5">
                             <div class="form-content">
                                 <!-- Current Company Website Field -->
                                 <div class="field-wrapper flex email-wrapper">
@@ -687,7 +687,7 @@
                     </div>
                 </div>
                 <button id="modal1-continue" class="btn-link active continue">Continue</button>
-                <button id="modal1-submit" class="btn-link"  class="submit">Submit</button>
+                <button id="modal1-submit" class="btn-link submit">Submit</button>
                 <div class="complete1">
                     <img src="/img/dog-dab.png" alt="A dabbing dog." class="dog">
                     <h3 class="heading3">Got it!</h3>

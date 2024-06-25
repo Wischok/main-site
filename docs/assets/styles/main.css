@@ -2560,6 +2560,7 @@ input[role="checkbox"] {
     border-radius: 0;
     aspect-ratio: 0;
     align-items: start;
+    overflow: visible;
 }
 @media screen and (max-width: 900px) {
     .section-text-left3 .content .container1 {
@@ -5931,6 +5932,7 @@ body:has([role="dialog"].active) {
 .modal.free-quote .icon {
     width: 1.5rem;
     height: 1.5rem;
+    pointer-events: none;
 }
 
 .modal.free-quote .contact {
@@ -5967,7 +5969,7 @@ body:has([role="dialog"].active) {
     min-width: 155px;
 }
 
-.modal.free-quote .contact [role="radio"] div {
+.modal.free-quote .contact [role="radio"] span {
     pointer-events: none;
 }
 

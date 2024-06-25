@@ -24,6 +24,9 @@ function Dialog (el) {
         this.dialog = dialog;
         this.radios = el.querySelectorAll('[role=radio]');
 
+        //data
+        this.value = null;
+
         this.init();
     }
 
@@ -34,6 +37,7 @@ function Dialog (el) {
 
             if(radio.getAttribute('aria-checked') === 'true') {
                 this.radio = radio;
+                this.value = this.radio.querySelector('span').innerHTML.replace('<br>', ' ');
             }
         })
 
@@ -45,6 +49,9 @@ function Dialog (el) {
         this.radio = r;
         this.radio.setAttribute('aria-checked', 'true');
         this.index = indexOf(this.radios, this.radio);
+        
+        //record service value
+        this.value = this.radio.querySelector('span').innerHTML.replace('<br>', ' ');
 
         //select form
         this.dialog.selectService(indexOf(this.radios, this.radio));
@@ -103,6 +110,10 @@ function Dialog (el) {
         }
     }
 
+    RadioGroup.prototype.returnService = function() {
+        return this.value;
+    }
+
     //element refs
     this.dialog = el;//dialog element
     this.triggers = document.querySelectorAll(".modal1_trigger");
@@ -118,7 +129,7 @@ function Dialog (el) {
     //set up radio groups
     document.querySelectorAll('[role=radiogroup]').forEach((el) => {
         this.r_groups.push(new RadioGroup(el, this));
-    })
+    });
 
     //data
     this.trigger = null;
@@ -183,7 +194,8 @@ Dialog.prototype.open = function(event) {
     this.trigger = event.target;
     this.dialog.querySelectorAll('form').forEach((form) => {
         if(form.classList.contains('active')) {
-            document.getElementById(form.getAttribute('focusNext')).focus();
+            //get list of form input values and focus the first one
+            form.querySelectorAll('input')[0].focus();
             return;
         }
     });
@@ -214,7 +226,7 @@ Dialog.prototype.selectForm = function(form) {
     this.activeForm.classList.add('active');
 
     //focus first element on form
-    document.getElementById(this.activeForm.getAttribute('focusNext')).focus();
+    this.activeForm.querySelectorAll('input')[0].focus();
 
     //top button controls
     this.stepButtons.forEach((button) => {
@@ -312,7 +324,7 @@ Dialog.prototype.onSubmit = function() {
 
     //create form element
     let formData = new FormData();
-    formData.set('service', this.formGroup.getAttribute('data-name'));
+    formData.set('service', this.r_groups[0].returnService());
 
     //add selected form data
     let group = this.dialog.querySelectorAll('form');
