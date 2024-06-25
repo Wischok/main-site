@@ -136,6 +136,8 @@ function Dialog (el) {
     this.formGroup = null;
     this.activeForm = null;
     this.firstForm = null;
+    this.firstFocusable = this.exit;
+    this.lastFocusable = this.continueButton;
    
     //formIndex
     this.index = 0;//first form
@@ -155,10 +157,12 @@ Dialog.prototype.init = function() {
     this.dialog.addEventListener('keydown', this.onKeyDown.bind(this));
     this.submitButton.addEventListener('click', this.onSubmit.bind(this));
     this.continueButton.addEventListener('click', this.onContinue.bind(this));
+    this.continueButton.addEventListener('keydown', this.keyboardTrapNext.bind(this));
+    this.exit.addEventListener('keydown', this.keyboardTrapPrev.bind(this));
 
     this.selectService(this.r_groups[0].returnIndex());
 
-    this.firstForm = document.getElementById('form1')
+    this.firstForm = document.getElementById('form1');
     this.activeForm = this.firstForm;
 
     this.stepButtons.forEach((button) => {
@@ -183,6 +187,24 @@ Dialog.prototype.init = function() {
     });
 }
 
+Dialog.prototype.keyboardTrapNext = function(event) {
+    const {key, shiftKey} = event;
+
+    if(key === "Tab" && !shiftKey) {
+        this.firstFocusable.focus()
+        event.preventDefault();
+    }
+}
+
+Dialog.prototype.keyboardTrapPrev = function(event) {
+    const {key, shiftKey} = event;
+
+    if(key === "Tab" && shiftKey) {
+        this.lastFocusable.focus()
+        event.preventDefault();
+    }
+}
+
 //open dialog
 Dialog.prototype.open = function(event) {
     if(this.dialog.classList.contains("active")) {
@@ -194,11 +216,11 @@ Dialog.prototype.open = function(event) {
     this.trigger = event.target;
     this.dialog.querySelectorAll('form').forEach((form) => {
         if(form.classList.contains('active')) {
-            //get list of form input values and focus the first one
-            form.querySelectorAll('input')[0].focus();
             return;
         }
     });
+
+    this.exit.focus();
 }
 
 //close dialog
@@ -215,10 +237,12 @@ Dialog.prototype.selectForm = function(form) {
     if((this.index) >= forms.length) {
         this.continueButton.classList.remove('active');
         this.submitButton.classList.add('active');
+        this.lastFocusable = this.submitButton;
     }
     else {
         this.continueButton.classList.add('active');
         this.submitButton.classList.remove('active');
+        this.lastFocusable = this.continueButton;
     }
 
     this.activeForm.classList.remove('active');

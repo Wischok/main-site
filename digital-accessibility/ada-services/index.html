@@ -42,7 +42,7 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav role="navigation" class="nav" aria-label="Main menu.">
+    <nav id="nav" class="nav" aria-label="Main menu.">
         <div class="content flex-row-center">
             <div class="logo-left">
                 <a href="/" aria-current="page" aria-label="Go to home page.">
@@ -54,31 +54,31 @@
                 <div class="wrapper">
                     <ul role="menu" class="flex-row-center menu">
                         <li role="none" class="menulistitem">
-                             <button role="button" id="menu-button1" class="menu-button underline li caret" 
+                             <div tabindex="0" role="menuitem" id="menu-button1" class="menu-button underline li caret" 
                              aria-haspopup="true" aria-controls="menu1" aria-expanded="false">
-                                 Web Design
-                             </button>
+                                <span>Web Design</span>
+                            </div>
                              <ul id="menu1" role="menu" aria-labelledby="menu-button1" class="sub-menu">
                                  <li role="none"><a role="menuitem" href="/small-business-web-design/">Small Businesses</a></li>
-                                 <li role="none"><a role="menuitem" href="/web-design/services/" >Services</a></li>
+                                 <li role="none"><a role="menuitem" href="/web-design/website-maintenance/">Website Maintenance</a></li>
+                                 <li role="none"><a role="menuitem" href="/web-design/custom-site-development/">Custom Site Development</a></li>
                              </ul>
                          </li>
                          <li role="none" class="menulistitem">
-                             <button role="button" id="menu-button2" class="menu-button underline li caret" 
+                             <div tabindex="0" role="menuitem" id="menu-button2" class="menu-button underline li caret" 
                              aria-haspopup="true" aria-controls="menu2" aria-expanded="false">
-                                 Digital Accessibility
-                             </button>
+                                <span>Digital Accessibility</span>
+                             </div>
                              <ul id="menu2" role="menu" aria-labelledby="menu-button2" class="sub-menu">
                                  <li role="none"><a role="menuitem" href="/digital-accessibility/">ADA Website Remediation</a></li>
                                  <li role="none"><a role="menuitem" href="/digital-accessibility/file-remediation/">File Remediation</a></li>
-                                 <li role="none"><a role="menuitem" href="">ADA Services</a></li>
                              </ul>
                          </li>
-                        <li role="none" class="li"><a role="menuitem" class="btn-link" href="/contact/">Free Quote</a></li>
+                         <li role="none" class="li"><a role="menuitem" class="btn-link" href="/contact/">Free Quote</a></li>
                      </ul>
-                     <span id="menu-backdrop"></span>
+                     <span id="menu-backdrop" class="backdrop"></span>
                 </div>
-                <button role="button" aria-expanded="false" class="hamburger">
+                <button  aria-expanded="false" class="hamburger">
                     <svg class="svg" viewbox="0 0 100 100" aria-hidden="true">
                         <line class="line top" x1="90" x2="10" y1="25" y2="25" stroke="black" stroke-width="10"
                             stroke-linecap="round" stroke-dasharray="80" stroke-dashoffset="0"></line>
@@ -91,8 +91,49 @@
                 </button>
             </div>
         </div>
+        <address class="address" id="address">
+            <ul class="contacts" id="contacts-widget">
+                <li class="li phone flex-row-center">
+                    <a href="tel:19096382889" id="address1" class="address-link">
+                        <span class="text-span">
+                            1 (909) 638-2889
+                        </span>
+                        <div>
+                            <img src="/img/phone-icon.png" alt="Call Wischok." class="icon">
+                        </div>
+                    </a>
+                </li>
+                <li class="li email flex-row-center">
+                    <a href="mailto:contact@wischok.com" class="address-link">
+                        <span class="text-span">
+                            contact@wischok.com
+                        </span>
+                        <div>
+                            <img src="/img/mail-icon.png" alt="Email Wischok." class="icon">
+                        </div>
+                    </a>
+                </li>
+                <li class="li schedule flex-row-center">
+                    <button class="modal1-trigger" >
+                        <span class="text-span">Get Quote</span>
+                        <span class="icon-span">
+                            <img src="/img/calendar-icon.png" alt="Schedule Appointment with Wischok." class="icon">
+                        </span>
+                    </button>
+                </li>
+            </ul>
+            <button aria-expanded="false" aria-controls="contacts-widget" class="btn-link" id="address-btn" aria-haspopup="true">
+                <span>Contact</span>
+                <span class="icon">
+                    <svg viewbox="0 0 50 50" aria-hidden="true">
+                        <line class="vertical" x1="25" x2="25" y1="0" y2="50"></line>
+                        <line x1="0" x2="50" y1="25" y2="25"></line>
+                    </svg>
+                </span>
+            </button>
+        </address>
     </nav>
-    <main role="main">
+    <main>
         <!-- Main Site Header -->
         <header class="main-header">
             <div class="left-content">
@@ -549,7 +590,7 @@
         </section>
     </main>
     <!-- Footer -->
-    <footer role="contentinfo" class="footer view-width-constrain margin-top-20">
+    <footer class="footer view-width-constrain margin-top-20">
         <div class="wrapper flex-row-center">
             <div class="content-left">
                 <img src="/docs/assets/img/wischok-logo-top.png" alt="Wischok logo. Home Button" class="img">

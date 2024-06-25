@@ -25,6 +25,7 @@ function Nav (el) {//define as class
     this.subMenuListItems = el.querySelectorAll('.menulistitem');
     this.hamburger = el.querySelector('.hamburger');
     this.menuBackdrop = document.getElementById('menu-backdrop');
+    this.addressLinks = document.getElementById('address').querySelectorAll('a');
     this.addressButton = document.getElementById('address-btn');
 
     //data
@@ -49,6 +50,12 @@ Nav.prototype.init = function() {
     this.menuBackdrop.addEventListener('click', this.hamburgerSelect.bind(this));
     this.hamburger.addEventListener('click', this.hamburgerSelect.bind(this));
     this.addressButton.addEventListener('click', this.addressToggle.bind(this));
+    this.addressButton.addEventListener('keydown', this.keyboardTrapNext.bind(this));
+    document.getElementById('address1').addEventListener('keydown',this.keyboardTrapPrev.bind(this));
+
+    this.addressLinks.forEach((link) => {
+        link.addEventListener('keydown', this.addressLinkClick.bind(this));
+    });
 
     if(isMobile()) {
         this.subMenuButtons.forEach(btn => {
@@ -56,6 +63,33 @@ Nav.prototype.init = function() {
         });
     }
 };
+
+Nav.prototype.addressLinkClick = function(event) {
+    const {key} = event;
+
+    if(key === ' ') {
+        event.target.click();
+        event.preventDefault();
+    }
+};
+
+Nav.prototype.keyboardTrapNext = function(event) {
+    const {key, shiftKey} = event;
+
+    if(key === "Tab" && !shiftKey) {
+        document.getElementById('address1').focus()
+        event.preventDefault();
+    }
+}
+
+Nav.prototype.keyboardTrapPrev = function(event) {
+    const {key, shiftKey} = event;
+
+    if(key === "Tab" && shiftKey) {
+        this.addressButton.focus()
+        event.preventDefault();
+    }
+}
 
 Nav.prototype.onSubMenuDisplay = function(event) {
     if(isMobile()) {

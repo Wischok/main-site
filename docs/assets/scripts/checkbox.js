@@ -64,7 +64,7 @@ class Checkbox {
 
 // Initialize checkboxes on the page
 window.addEventListener('load', function () {
-  let checkboxes = document.querySelectorAll('[role="checkbox"]');
+  let checkboxes = document.querySelectorAll('[type="checkbox"]');
   for (let i = 0; i < checkboxes.length; i++) {
     new Checkbox(checkboxes[i]);
   }

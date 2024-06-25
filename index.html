@@ -95,10 +95,10 @@
                 </button>
             </div>
         </div>
-        <address class="address" id="adress">
+        <address class="address" id="address">
             <ul class="contacts" id="contacts-widget">
                 <li class="li phone flex-row-center">
-                    <a href="tel:19096382889"  aria-label="Call Wischok." id="address1">
+                    <a href="tel:19096382889" id="address1" class="address-link">
                         <span class="text-span">
                             1 (909) 638-2889
                         </span>
@@ -108,7 +108,7 @@
                     </a>
                 </li>
                 <li class="li email flex-row-center">
-                    <a href="mailto:contact@wischok.com">
+                    <a href="mailto:contact@wischok.com" class="address-link">
                         <span class="text-span">
                             contact@wischok.com
                         </span>
@@ -118,7 +118,7 @@
                     </a>
                 </li>
                 <li class="li schedule flex-row-center">
-                    <button class="modal1-trigger">
+                    <button class="modal1-trigger" >
                         <span class="text-span">Get Quote</span>
                         <span class="icon-span">
                             <img src="/img/calendar-icon.png" alt="Schedule Appointment with Wischok." class="icon">
@@ -327,9 +327,9 @@
                         <!-- Email marketing -->
                         <div class="flex-row-center consent">
                         <ul class="interestgroup_field checkbox-group">
-                            <li class="!margin-bottom--lv2"> <label class="checkbox flex-row-center" for="group_1"><input role="checkbox" type="checkbox"
+                            <li class="!margin-bottom--lv2"> <label class="checkbox flex-row-center" for="group_1"><input type="checkbox"
                                         data-dojo-type="dijit/form/CheckBox" id="group_1" name="group[22561][1]" value="1"
-                                        class="av-checkbox"><span>I would like to recieve promotions and offers from Wischok.</span> </label> </li>
+                                        class="av-checkbox" aria-checked="false"><span>I would like to recieve promotions and offers from Wischok.</span> </label> </li>
                         </ul>
                         </div>
                         <!-- Phone Field -->
@@ -433,7 +433,7 @@
         </div>
     </footer>
     <!-- Modal | Free Quote -->
-    <div class="modal free-quote" id="modal1" aria-labelledby="modal1_heading" role="dialog" aria-modal="true" focus-first="modal1_exit">
+    <div class="modal free-quote" id="modal1" aria-labelledby="modal1_heading" role="dialog" aria-modal="true">
         <div class="backdrop" id="modal1-backdrop"></div>
         <div class="content">
             <div class="outer-main-wrapper">
