@@ -709,6 +709,7 @@ input[role="checkbox"] {
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
+    display: inline-block;
 }
 
 .menu .menu-button span {
@@ -5545,7 +5546,7 @@ body:has([role="dialog"].active) {
     z-index: 2;
 }
 
-.modal.free-quote [role="form"] {
+.modal.free-quote form {
     display: none;
     min-width: 100%;
     max-width: 100%;
@@ -5556,12 +5557,12 @@ body:has([role="dialog"].active) {
     margin-bottom: 3rem;
 }
 @media screen and (max-width: 600px) {
-    .modal.free-quote [role="form"] {
+    .modal.free-quote form {
         padding-inline: 1rem;
     }
 }
 
-.modal.free-quote [role="form"] .form-content {
+.modal.free-quote form .form-content {
     position: relative;
     top: 1rem;
     opacity: 0;
@@ -5569,13 +5570,13 @@ body:has([role="dialog"].active) {
             animation: modal-contentOut forwards ease-in-out 500ms;
 }
 
-.modal.free-quote [role="form"].active .form-content {
+.modal.free-quote form.active .form-content {
     position: relative;
     -webkit-animation: modal-contentIn forwards ease-in-out 1000ms 300ms;
             animation: modal-contentIn forwards ease-in-out 1000ms 300ms;
 }
 
-.modal.free-quote [role="form"].active {
+.modal.free-quote form.active {
     display: block;
 }
 
@@ -5625,7 +5626,7 @@ body:has([role="dialog"].active) {
     }
 }
 
-.modal.free-quote [role="form"].active {
+.modal.free-quote form.active {
     display: block;
 }
 
@@ -5936,7 +5937,7 @@ body:has([role="dialog"].active) {
     }
 }
 
-.modal.free-quote .contact li {
+.modal.free-quote .contact [role="radio"] {
     position: static;
     border: 3px solid #B1B1B1;
     background-color: white;
@@ -5952,21 +5953,21 @@ body:has([role="dialog"].active) {
     min-width: 155px;
 }
 
-.modal.free-quote .contact li div {
+.modal.free-quote .contact [role="radio"] div {
     pointer-events: none;
 }
 
-.modal.free-quote .contact li:focus {
+.modal.free-quote .contact [role="radio"]:focus {
     outline: 3px solid #121212;
 }
 
-.modal.free-quote .contact li[aria-checked="true"] {
+.modal.free-quote .contact [role="radio"][aria-checked="true"] {
     background-color: #121212;
     border: 3px solid #121212;
     color: white;
 }
 
-.modal.free-quote .contact li[aria-checked="true"] .icon {
+.modal.free-quote .contact [role="radio"][aria-checked="true"] .icon {
     -webkit-filter: invert(1);
             filter: invert(1);
 }
@@ -6179,6 +6180,6 @@ body:has([role="dialog"].active) {
     display: flex;
 }
 
-.modal.free-quote.complete [role="form"] {
+.modal.free-quote.complete form {
     display: none;
 }

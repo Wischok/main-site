@@ -181,9 +181,9 @@ Dialog.prototype.open = function(event) {
     this.dialog.classList.add("active");
 
     this.trigger = event.target;
-    this.dialog.querySelectorAll('[role=form]').forEach((form) => {
+    this.dialog.querySelectorAll('form').forEach((form) => {
         if(form.classList.contains('active')) {
-            document.getElementById(form.getAttribute('value-focusNext')).focus();
+            document.getElementById(form.getAttribute('focusNext')).focus();
             return;
         }
     });
@@ -197,7 +197,7 @@ Dialog.prototype.close = function() {
 
 //select form
 Dialog.prototype.selectForm = function(form) {
-    let forms = this.formGroup.querySelectorAll('[role=form]');
+    let forms = this.formGroup.querySelectorAll('form');
 
     //switch buttons if on final form
     if((this.index) >= forms.length) {
@@ -214,7 +214,7 @@ Dialog.prototype.selectForm = function(form) {
     this.activeForm.classList.add('active');
 
     //focus first element on form
-    document.getElementById(this.activeForm.getAttribute('value-focusNext')).focus();
+    document.getElementById(this.activeForm.getAttribute('focusNext')).focus();
 
     //top button controls
     this.stepButtons.forEach((button) => {
@@ -252,7 +252,7 @@ Dialog.prototype.onKeyDown = function(event) {
 Dialog.prototype.selectService = function(index) {
     this.formGroup = this.formGroups[index];//swap service
 
-    if((this.formGroup.querySelectorAll('[role=form]').length + 1) < this.stepButtons.length) {
+    if((this.formGroup.querySelectorAll('form').length + 1) < this.stepButtons.length) {
         this.stepButtons[this.stepButtons.length - 1].setAttribute('aria-disabled', 'true');
     }
     else {
@@ -279,7 +279,7 @@ Dialog.prototype.onStepSelect = function(e) {
         this.selectForm(this.firstForm);
     }
     else {
-        this.selectForm(this.formGroup.querySelectorAll('[role=form]')[this.index - 1]);
+        this.selectForm(this.formGroup.querySelectorAll('form')[this.index - 1]);
     }
 }
 
@@ -289,7 +289,7 @@ Dialog.prototype.onContinue = function(event) {
         return;
     }
 
-    let forms = this.formGroup.querySelectorAll('[role=form]');
+    let forms = this.formGroup.querySelectorAll('form');
     this.index++;
     this.selectForm(forms[this.index - 1]);
 }
@@ -315,7 +315,7 @@ Dialog.prototype.onSubmit = function() {
     formData.set('service', this.formGroup.getAttribute('data-name'));
 
     //add selected form data
-    let group = this.dialog.querySelectorAll('[role=form]');
+    let group = this.dialog.querySelectorAll('form');
     group.forEach((form) => {
         let tempformData = new FormData(form);
 
