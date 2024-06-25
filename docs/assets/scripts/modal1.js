@@ -108,7 +108,7 @@ function Dialog (el) {
     this.triggers = document.querySelectorAll(".modal1_trigger");
     this.exit = document.getElementById(el.id + "_exit");//exit
     this.backdrop = document.getElementById(this.dialog.id + '-backdrop');//backdrop exit
-    this.firstElement = document.getElementById(this.dialog.getAttribute('value-focus-first'));
+    this.firstElement = document.getElementById(this.dialog.getAttribute('focus-first'));
     this.formGroups = el.querySelectorAll('.forms');
     this.continueButton = document.getElementById('modal1-continue');
     this.submitButton = document.getElementById('modal1-submit');
