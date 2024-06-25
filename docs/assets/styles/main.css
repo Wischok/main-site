@@ -1058,7 +1058,7 @@ input[role="checkbox"] {
     text-decoration: none;
 }
 
-.address .contacts button:has(span) {
+.address .contacts button:has(.text-span) {
     justify-content: end;
     margin-block: .5rem;
     letter-spacing: 1px;
@@ -1071,8 +1071,8 @@ input[role="checkbox"] {
     background: none;
 }
 
-.address .contacts .phone a:hover span,
-.address .contacts .phone a:focus span{
+.address .contacts .phone a:hover .text-span,
+.address .contacts .phone a:focus .text-span{
     -webkit-animation: slide-expand-1 forwards 500ms ease-out;
             animation: slide-expand-1 forwards 500ms ease-out;
 }
@@ -1099,8 +1099,8 @@ input[role="checkbox"] {
     }
 }
 
-.address .contacts .email a:hover span,
-.address .contacts .email a:focus span {
+.address .contacts .email a:hover .text-span,
+.address .contacts .email a:focus .text-span {
     -webkit-animation: slide-expand-2 forwards 500ms ease-out;
             animation: slide-expand-2 forwards 500ms ease-out;
 }
@@ -1126,8 +1126,8 @@ input[role="checkbox"] {
         padding-left: 1rem;
     }
 }
-.address .contacts .schedule button:hover span,
-.address .contacts .schedule button:focus span {
+.address .contacts .schedule button:hover .text-span,
+.address .contacts .schedule button:focus .text-span {
     -webkit-animation: slide-expand-3 forwards 500ms ease-out;
             animation: slide-expand-3 forwards 500ms ease-out;
 }
@@ -1154,7 +1154,7 @@ input[role="checkbox"] {
     }
 }
 
-.address .contacts a span {
+.address .contacts a .text-span {
     right: 0rem;
     display: flex;
     justify-content: center;
@@ -1174,7 +1174,7 @@ input[role="checkbox"] {
     visibility: hidden;
 }
 
-.address .contacts button span {
+.address .contacts button .text-span {
     right: 0rem;
     display: flex;
     justify-content: center;
@@ -1195,8 +1195,8 @@ input[role="checkbox"] {
     visibility: hidden;
 }
 
-.address .contacts a:hover span,
-.address .contacts a:focus span {
+.address .contacts a:hover .text-span,
+.address .contacts a:focus .text-span {
     visibility: visible;
 }
 
@@ -1205,8 +1205,8 @@ input[role="checkbox"] {
     outline: none;
 }
 
-.address .contacts button:hover span,
-.address .contacts button:focus span {
+.address .contacts button:hover .text-span,
+.address .contacts button:focus .text-span {
     visibility: visible;
 }
 
@@ -1220,7 +1220,7 @@ input[role="checkbox"] {
     font-weight: 600;
 }
 
-.address .contacts button:has(span) {
+.address .contacts button:has(.text-span) {
     text-decoration: none;
     font-weight: 600;
 }
@@ -1235,9 +1235,23 @@ input[role="checkbox"] {
     z-index: 1;
 }
 
+.address .contacts .li.schedule .icon-span {
+    height: 3rem;
+    width: 3rem;
+    padding: 10px;
+    border-radius: 50%;
+    border: 2px solid white;
+    cursor: pointer;
+    z-index: 1;
+}
+
 .address .contacts .li.phone div,
-.address .contacts .li.schedule div {
+.address .contacts .li.schedule .icon-span {
     background-color: var(--color-background-1);
+}
+
+.address .contacts .li.schedule .icon-span {
+    display: block;
 }
 
 .address .contacts .li.email div {

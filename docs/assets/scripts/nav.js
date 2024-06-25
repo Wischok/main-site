@@ -123,10 +123,5 @@ Nav.prototype.addressToggle = function() {
 
 //init Nav
 window.addEventListener('load', function () {
-    const comboEls = document.querySelectorAll('[role="navigation"]');
-
-    comboEls.forEach((el) => {
-        new Nav(el);
-        
-    })
+    new Nav(document.getElementById('nav'));
 });
