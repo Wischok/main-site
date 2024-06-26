@@ -2389,7 +2389,7 @@ input[role="checkbox"] {
 
 /* Section | text left version 2 */
 .section-text-left2 {
-    margin: 10rem var(--side-margin) 0 var(--side-margin);
+    margin: 0 var(--side-margin);
 }
 
 @media screen and (max-width: 810px) {
