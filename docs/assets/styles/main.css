@@ -2139,7 +2139,6 @@ input[role="checkbox"] {
     align-items: start;
     padding-bottom: 5rem;
     max-width: 35rem;
-    right: 4rem;
 }
 @media screen and (max-width: 1440px) {
     .section-text-right1 .content-left .img-wrapper {
