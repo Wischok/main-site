@@ -2317,7 +2317,7 @@ h3 {
     border-radius: 5px;
     border: 2px solid var(--black);
     padding-left: 10px;
-    padding-block: 3px;
+    padding-block: 7px;
 }
 
 .dialog input:focus {
