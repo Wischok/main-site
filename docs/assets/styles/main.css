@@ -1735,7 +1735,6 @@ input[role="checkbox"] {
 }
 
 .input-wrapper.submit input {
-    max-width: 125px;
     padding-left: 0;
     font-weight: 400;
     color: white;
