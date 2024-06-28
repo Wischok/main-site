@@ -5513,6 +5513,12 @@ input[type="submit"] {
     -webkit-animation: scaleUp .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
             animation: scaleUp .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
 }
+@media screen and (max-width: 830px) {
+    .modal.active .outer-main-wrapper {
+        position: relative;
+        bottom: 7vh;
+    }
+}
 
 .modal .backdrop {
     height: 100%;
@@ -5675,17 +5681,16 @@ body:has([role="dialog"].active) {
 .modal.free-quote .main-wrapper {
     background-color: white;
     max-width: 800px;
-    max-height: 80vh;
+    max-height: 75dvh;
     border-radius: 1.5rem;
     position: relative;
     min-height: -webkit-max-content;
     min-height: -moz-max-content;
     min-height: max-content;
-    max-height: 80vh;
     height: 100%;
     
 }
-@media screen and (max-height: 830px) {
+@media screen and (max-width: 830px) {
     .modal.free-quote .main-wrapper {
         overflow-y: scroll;
     }
@@ -5904,9 +5909,7 @@ body:has([role="dialog"].active) {
         position: relative;
         right: 0;
         bottom: 0;
-        margin-inline: auto;
-        margin-bottom: 2rem;
-        margin-top: 1rem;
+        margin: 13px auto;
     }
 }
 

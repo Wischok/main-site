@@ -322,7 +322,7 @@
         <!-- Section | Good Web Design -->
         <div class="section-carousel-single-timer1 margin-top-15">
             <h2 class="heading2">Good Web Design</h2>
-            <section aria-roledescription="carousel-single1-desc" class="content">
+            <div aria-roledescription="carousel-single1-desc" class="content">
                 <p id="carousel-single1-desc" class="carousel-desc p2">There are a hundreds of things that make for a good website design. Here are our favorite 4.</p>
                 <div class="carousel content-bottom flex-row" id="carousel-single1" aria-label="4 tips to good web design">
                     <div class="content-left">
@@ -363,12 +363,12 @@
                     </div>
                     <div class="img-wrapper content-right" aria-live="off">
                         <img src="/img/dentist-mobile-site.png" id="carousel-single-btn1" alt="" aria-roledescription="slide" aria-label="1 of 4" class="img active">
-                        <img src="/img/temp2.png" id="carousel-single-btn2" alt="" aria-roledescription="slide" aria-label="2 of 4" class="img">
-                        <img src="/img/temp3.png" id="carousel-single-btn3" alt="" aria-roledescription="slide" aria-label="3 of 4" class="img">
-                        <img src="/img/temp4.png" id="carousel-single-btn4" alt="" aria-roledescription="slide" aria-label="4 of 4" class="img">
+                        <img src="/img/temp2.png" id="carousel-single-btn5" alt="" aria-roledescription="slide" aria-label="2 of 4" class="img">
+                        <img src="/img/temp3.png" id="carousel-single-btn6" alt="" aria-roledescription="slide" aria-label="3 of 4" class="img">
+                        <img src="/img/temp4.png" id="carousel-single-btn7" alt="" aria-roledescription="slide" aria-label="4 of 4" class="img">
                     </div>
                 </div>
-            </section>
+            </div>
         </div>
         <!-- Section | The Right Website For You -->
         <div class="section-text-right2 flex-row-center margin-top-20 sb-section flex-wrap" aria-labelledby="section-text-right2-h2">
@@ -397,10 +397,10 @@
         </div>
         <!-- Section | Free Proposal / Contact Form -->
         <div class="section-contact margin-top-10">
-            <div class="form-region1" aria-labelledby="form-region1-lbl">
+            <div class="form-region1" aria-labelledby="contact-heading">
                 <div class="container">
-                    <h2 class="heading2">Contact us now for a free quote</h2>
-                    <form role="form" class="contact-form grid form-grid" action="https://wischok.us17.list-manage.com/subscribe/post" method="POST">
+                    <h2 class="heading2" id="contact-heading">Contact us now for a free quote</h2>
+                    <form class="contact-form grid form-grid" action="https://wischok.us17.list-manage.com/subscribe/post" method="POST">
                         <!-- Name Field -->
                         <div class="field-wrapper flex">
                             <div class="label-wrapper">
@@ -423,8 +423,8 @@
                         <!-- Email marketing -->
                         <div class="flex-row-center consent">
                         <ul class="interestgroup_field checkbox-group">
-                            <li class="!margin-bottom--lv2"> <label class="checkbox flex-row-center" for="group_1"><input role="checkbox" type="checkbox"
-                                        data-dojo-type="dijit/form/CheckBox" id="group_1" name="group[22561][1]" value="1"
+                            <li class="!margin-bottom--lv2"> <label class="checkbox flex-row-center" for="group_1"><input type="checkbox"
+                                        data-dojo-type="dijit/form/CheckBox" id="group_1" name="group[22561][1]" value="1" aria-checked="false"
                                         class="av-checkbox"><span>I would like to recieve promotions and offers from Wischok.</span> </label> </li>
                         </ul>
                         </div>
@@ -447,7 +447,7 @@
                                 <div class="combo combo-standard combo1">
                                     <input class="combo-input" name="MERGE2" id="MERGE2" role="combobox" 
                                     tabindex="0" aria-labelledby="combo1-lbl" type="text"
-                                    aria-haspopup="listbox" aria-controls="listbox1" value="" placeholder="Website Design">
+                                    aria-haspopup="listbox" aria-controls="listbox1" aria-expanded="false" value="" placeholder="Website Design">
                                     <!-- Combo Menu | List of Options -->
                                     <div class="combo-menu" role="listbox" id="listbox1" 
                                     aria-labelledby="combo1-lbl" tabindex="-1">
@@ -457,9 +457,9 @@
                                         aria-selected="false">Fresh Designs</div>
                                         <div role="option" id="combo1-2" class="combo-option"
                                         aria-selected="false">Custom Interactions</div>
-                                        <div role="option" id="combo1-5" class="combo-option"
+                                        <div role="option" id="combo1-3" class="combo-option"
                                         aria-selected="false">Digital Accessibility</div>
-                                        <div role="option" id="combo1-5" class="combo-option"
+                                        <div role="option" id="combo1-4" class="combo-option"
                                         aria-selected="false">Marketing</div>
                                     </div>
                                 </div>
