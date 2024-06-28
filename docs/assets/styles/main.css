@@ -5495,7 +5495,7 @@ input[type="submit"] {
 /* Modal */
 .modal {
     position: fixed;
-    height: 100vh;
+    height: 100dvh;
     width: 100vw;
     top: 0;
     left: 0;
