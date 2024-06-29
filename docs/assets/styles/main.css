@@ -5516,7 +5516,6 @@ input[type="submit"] {
 @media screen and (max-width: 830px) {
     .modal.active .outer-main-wrapper {
         position: relative;
-        bottom: 7vh;
     }
 }
 
