@@ -5495,6 +5495,7 @@ input[type="submit"] {
 /* Modal */
 .modal {
     position: fixed;
+    height: 100svh;
     height: 100dvh;
     width: 100vw;
     top: 0;
@@ -5680,7 +5681,7 @@ body:has([role="dialog"].active) {
 .modal.free-quote .main-wrapper {
     background-color: white;
     max-width: 800px;
-    max-height: 75dvh;
+    max-height: 85dvh;
     border-radius: 1.5rem;
     position: relative;
     min-height: -webkit-max-content;
