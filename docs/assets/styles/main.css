@@ -645,6 +645,10 @@ input[role="checkbox"] {
     width: calc(100% - 1rem);
 }
 
+.menu li:has(.underline):hover .underline::after {
+    width: calc(100% - 1rem);
+}
+
 @media screen and (max-width: 900px) {
     .menu .underline {
         font-weight: 700;
@@ -688,6 +692,10 @@ input[role="checkbox"] {
     text-decoration: underline;
 }
 
+.menu .sub-menu [role="menuitem"]:focus {
+    outline: 2px solid #0d0d0d;
+}
+
 .menu [role="menu"] {
     position: absolute;
     background-color: white;
@@ -710,6 +718,11 @@ input[role="checkbox"] {
     width: -moz-max-content;
     width: max-content;
     display: inline-block;
+    border-radius: 0;
+}
+
+.menu .menu-button:focus {
+    outline: none;
 }
 
 .menu .menu-button span {
@@ -719,6 +732,11 @@ input[role="checkbox"] {
     height: -webkit-max-content;
     height: -moz-max-content;
     height: max-content;
+}
+
+.menu .menu-button:focus span {
+    outline-offset: 3px;
+    outline: 2px solid #0d0d0d;
 }
 
 .menu .menu-button span::after {
@@ -2231,6 +2249,7 @@ input[role="checkbox"] {
 .section-text-right1 .content-right .row {
     gap: 2rem;
     margin: 1rem 0;
+    display: flex;
 }
 @media screen and (max-width: 810px) {
     .section-text-right1 .content-right .row {
@@ -3523,13 +3542,16 @@ input[role="checkbox"] {
 }
 
 /* Section | Small Business Text Right */
+.sb-section.section-text-right2 {
+    gap: 4rem;
+}
+
 .sb-section.section-text-right2 .heading2 {
     max-width: 22ch;
 }
 
 .sb-section .img {
     aspect-ratio: 4 / 5;
-    max-width: 80%;
     position: relative;
 }
 
@@ -3938,23 +3960,126 @@ input[role="checkbox"] {
 }
 
 /* Digital Accessibility Section | Text Right Image Left */
+.section-text-right2.da-section {}
+@media screen and (max-width: 1440px) {
+    .section-text-right2.da-section {
+        flex-wrap: wrap;
+        gap: 0;
+    }
+}
+
 .section-text-right2.da-section .img {
-    -o-object-fit: contain;
-       object-fit: contain;
+    -o-object-fit: cover;
+       object-fit: cover;
     width: 100%;
-    transform: scale(1.2);
+    border-radius: 15px;
+    object-position: 60% 50%;
+    max-height: 70vh;
+}
+
+.section-text-right2.da-section h2 {
+    margin-bottom: 1rem;
+    text-align: left !important;
+}
+@media screen and (max-width: 1440px) {
+    .section-text-right2.da-section h2 {
+        max-width: 45ch !important;
+    }
 }
 
 .section-text-right2.da-section .p2 {
-    max-width: 60ch;
+    max-width: none;
+    margin-top: 0;
+    text-align: left !important;
 }
+
+
+.section-text-right2.da-section .content-left {
+    display: flex !important;
+
+}
+@media screen and (max-width: 1440px) {
+    .section-text-right2.da-section .content-left {
+        max-width: 100%;
+        padding-bottom: 0;
+    }
+}
+
+.section-text-right2.da-section .content-right {
+
+}
+@media screen and (max-width: 1440px) {
+    .section-text-right2.da-section .content-right {
+        max-width: 100%;
+        padding-top: 0;
+    }
+}
+
+.section-text-right2.da-section ul {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 2rem;
+    flex-wrap: wrap;
+    position: relative;
+    width: 100%;
+    margin-top: 2rem;
+}
+
 .section-text-right2.da-section li {
-    margin: 1.5rem 0;
-    max-width: 60ch;
+    justify-content: start;
+    align-items: start;
+    max-width: 40%;
     line-height: 220%;
-    align-items: center;
-    text-align: left;
+    border-radius: 15px;
+    text-align: left !important;
 }
+@media screen and (max-width: 1440px) {
+    .section-text-right2.da-section li {
+        max-width: min(30ch, 40%);
+    }
+}
+@media screen and (max-width: 575px) {
+    .section-text-right2.da-section li {
+        max-width: none;
+        padding-inline: var(--side-margin);
+    }
+}
+
+
+.section-text-right2.da-section h3 {
+    font-size: 1.1rem;
+}
+
+.section-text-right2.da-section ul li img {
+    min-width: 2rem;
+    min-height: 2rem;
+    max-width: 2rem;
+    max-height: 2rem;
+    object-fit: contain;
+    position: relative;
+}
+
+.section-text-right2.da-section ul li span {
+    position: relative;
+    margin: 10px;
+}
+
+.section-text-right2.da-section ul li span::after {
+    content: "";
+    background-color: #9DADDF;
+    min-width: 2rem;
+    min-height: 2rem;
+    max-width: 2rem;
+    max-height: 2rem;
+    position: absolute;
+    bottom: 0px;
+    right: -10px;
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 40%;
+}
+
+
 
 /* 
   Section | tri 3 cards version 2
@@ -4373,7 +4498,7 @@ span.bullet {
     margin: 1rem 0;
 }
 
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 1024px) {
     .section-circle-carousel .circle-row .circle {
     min-width: 25%;
     }
@@ -4389,10 +4514,38 @@ span.bullet {
     display: flex;
     justify-content: center;
     align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
 }
 
-.section-circle-carousel .circle-row .circle.active .img-wrapper {
-    transform: scale(1.7);
+.section-circle-carousel .circle-row .circle .img-wrapper[aria-selected="true"]::before {
+    content: "";
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    background: #C0CFFA;
+    background-size: 0%;
+    z-index: -1;
+    border-radius: 50%;
+    opacity: 0;
+    animation: tabs-carousel-background-enter 200ms ease-out forwards;
+}
+
+@keyframes tabs-carousel-background-enter {
+    from {
+        opacity: 0%;
+        top: 20%;
+        left: 25%;
+    }
+    to {
+        opacity: 60%;
+        top: 35%;
+        left: 40%;
+    }
 }
 
 .section-circle-carousel .circle-row .circle .img {
@@ -4427,6 +4580,7 @@ span.bullet {
     position: relative;
     width: 100%;
     padding: 0 1rem;
+    max-width: 50ch;
 }
 
 .section-text-center1 .carousel-content .content::after
@@ -4482,16 +4636,20 @@ span.bullet {
     }
 }
 
-.section-text-center1 .carousel-content .content.active
-{
+.section-text-center1 .carousel-content .content {
+    opacity: 0;
+}
+
+.section-text-center1 .carousel-content .content.display {
     display: block;
+    animation: fade-in 1200ms ease-out forwards;
 }
 
 .section-text-center1 .carousel-content .img {
-    width: 2rem;
+    width: 3rem;
+    height: 3rem;
     border-radius: 50%;
-    aspect-ratio: 1 / 1;
-    background-color: white;
+    object-fit: contain;
 }
 
 .section-text-center1 .carousel-content .p1 {
@@ -5216,6 +5374,10 @@ span.bullet {
     .section-text-right3 .img {
         display: none;
     }
+}
+
+.section-text-right3 .img.da {
+    background-image: url(/img/digital-accessibility-keyboard.jpg);
 }
 
 .section-text-right3 .img, 

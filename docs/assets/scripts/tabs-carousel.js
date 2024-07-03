@@ -55,20 +55,17 @@ function indexOf(array, key) {
 }
 
 /*
-    Tablist Component Class
+    TablistCarousel Component Class
 */
 
 //accepts tablist element as argument
-function Tablist (el) {
+function TablistCarousel (el) {
     //element refs
     this.tablist = el;//tab element
     this.tabs = el.querySelectorAll('[role=tab]'); //list of tabs 
-    this.tabPanels = el.querySelectorAll('[role=tabpanel]');//list of tabPanels
-    this.descriptions = el.querySelectorAll('.desc');//list of descriptions
-    this.progressBar = el.querySelector('[role=progressbar]');
-    if(this.progressBar) {
-        this.progressBar = new ProgressBar(this.progressBar, this);//injection of tablist into progress bar
-    }
+    this.tabPanels = [];//list of tabPanels
+    this.descriptions = [];//list of descriptions
+    this.progressBar;
 
     //data
     this.idBase = this.tablist.id || 'tablist';
@@ -82,14 +79,21 @@ function Tablist (el) {
     if(el && this.tablist && this.tabs) {
         this.init();
     }
+
+    if(this.tablist.querySelector('[role=progressbar]')) {
+        this.progressBar = new ProgressBar(this.tablist.querySelector('[role=progressbar]'), this);//injection of tablist into progress bar
+    }
 }
 
 //tablist initialization funciton
-Tablist.prototype.init = function() {
+TablistCarousel.prototype.init = function() {
     //set up tabs
     for (let i = 0; i < this.tabs.length; i++) {
         //hold onto current tab
         let tab = this.tabs[i];
+
+        this.tabPanels.push(document.getElementById(tab.getAttribute('aria-controls')));
+        this.descriptions.push(document.getElementById(this.tabPanels[i].getAttribute('aria-describedby')));
 
         //add listener events
         tab.addEventListener('click', this.onClick.bind(this));
@@ -107,7 +111,7 @@ Tablist.prototype.init = function() {
 }
 
 //on tab select
-Tablist.prototype.selectTab = function(newTab) {
+TablistCarousel.prototype.selectTab = function(newTab) {
     let tab = this.selectedTab;
 
     //remove attributes from old tab
@@ -142,7 +146,7 @@ Tablist.prototype.selectTab = function(newTab) {
 }
 
 //next tab function
-Tablist.prototype.next = function() {
+TablistCarousel.prototype.next = function() {
     if(this.selectedTab === this.lastTab) {
         this.selectTab(this.lastTab);
     }
@@ -153,7 +157,7 @@ Tablist.prototype.next = function() {
 }
 
 //prev tab function
-Tablist.prototype.prev = function() {
+TablistCarousel.prototype.prev = function() {
     if(this.selectedTab === this.firstTab) {
         this.selectTab(this.firstTab);
     }
@@ -164,22 +168,22 @@ Tablist.prototype.prev = function() {
 }
 
 //select firs tab
-Tablist.prototype.homeTab = function() {
+TablistCarousel.prototype.homeTab = function() {
     this.selectTab(this.firstTab);
 }
 
 //select last tab
-Tablist.prototype.endTab = function() {
+TablistCarousel.prototype.endTab = function() {
     this.selectTab(this.lastTab);
 }
 
 //tab click function
-Tablist.prototype.onClick = function(event) {
+TablistCarousel.prototype.onClick = function(event) {
     this.selectTab(event.currentTarget);
 }
 
 //on key down
-Tablist.prototype.onKeydown = function (event) {
+TablistCarousel.prototype.onKeydown = function (event) {
     //get action from key pressed
     const action = getActionFromKey(event);
     
@@ -210,7 +214,7 @@ Tablist.prototype.onKeydown = function (event) {
     event.preventDefault();
 }
 
-Tablist.prototype.tabPanelsLength = function() {
+TablistCarousel.prototype.tabPanelsLength = function() {
     return this.tabPanels.length;
 }
 
@@ -221,9 +225,8 @@ function ProgressBar (bar, parent) {
     //element refs
     this.parent = parent;
     this.progressBar = bar;//progress bar
-    this.pauseButton = document.getElementById(this.progressBar.getAttribute('pausebtn'));
+    this.pauseButton = document.getElementById(bar.getAttribute('pausebtn'));
     this.slides = document.querySelectorAll('.progressbar-slide');
-    
 
     //data
     this.progress = 0;
@@ -239,6 +242,7 @@ function ProgressBar (bar, parent) {
 }
 
 ProgressBar.prototype.init = function() {
+    
     //set timed interval for ProgressBar
     this._interval = setInterval(this.interval.bind(this),100);
     
@@ -312,6 +316,10 @@ window.addEventListener('load', function () {
     const elements = document.querySelectorAll('[role=tablist]');
 
     elements.forEach((el) => {
-        new Tablist(el);
+        if(!el.classList.contains('tabs-carousel')) {
+            return;
+        }
+
+        new TablistCarousel(el)
     })
 });

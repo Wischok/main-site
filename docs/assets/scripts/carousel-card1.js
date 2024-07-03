@@ -65,7 +65,7 @@ function indexOf(array, key) {
 function Carousel (el) {
     //element refs
     this.carousel = el;//tab element
-    this.slides = el.querySelectorAll('ul');//list of tabPanels
+    this.slides = el.querySelectorAll('[role=group]');//list of tabPanels
     this.btnPrev = document.getElementById('carousel_prev1');
     this.btnNext = document.getElementById('carousel_prev2');
 

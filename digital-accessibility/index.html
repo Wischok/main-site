@@ -26,6 +26,7 @@
     <script defer src="/docs/assets/scripts/combobox.js"></script>
     <script defer src="/docs/assets/scripts/checkbox.js"></script>
     <script defer src="/docs/assets/scripts/modal1.js"></script>
+    <script defer src="/docs/assets/scripts/tabs.js"></script>
 
     <!-- External Stylesheets -->
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
@@ -189,67 +190,78 @@
             </section>
         </div>
         <!-- Section | How do we check for digital accessibility -->
-        <div class="section-text-right2 margin-top-5 da-section flex-row-center sb-section flex-wrap">
+        <div class="section-text-right2 margin-top-10 da-section flex-row-center sb-section flex-wrap">
             <div class="content-left flex-half">
-                <img src="/img/digital-accessibility-abstract.png" alt="Passion Led Us Here." class="img">
+                <img src="/img/digital-accessibility-keyboard.jpg" alt="Passion Led Us Here." class="img">
             </div>
             <div class="content-right flex-half">
                 <div class="wrapper">
                     <h2 class="heading2 max-width">How do we check for Digital Accessibility?</h2>
-                    <p class="p2">We check for Digital Accessibility using automated tools and manual testing. Here are a few from our
-                        digital accessibility specialists :</p>
+                    <p class="p2">We check for Digital Accessibility using automated tools and manual testing:</p>
                     <ul>
-                        <li class="flex-row"><span class="list-circle"></span>Online tools such as WAVE. ANDi, and Lighthouse are used to get quick insights.</li>
-                        <li class="flex-row"><span class="list-circle"></span>Screen readers are used from beginning to end during ADA website testing / remediation.</li>
-                        <li class="flex-row"><span class="list-circle"></span>Text must also be accessible. We check for clear and understandable language.</li>
-                        <li class="flex-row"><span class="list-circle"></span>Keyboard only: We navigate the entire website using only a keyboard to ensure a mouse is not a requirement.</li>
+                        <li class="flex-column">
+                            <span><img src="/img/wave-icon.png" alt="Wave accessibility tool."></span>
+                            <h3>Digital Tools</h3>
+                            Online tools such as WAVE. ANDi, and Lighthouse are used to get quick insights.</li>
+                        <li class="flex-column">
+                            <span><img src="/img/screen-reader-icon.png" alt="Screen reader."></span>
+                            <h3>Screen Readers</h3>
+                            Screen readers are used from beginning to end during ADA website testing / remediation.</li>
+                        <li class="flex-column">
+                            <span><img src="/img/text-icon.png" alt="Digital text document icon."></span>
+                            <h3>Cognitive Text</h3>
+                            Text must also be accessible. We check for clear and understandable language.</li>
+                        <li class="flex-column">
+                            <span><img src="/img/keyboard-icon.png" alt="A Keyboard."></span>
+                            <h3>Keyboard Tests</h3>
+                            Keyboard only: We navigate the entire website using only a keyboard to ensure a mouse is not a requirement.</li>
                     </ul>
                 </div>
             </div>
         </div>
         <!-- Section | Everybody cares about digital accessibility -->
-        <h2 class="heading2 align-center margin-top-15">Everybody focuses on ADA Accessibility</h2>
+        <h2 class="heading2 align-center margin-top-15" id="tablist-2-heading">Everybody focuses on ADA Accessibility</h2>
         <Section class="section-circle-carousel">
-            <div class="circle-row">
+            <div class="circle-row" role="tablist" aria-labelledby="tablist-2-heading">
                 <div class="circle circle1">
-                    <div class="img-wrapper">
+                    <button  id="tablist2-tab1" type="button" role="tab" aria-selected="true" aria-controls="tablist2-tabpanel1" class="img-wrapper">
                         <img src="/img/apple-logo.png" alt="Apple logo." class="img">
-                    </div>
+                    </button>
                 </div>
                 <div class="circle circle2">
-                    <div class="img-wrapper">
+                    <button id="tablist2-tab2" type="button" tabindex="-1" role="tab" aria-selected="false" aria-controls="tablist2-tabpanel2" class="img-wrapper">
                         <img src="/img/microsoft-logo.png" alt="microsoft logo." class="img">
-                    </div>
+                    </button>
                 </div>
-                <div class="circle circle3 active">
-                    <div class="img-wrapper">
-                        <img src="/img/google-icon.webp" alt="Google logo." class="img">
-                    </div>
+                <div class="circle circle3">
+                    <button id="tablist2-tab3" type="button" tabindex="-1" role="tab" aria-selected="false" aria-controls="tablist2-tabpanel3" class="img-wrapper">
+                        <img src="/img/google-icon.png" alt="Google logo." class="img">
+                    </button>
                 </div>
                 <div class="circle circle4">
-                    <div class="img-wrapper">
+                    <button id="tablist2-tab4" type="button" tabindex="-1" role="tab" aria-selected="false" aria-controls="tablist2-tabpanel4" class="img-wrapper">
                         <img src="/img/amazon-logo.svg" alt="Amazon logo." class="img">
-                    </div>
+                    </button>
                 </div>
                 <div class="circle circle5">
-                    <div class="img-wrapper">
+                    <button id="tablist2-tab5" type="button" tabindex="-1" role="tab" aria-selected="false" aria-controls="tablist2-tabpanel5" class="img-wrapper">
                         <img src="/img/facebook-logo.webp" alt="Facebook logo." class="img">
-                    </div>
+                    </button>
                 </div>
                 <div class="circle circle6">
-                    <div class="img-wrapper">
+                    <button id="tablist2-tab6" type="button" tabindex="-1" role="tab" aria-selected="false" aria-controls="tablist2-tabpanel6" class="img-wrapper">
                         <img src="/img/x-logo.svg" alt="X / Twitter logo." class="img">
-                    </div>
+                    </button>
                 </div>
                 <div class="circle circle7">
-                    <div class="img-wrapper">
+                    <button id="tablist2-tab7" type="button" tabindex="-1" role="tab" aria-selected="false" aria-controls="tablist2-tabpanel7" class="img-wrapper">
                         <img src="/img/linkedin-logo.webp" alt="LinkedIn logo." class="img">
-                    </div>
+                    </button>
                 </div>
                 <div class="circle circle8">
-                    <div class="img-wrapper">
+                    <button id="tablist2-tab8" type="button" tabindex="-1" role="tab" aria-selected="false" aria-controls="tablist2-tabpanel8" class="img-wrapper">
                         <img src="/img/netflix-logo.webp" alt="Netflix logo." class="img">
-                    </div>
+                    </button>
                 </div>
             </div>
         </Section>
@@ -258,43 +270,43 @@
                 <div class="carousel-content flex-row-center">
                     <div class="content-left">
                         <div class="content-wrapper">
-                            <div class="content active">
+                            <div id="tablist2-tabpanel1" role="tabpanel" aria-labelledby="tablist2-tab1" class="content display">
                                 <img src="/img/apple-logo.png" alt="Apple logo." class="img">
                                 <p class="p1">Accessibility Statement</p>
                                 <p class="p2"><span class="company-name">[Apple]</span> has always believed that accessibility is a human right...</p>
                             </div>
-                            <div class="content">
+                            <div id="tablist2-tabpanel2" role="tabpanel" aria-labelledby="tablist2-tab2" class="content">
                                 <img src="/img/microsoft-logo.png" alt="Microsft logo." class="img">
                                 <p class="p1">Accessibility Statement</p>
                                 <p class="p2"><span class="company-name">[Microsoft]</span> is committed to accessibility with the belief...</p>
                             </div>
-                            <div class="content">
-                                <img src="/img/google-icon.webp" alt="Google logo." class="img">
+                            <div id="tablist2-tabpanel3" role="tabpanel" aria-labelledby="tablist2-tab3" class="content">
+                                <img src="/img/google-icon.png" alt="Google logo." class="img">
                                 <p class="p1">Accessibility Statement</p>
                                 <p class="p2"><span class="company-name">[Google]</span> we integrate disability-friendly workspaces and build accessible technology to...</p>
                             </div>
-                            <div class="content">
+                            <div id="tablist2-tabpanel4" role="tabpanel" aria-labelledby="tablist2-tab4" class="content">
                                 <img src="/img/amazon-logo.svg" alt="Amazon logo." class="img">
                                 <p class="p1">Accessibility Statement</p>
                                 <p class="p2"><span class="company-name">[Amazon]</span> we’re building a more accessible future...</p>
                             </div>
-                            <div class="content">
-                                <img src="/img/x-logo.svg" alt="X / Twitter logo." class="img">
+                            <div id="tablist2-tabpanel5" role="tabpanel" aria-labelledby="tablist2-tab5" class="content">
+                                <img src="/img/facebook-logo.webp" alt="Facebook logo." class="img">
                                 <p class="p1">Accessibility Statement</p>
                                 <p class="p2"><span class="company-name">[Facebook]</span> is committed to creating a great experience for all people...</p>
                             </div>
-                            <div class="content">
-                                <img src="/img/linkedin-logo.webp" alt="LinkedIn logo." class="img">
+                            <div id="tablist2-tabpanel6" role="tabpanel" aria-labelledby="tablist2-tab6" class="content">
+                                <img src="/img/x-logo.svg" alt="X / Twitter logo." class="img">
                                 <p class="p1">Accessibility Statement</p>
                                 <p class="p2"><span class="company-name">[X - Twitter]</span> We have a dedicated group of cross-functional inclusive designers and engineers for accessibility...</p>
                             </div>
-                            <div class="content">
-                                <img src="/img/netflix-logo.webp" alt="Netflix logo." class="img">
+                            <div id="tablist2-tabpanel7" role="tabpanel" aria-labelledby="tablist2-tab7" class="content">
+                                <img src="/img/linkedin-logo.webp" alt="LinkedIn logo." class="img">
                                 <p class="p1">Accessibility Statement</p>
                                 <p class="p2"><span class="company-name">[LinkedIn]</span> Accessibility means creating a space where anyone can find opportunity regardless of ability...</p>
                             </div>
-                            <div class="content">
-                                <img src="" alt="" class="img">
+                            <div id="tablist2-tabpanel8" role="tabpanel" aria-labelledby="tablist2-tab8" class="content">
+                                <img src="/img/netflix-logo.webp" alt="Netflix logo." class="img">
                                 <p class="p1">Accessibility Statement</p>
                                 <p class="p2"><span class="company-name">[Netflix]</span> We believe incredible stories should be enjoyed by all of our members, regardless of language, device, connectivity, or ability...</p>
                             </div>
@@ -369,9 +381,9 @@
                         <path d="M75 44L-4.07833e-06 87.3013L-2.92811e-07 0.698727L75 44Z"/>
                     </svg>
                 </button>
-                <div role=tablist class="carousel flex-row" id="carousel-single1" aria-label="4 tips to good web design">
+                <div class="carousel flex-row" id="carousel-single1" aria-label="4 tips to good web design">
                     <div class="content-left">
-                        <ol class="tab-list">
+                        <ol class="tab-list tabs-carousel" role=tablist>
                             <div class="progress-bar" pausebtn="pause1" role="progressbar" style="--progress: 20" value="20"></div>
                             <li>
                                 <button role="tab" id="carousel-single-btn1" aria-selected="false" type="button" aria-label="Website Remediation Step 1" aria-controls="carousel-single2-slide1" class="btn">
@@ -397,33 +409,33 @@
                     </div>
                     <div class="content-right flex-column" aria-live="off">
                         <div class="descriptions">
-                            <p class="desc p2 display"><span>A website may look fine, but there could be a lot of accessibility problems underneath
+                            <p class="desc p2 display" id="tabcarousel-desc1"><span>A website may look fine, but there could be a lot of accessibility problems underneath
                             the hood. So, we send in a specialist to take a look.
                             </span></p>
-                            <p class="desc p2"><span>Often times, a myriad of accessibility issues pop up, highlighting how difficult it currently is for
+                            <p class="desc p2" id="tabcarousel-desc2"><span>Often times, a myriad of accessibility issues pop up, highlighting how difficult it currently is for
                                 some users to navigate your website. So, we get to work on removing these issues.
                             </span></p>
-                            <p class="desc p2"><span>One step at a time, we fix the issues present on the website to bring it closer to the “Web For
+                            <p class="desc p2" id="tabcarousel-desc3"><span>One step at a time, we fix the issues present on the website to bring it closer to the “Web For
                                 Everyone", where anybody can use your website.
                             </span></p>
-                            <p class="desc p2"><span>After we finish correcting all the issues, we take one final check to ensure we didn’t miss anything,
+                            <p class="desc p2" id="tabcarousel-desc4"><span>After we finish correcting all the issues, we take one final check to ensure we didn’t miss anything,
                                 and just like that, you’re website is now ADA compliant.
                             </span></p>
                         </div>
                         <div class="slides flex-row">
-                            <div role="tabpanel" id="carousel-single2-slide1" aria-roledescription="slide" aria-label="1 of 4" class="display slide">
+                            <div role="tabpanel" id="carousel-single2-slide1" aria-roledescription="slide" aria-label="1 of 4" class="display slide" aria-describedby="tabcarousel-desc1">
                                 <img src="/img/ada-remediation-step-1_1.png" alt="A generic website placed with a digital accessiblility specialist preparing to check it." class="img img1" >
                                 <img src="/img/ada-remediation-step-1_2.png" alt="" class="img img2">
                             </div>
-                            <div role="tabpanel" id="carousel-single2-slide2" aria-roledescription="slide" aria-label="2 of 4" class="slide">
+                            <div role="tabpanel" id="carousel-single2-slide2" aria-roledescription="slide" aria-label="2 of 4" class="slide" aria-describedby="tabcarousel-desc2">
                                 <img src="/img/ada-remediation-step-2_1.png" alt="The generic website now has 3 errors that weren't previously visible." class="img img1" >
                                 <img src="/img/ada-remediation-step-2_2.png" alt="" class="img img2">
                             </div>
-                            <div role="tabpanel" id="carousel-single2-slide3" aria-roledescription="slide" aria-label="3 of 4" class="slide">
+                            <div role="tabpanel" id="carousel-single2-slide3" aria-roledescription="slide" aria-label="3 of 4" class="slide" aria-describedby="tabcarousel-desc3">
                                 <img src="/img/ada-remediation-step-3_1.png" alt="Little workers fix the website and bring it closer to digital accessibility compliance." class="img img1" >
                                 <img src="/img/ada-remediation-step-3_2.png" alt="" class="img img2">
                             </div>
-                            <div role="tabpanel" id="carousel-single2-slide4" aria-roledescription="slide" aria-label="4 of 4" class="slide">
+                            <div role="tabpanel" id="carousel-single2-slide4" aria-roledescription="slide" aria-label="4 of 4" class="slide" aria-describedby="tabcarousel-desc4">
                                 <img src="/img/ada-remediation-step-4_1.png" alt="The website is now digitally accessible and passes the ada compliance check." class="img img1" >
                                 <img src="/img/ada-remediation-step-4_2.png" alt="" class="img img2">
                             </div>

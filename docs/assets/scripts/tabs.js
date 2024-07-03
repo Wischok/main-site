@@ -66,7 +66,7 @@ function Tablist (el) {
     //element refs
     this.tablist = el;//tab element
     this.tabs = el.querySelectorAll('[role=tab]'); //list of tabs 
-    this.tabPanels = el.querySelectorAll('[role=tabpanel]');//list of tabPanels
+    this.tabPanels = [];//list of tabPanels
 
     //data
     this.idBase = this.tablist.id || 'tablist';
@@ -88,6 +88,8 @@ Tablist.prototype.init = function() {
     for (let i = 0; i < this.tabs.length; i++) {
         //hold onto current tab
         let tab = this.tabs[i];
+
+        this.tabPanels.push(document.getElementById(tab.getAttribute('aria-controls')));
 
         //add listener events
         tab.addEventListener('click', this.onClick.bind(this));
@@ -113,6 +115,7 @@ Tablist.prototype.selectTab = function(newTab) {
 
         //reset aria-selected
         tab.setAttribute('aria-selected', 'false');
+        tab.setAttribute('tabindex', '-1');
 
         //remove display from old tabpanel
         this.tabPanels[indexOf(this.tabs, this.selectedTab)].classList.remove('display');
@@ -126,9 +129,7 @@ Tablist.prototype.selectTab = function(newTab) {
 
     //update aria-selected
     tab.setAttribute('aria-selected', 'true');
-
-    //focus tab
-    tab.focus();
+    tab.setAttribute('tabindex', '0');
 
     //add display class to new tabpanel
     this.tabPanels[indexOf(this.tabs, this.selectedTab)].classList.add('display');
@@ -209,6 +210,8 @@ window.addEventListener('load', function () {
     const elements = document.querySelectorAll('[role=tablist]');
 
     elements.forEach((el) => {
-        new Tablist(el);
+        if(!el.classList.contains('tabs-carousel')) {
+            new Tablist(el);
+        }
     })
 });
