@@ -34,6 +34,10 @@ h1 {
     letter-spacing: 6px;
     font-size: 4.5rem;
     line-height: 110%;
+    min-height: 3lh;
+    display: flex;
+    align-items: end;
+    flex-direction: column;
 }
 @media screen and (max-width: 810px) {
     h1 {
