@@ -76,6 +76,10 @@ Nav.prototype.addressLinkClick = function(event) {
 Nav.prototype.keyboardTrapNext = function(event) {
     const {key, shiftKey} = event;
 
+    if(this.addressButton.getAttribute('aria-expanded') === 'false') {
+        return;
+    }
+
     if(key === "Tab" && !shiftKey) {
         document.getElementById('address1').focus()
         event.preventDefault();
@@ -84,6 +88,10 @@ Nav.prototype.keyboardTrapNext = function(event) {
 
 Nav.prototype.keyboardTrapPrev = function(event) {
     const {key, shiftKey} = event;
+
+    if(this.addressButton.getAttribute('aria-expanded') === 'false') {
+        return;
+    }
 
     if(key === "Tab" && shiftKey) {
         this.addressButton.focus()
