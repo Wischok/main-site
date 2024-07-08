@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wischok Music Portfolio Website</title>
+    <meta name="description" content="Web design, maintenance, and ada accessibility services provided by certified wischok experts.">
+    <link rel="canonical" href="https://wischok.com/portfolio/music/index.html"/>
+
+    <!-- Meta 2 -->
+    <meta name="robots" content="max-image-preview:large">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Archivo+Black&family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    
+    <!-- Javascript -->
+    <script defer src="./docs/assets/scripts/carousel.js"></script>
+    <script defer src="./docs/assets/scripts/transitionHandler.js"></script>
+    <script defer src="./docs/assets/scripts/nav.js"></script>
+    <script defer src="./docs/assets/scripts/modal.js"></script>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./docs/assets/style/reset.css">
+    <link rel="stylesheet" href="./docs/assets/style/main.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./docs/assets/img/relapsing.png">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LY8F4XBXY7"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-LY8F4XBXY7');
+    </script>
+</head>
+<body>
+    <div class="transitions" id="transition">
+        <div class="rows">
+            <div class="row row1"><div class="inner">
+            </div>
+        </div>
+            <div class="row row2"><div class="inner">
+                <div class="img"></div>
+            </div>
+            </div>
+            <div class="row row3"><div class="inner">
+                <div class="img"></div>
+            </div></div>
+            <div class="row row4"><div class="inner">
+                <div class="img"></div>
+            </div></div>
+            <div class="row row5"><div class="inner"></div></div>
+        </div>
+        
+    </div>
+    <main role="main" class="main1">
+        <h1 class="hide-visually">Artiist Web page</h1>
+        <div role="navigation" class="nav" aria-label="Music Website">
+            <div class="banner">
+                <img src="./docs/assets/img/artiist-logo.png" alt="Artiist Logo." class="img">
+                <button role="button" aria-expanded="false" class="hamburger" id="hamburger">
+                    <svg class="svg" viewbox="0 0 100 100" aria-hidden="true">
+                        <line class="line top" x1="90" x2="10" y1="25" y2="25" stroke="black" stroke-width="10"
+                            stroke-linecap="round" stroke-dasharray="80" stroke-dashoffset="0"></line>
+                        <line class="line mid" x1="10" x2="90" y1="50" y2="50" stroke="black" stroke-width="10"
+                            stroke-linecap="round" stroke-dasharray="80" stroke-dashoffset="0"></line>
+                        <line class="line bot" x1="10" x2="90" y1="75" y2="75" stroke="black" stroke-width="10"
+                            stroke-linecap="round" stroke-dasharray="80" stroke-dashoffset="0">
+                        </line>
+                    </svg>
+                </button>
+            </div>
+                <ul class="menubar-navigation" role="menubar">
+                    <li role="none" class="link">
+                        <button class="menu-button" role="menuitem" aria-current="true" id="home" aria-controls="carousel"><span class="text">Home</span><span class="underline" aria-hidden="true"></span></button>
+                    </li>
+                    <li role="none" class="link">
+                        <button id="music" class="menu-button" role="menuitem" aria-pressed="false" aria-haspopup="true" aria-controls="carousel" aria-current="true"><span class="text music">Music</span><span class="underline" aria-hidden="true"></span></button>
+                    </li>
+                    <li role="none" class="link">
+                        <button class="menu-button" role="menuitem" id="shop" aria-controls="shop-section"><span class="text">Shop</span><span class="underline" aria-hidden="true"></span></button>
+                    </li>
+                    <li role="none" class="link">
+                        <button class="menu-button" role="menuitem" aria-controls="touring-section" id="touring">
+                            <span class="text">Touring</span>
+                            <span class="underline" aria-hidden="true"></span>
+                        </button>
+                    </li>
+                    <li role="none" class="link">
+                        <button class="menu-button" id="subscribe" role="menuitem" aria-haspopup="dialog" ><span class="text">Subscribe</span><span class="underline" aria-hidden="true"></span></button>
+                    </li>
+                    <li class="footer-content">
+                            <ul class="social-links" aria-label="Social Links.">
+                                <li class="link">
+                                    <a href="" >
+                                        <img src="./docs/assets/img/instagram-footer.png" alt="Artiist Instagram" class="icon">
+                                    </a>
+                                </li>
+                                <li class="link">
+                                    <a href="" >
+                                        <img src="./docs/assets/img/spotify-footer.png" alt="Artiist Spotify" class="icon">
+                                    </a>
+                                </li>
+                                <li class="link">
+                                    <a href="" >
+                                        <img src="./docs/assets/img/youtube-footer.png" alt="Artiist Youtube" class="icon">
+                                    </a>
+                                </li>
+                                <li class="link">
+                                    <a href="" >
+                                        <img src="./docs/assets/img/discord-footer.png" alt="Artiist Discord" class="icon">
+                                    </a>
+                                </li>
+                                <li class="link">
+                                    <a href="" >
+                                        <img src="./docs/assets/img/tiktok-footer.png" alt="Artiist Tiktok" class="icon">
+                                    </a>
+                                </li>
+                            </ul>
+                    </li>
+                </ul>
+        </div>
+        <section id="carousel" class="carousel" aria-expanded="false" aria-roledescription="carousel" aria-label="Music Albums">
+            <div class="carousel-inner">
+                <div class="controls controls1">
+                    <div class="wrapper">
+                        <button id="carousel-exit" class="exit"><span class="hide-visually">Exit</span><img src="./docs/assets/img/x-close.png" alt=""></button>
+                        <button id="carousel-mute" class="mute" aria-pressed="true"><span class="hide-visually">Mute</span><img class="off" src="./docs/assets/img/volume-off.png" alt=""><img src="./docs/assets/img/volume-on.png" alt="" class="on"></button>
+                    </div>
+                </div>
+                <div class="controls controls2">
+                    <div class="wrapper">
+                        <button class="link1"><span class="hide-visually">Spotify</span><img src="./docs/assets/img/spotify-logo-small.png" alt="Spotify logo." class="short"><img src="./docs/assets/img/spotify.png" alt="Spotify logo." class="long"></button>
+                        <button class="link2"><span class="hide-visually">Apple</span><img src="./docs/assets/img/apple-music-logo-small.png" alt="Apple logo." class="short"><img src="./docs/assets/img/apple.png" alt="Apple logo." class="long"></button>
+                        <button class="link3"><span class="hide-visually">Youtube Music</span><img src="./docs/assets/img/youtube-music-logo-small.png" alt="Youtube Music logo." class="short"><img src="./docs/assets/img/youtube-music.png" alt="Youtube Music logo." class="long"></button>
+                        <button class="link4"><span class="hide-visually">Soundcloud</span><img src="./docs/assets/img/soundcloud-logo-small.png" alt="Soundcloud logo." class="short"><img src="./docs/assets/img/soundcloud-logo-small.png" alt="Soundcloud logo." class="long"></button>
+                    </div>
+                </div>
+                <div class="controls controls3">
+                    <div class="wrapper">
+                        <div class="content">
+                            <button class="prev">
+                                <img src="./docs/assets/img/arrow-left.png" alt="">
+                            </button>
+                            <p id="song-title" class="song-title">Godless Woman</p>
+                            <button class="next">
+                                <img src="./docs/assets/img/arrow-left.png" alt="">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div id="carousel-items" class="carousel-items" aria-live="off">
+                    <div class="rotation2" id="rotation2">
+                        <!-- Godless Woman -->
+                        <div class="carousel-item record1" aria-label="record 1 of 8" value-title="Godless Woman">
+                            <div class="wrapper">
+                                <img src="./docs/assets/img/godless-woman.png" alt="Godless Woman song." class="img">
+                            </div>
+                        </div>
+                        <!-- Memories -->
+                        <div class="carousel-item record2" aria-label="record 2 of 8" value-title="Memories">
+                            <div class="wrapper">
+                                <img src="./docs/assets/img/memories.png" alt="Memories song." class="img">
+                            </div>
+                        </div>
+                        <!-- Clouds -->
+                        <div class="carousel-item record3" aria-label="record 3 of 8" value-title="Clouds">
+                            <div class="wrapper">
+                                <img src="./docs/assets/img/clouds-ex.png" alt="Clouds song." class="img">
+                            </div>
+                        </div>
+                        <!-- Dust -->
+                        <div class="carousel-item record4" aria-label="record 4 of 8" value-title="Dust">
+                            <div class="wrapper">
+                                <img src="./docs/assets/img/dust.png" alt="Dust song." class="img">
+                            </div>
+                        </div>
+                        <!-- Spiffeon -->
+                        <div class="carousel-item record5" aria-label="record 5 of 8" value-title="Spiffeon">
+                            <div class="wrapper">
+                                <img src="./docs/assets/img/spiffeon.png" alt="Spiffeon song." class="img">
+                            </div>
+                        </div>
+                        <!-- Relapsing -->
+                        <div class="carousel-item record6 active" aria-label="record 6 of 8" value-title="Relapsing">
+                            <div class="wrapper">
+                                <img src="./docs/assets/img/relapsing.png" alt="Relapsing Song." class="img">
+                            </div>
+                        </div>
+                        <!-- Miniature People -->
+                        <div class="carousel-item record7" aria-label="record 7 of 8" value-title="Miniature People">
+                            <div class="wrapper">
+                                <img src="./docs/assets/img/mini-people.png" alt="Miniature People song." class="img">
+                            </div>
+                        </div>
+                        <!-- Cave -->
+                        <div class="carousel-item record8" aria-label="record 8 of 8" value-title="Cave">
+                            <div class="wrapper">
+                                <img src="./docs/assets/img/cave.png" alt="Cave song." class="img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="shop close" id="shop-section">
+            <div class="wrapper">
+                <h2 class="heading2"><span aria-hidden="true"><img src="./docs/assets/img/memories.png" alt=""></span><span class="text">Artist Store</span><span aria-hidden="true"><img class="img2" src="./docs/assets/img/memories.png" alt=""></span></h2>
+                <ul class="item-list">
+                    <li class="item">
+                        <img src="./docs/assets/img/item1.jfif" alt="" class="img">
+                        <h3 class="heading3">Pleated Sweatpants</h3>
+                        <p class="p1">$49.99</p>
+                    </li>
+                    <li class="item">
+                        <img src="./docs/assets/img/item2.jfif" alt="" class="img">
+                        <h3 class="heading3">Fresh Coconut</h3>
+                        <p class="p1">$15.99</p>
+                    </li>
+                    <li class="item">
+                        <img src="./docs/assets/img/item3.jfif" alt="" class="img">
+                        <h3 class="heading3">Knee-patched jaw string jeans</h3>
+                        <p class="p1">$79.99</p>
+                    </li>
+                    <li class="item">
+                        <img src="./docs/assets/img/item4.jfif" alt="" class="img">
+                        <h3 class="heading3">Plaid Wind Breaker</h3>
+                        <p class="p1">$59.99</p>
+                    </li>
+                    <li class="item">
+                        <img src="./docs/assets/img/item5.jfif" alt="" class="img">
+                        <h3 class="heading3">Deep Navy Flood fit Chino Pants</h3>
+                        <p class="p1">$79.99</p>
+                    </li>
+                    <li class="item">
+                        <img src="./docs/assets/img/item6.jfif" alt="" class="img">
+                        <h3 class="heading3">Floral Vest</h3>
+                        <p class="p1">$29.99</p>
+                    </li>
+                    <li class="item">
+                        <img src="./docs/assets/img/item7.jfif" alt="" class="img">
+                        <h3 class="heading3">Vertical Striped Dress Shirt</h3>
+                        <p class="p1">$29.99</p>
+                    </li>
+                    <li class="item">
+                        <img src="./docs/assets/img/item8.jfif" alt="" class="img">
+                        <h3 class="heading3">Studded Leather Boots</h3>
+                        <p class="p1">$119.99</p>
+                    </li>
+                    <li class="item">
+                        <img src="./docs/assets/img/item9.jfif" alt="" class="img">
+                        <h3 class="heading3">Min-plaid Cove Jacket</h3>
+                        <p class="p1">$115.99</p>
+                    </li>
+                    <li class="item">
+                        <img src="./docs/assets/img/item10.jfif" alt="" class="img">
+                        <h3 class="heading3">CamelBak Backpack</h3>
+                        <p class="p1">$44.99e</p>
+                    </li>
+                    <li class="item">
+                        <img src="./docs/assets/img/item11.jfif" alt="" class="img">
+                        <h3 class="heading3">Two-toned Top</h3>
+                        <p class="p1">$17.99</p>
+                    </li>
+                    <li class="item">
+                        <img src="./docs/assets/img/item12.jfif" alt="" class="img">
+                        <h3 class="heading3">Loose-fit Overalls</h3>
+                        <p class="p1">$139.99</p>
+                    </li>
+                    <li class="item">
+                        <img src="./docs/assets/img/item13.jfif" alt="" class="img">
+                        <h3 class="heading3">Quilted Overalls</h3>
+                        <p class="p1">$159.99</p>
+                    </li>
+                    <li class="item">
+                        <img src="./docs/assets/img/item14.jfif" alt="" class="img">
+                        <h3 class="heading3">Multi Colored Sweatshirt</h3>
+                        <p class="p1">$79.99</p>
+                    </li>
+                    <li class="item">
+                        <img src="./docs/assets/img/item15.jfif" alt="" class="img">
+                        <h3 class="heading3">High-Rise Band-Fit Sweatpants</h3>
+                        <p class="p1">$34.99</p>
+                    </li>
+                    <li class="item">
+                        <img src="./docs/assets/img/item16.jfif" alt="" class="img">
+                        <h3 class="heading3">Studden Vest</h3>
+                        <p class="p1">$56.99</p>
+                    </li>
+                    <li class="item">
+                        <img src="./docs/assets/img/item17.jfif" alt="" class="img">
+                        <h3 class="heading3">White Chino Pants</h3>
+                        <p class="p1">$63.99</p>
+                    </li>
+                    <li class="item">
+                        <img src="./docs/assets/img/item18.jfif" alt="" class="img">
+                        <h3 class="heading3">Traveler's Puffer Jacket</h3>
+                        <p class="p1">$107.99</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="touring close" id="touring-section">
+            <div class="wrapper">
+                <h2 class="heading2">Tour Dates</h2>
+                <ul class="tour-list">
+                    <hr class="line">
+                    <li class="item first">
+                        <div class="content">
+                            <div class="inner">
+                                <h3 class="heading3">Date</h3>
+                                <p class="p1">Venue Name</p>
+                                <p class="p2">Location</p>
+                            </div>
+                        </div>
+                        <div class="links">
+                            <a class="link1">Tickets</a>
+                            <a class="link2">RSVP</a>
+                        </div>
+                    </li>
+                    <hr class="line">
+                    <li class="item first">
+                        <div class="content">
+                            <div class="inner">
+                                <h3 class="heading3">Date</h3>
+                                <p class="p1">Venue Name</p>
+                                <p class="p2">Location</p>
+                            </div>
+                        </div>
+                        <div class="links">
+                            <a class="link1">Tickets</a>
+                            <a class="link2">RSVP</a>
+                        </div>
+                    </li>
+                    <hr class="line">
+                    <li class="item first">
+                        <div class="content">
+                            <div class="inner">
+                                <h3 class="heading3">Date</h3>
+                                <p class="p1">Venue Name</p>
+                                <p class="p2">Location</p>
+                            </div>
+                        </div>
+                        <div class="links">
+                            <a class="link1">Tickets</a>
+                            <a class="link2">RSVP</a>
+                        </div>
+                    </li>
+                    <hr class="line">
+                    <li class="item first">
+                        <div class="content">
+                            <div class="inner">
+                                <h3 class="heading3">Date</h3>
+                                <p class="p1">Venue Name</p>
+                                <p class="p2">Location</p>
+                            </div>
+                        </div>
+                        <div class="links">
+                            <a class="link1">Tickets</a>
+                            <a class="link2">RSVP</a>
+                        </div>
+                    </li>
+                    <hr class="line">
+                    <li class="item first">
+                        <div class="content">
+                            <div class="inner">
+                                <h3 class="heading3">Date</h3>
+                                <p class="p1">Venue Name</p>
+                                <p class="p2">Location</p>
+                            </div>
+                        </div>
+                        <div class="links">
+                            <a class="link1">Tickets</a>
+                            <a class="link2">RSVP</a>
+                        </div>
+                    </li>
+                    <hr class="line">
+                    <li class="item first">
+                        <div class="content">
+                            <div class="inner">
+                                <h3 class="heading3">Date</h3>
+                                <p class="p1">Venue Name</p>
+                                <p class="p2">Location</p>
+                            </div>
+                        </div>
+                        <div class="links">
+                            <a class="link1">Tickets</a>
+                            <a class="link2">RSVP</a>
+                        </div>
+                    </li>
+                    <hr class="line">
+                    <li class="item first">
+                        <div class="content">
+                            <div class="inner">
+                                <h3 class="heading3">Date</h3>
+                                <p class="p1">Venue Name</p>
+                                <p class="p2">Location</p>
+                            </div>
+                        </div>
+                        <div class="links">
+                            <a class="link1">Tickets</a>
+                            <a class="link2">RSVP</a>
+                        </div>
+                    </li>
+                    <hr class="line">
+                    <li class="item first">
+                        <div class="content">
+                            <div class="inner">
+                                <h3 class="heading3">Date</h3>
+                                <p class="p1">Venue Name</p>
+                                <p class="p2">Location</p>
+                            </div>
+                        </div>
+                        <div class="links">
+                            <a class="link1">Tickets</a>
+                            <a class="link2">RSVP</a>
+                        </div>
+                    </li>
+                    <hr class="line">
+                    <li class="item first">
+                        <div class="content">
+                            <div class="inner">
+                                <h3 class="heading3">Date</h3>
+                                <p class="p1">Venue Name</p>
+                                <p class="p2">Location</p>
+                            </div>
+                        </div>
+                        <div class="links">
+                            <a class="link1">Tickets</a>
+                            <a class="link2">RSVP</a>
+                        </div>
+                    </li>
+                    <hr class="line">
+                    <li class="item first">
+                        <div class="content">
+                            <div class="inner">
+                                <h3 class="heading3">Date</h3>
+                                <p class="p1">Venue Name</p>
+                                <p class="p2">Location</p>
+                            </div>
+                        </div>
+                        <div class="links">
+                            <a class="link1">Tickets</a>
+                            <a class="link2">RSVP</a>
+                        </div>
+                    </li>
+                    <hr class="line">
+                    <li class="item first">
+                        <div class="content">
+                            <div class="inner">
+                                <h3 class="heading3">Date</h3>
+                                <p class="p1">Venue Name</p>
+                                <p class="p2">Location</p>
+                            </div>
+                        </div>
+                        <div class="links">
+                            <a class="link1">Tickets</a>
+                            <a class="link2">RSVP</a>
+                        </div>
+                    </li>
+                    <hr class="line">
+                </ul>
+            </div>
+        </div>
+        <div class="filler" aria-hidden="true">
+        </div>
+    </main>
+    <footer role="contentinfo" class="footer">
+        <div class="wrapper">
+            <div class="content-left">
+                <img src="./docs/assets/img/artiist-logo.png" alt="Artiist Logo." class="img">
+                <p>This is a portfolio website designed by <a href="/" target="_blank" rel="noopener">Wischok</a></p>
+            </div>
+            <div class="content-right">
+                <h2 class="heading2">Find More Of This Artiist</h2>
+                <ul class="social-links">
+                    <li class="link">
+                        <a href="" >
+                            <img src="./docs/assets/img/instagram-footer.png" alt="Artiist Instagram" class="icon">
+                        </a>
+                    </li>
+                    <li class="link">
+                        <a href="" >
+                            <img src="./docs/assets/img/spotify-footer.png" alt="Artiist Spotify" class="icon">
+                        </a>
+                    </li>
+                    <li class="link">
+                        <a href="" >
+                            <img src="./docs/assets/img/youtube-footer.png" alt="Artiist Youtube" class="icon">
+                        </a>
+                    </li>
+                    <li class="link">
+                        <a href="" >
+                            <img src="./docs/assets/img/discord-footer.png" alt="Artiist Discord" class="icon">
+                        </a>
+                    </li>
+                    <li class="link">
+                        <a href="" >
+                            <img src="./docs/assets/img/tiktok-footer.png" alt="Artiist Tiktok" class="icon">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <div class="dialog" id="dialog1">
+        <div class="content" role="dialog" aria-labelledby="subscribe" aria-modal="true" aria-describedby="dialog1-heading">
+            <button class="exit" id="dialog1_exit"><span class="hide-visually">Exit</span><img src="./docs/assets/img/x-close.png" alt=""></button>
+            <img src="./docs/assets/img/artiist-logo.png" alt="Artiist logo.">
+            <h2 class="heading2 inter" id="dialog1-heading">Stay Up To Date With the Artist</h2>
+            <form id="dialog1_form">
+                <div class="wrapper">
+                    <div class="form-field">
+                        <label for="email" class="inter">Email</label>
+                        <input type="email" name="email" id="email" class="inter" required placeholder="Email">
+                    </div>
+                    <p>By signing up, you agree to recieve promotional emails from Artiist.</p>
+                    <input type="submit" class="inter" id="dialog1_submit">
+                </div>
+                <p class="thanks" id="dialog1_thankyou">Thank for subscribing!<br>(Remember, this is a dummy website)</p>
+            </form>
+        </div>
+    </div>
+    <div class="modal" id="modal1"></div>
+</body>
+</html>
+
+<!-- Commented out Blog link in nav, blog link in footer, website portfolios -->
