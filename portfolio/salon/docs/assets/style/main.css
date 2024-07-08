@@ -242,6 +242,7 @@ a:focus, button:focus {
   font-weight: 600;
   display: block;
   max-width: max-content;
+  text-decoration: none;
 }
 
 .button2 {
@@ -256,6 +257,7 @@ a:focus, button:focus {
   max-width: max-content;
   transition: color 200ms ease-out,
   background-color 200ms ease-out;
+  text-decoration: none;
 }
 
 .button2:hover, .button2:focus {
