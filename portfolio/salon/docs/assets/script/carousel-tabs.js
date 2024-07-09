@@ -11,6 +11,16 @@
     Helper functions for Component
 */
 
+const elementIsVisibleInViewport = (el, partiallyVisible = false) => {
+    const { top, left, bottom, right } = el.getBoundingClientRect();
+    const { innerHeight, innerWidth } = window;
+    return partiallyVisible
+      ? ((top > 0 && top < innerHeight) ||
+          (bottom > 0 && bottom < innerHeight)) &&
+          ((left > 0 && left < innerWidth) || (right > 0 && right < innerWidth))
+      : top >= 0 && left >= 0 && bottom <= innerHeight && right <= innerWidth;
+};
+
 //Select Actions
 var SelectActions = {
     First: 0,
@@ -154,7 +164,9 @@ CarouselTabs.prototype.selectTab = function(newTab) {
     if(this.firstLoad) {
         this.firstLoad = false;
     } else {
-        tab.focus();
+        if(!elementIsVisibleInViewport(tab)) {
+            tab.focus();
+        }
     }
     
 
