@@ -310,7 +310,7 @@ a:focus, button:focus {
   border: none;
   padding: 0;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
   .hamburger {
       display: block;
   }
@@ -903,7 +903,7 @@ h2:has( + .carousel) {
 }
 
 .long-columns .column1 {
-  background-image: url(/portfolio/salon/docs/assets/img/hair-spray.avif);
+  background-image: url(/portfolio/salon/docs/assets/img/hair-spray.jpg);
   animation: fade-up-medium 500ms ease-out forwards;
 }
 .long-columns .column2 {
@@ -972,6 +972,7 @@ h2:has( + .carousel) {
 
 .gallery img {
   pointer-events: none;
+  border-radius: 5px;
 }
 
 .gallery button {
@@ -1021,11 +1022,22 @@ h2:has( + .carousel) {
   background-color: blue;
   z-index: 1;
 }
+@media screen and (max-width: 600px) {
+  .expanded-image img {
+    height: 70vh;
+  }
+}
 @media screen and (orientation: portrait) {
   .expanded-image img {
     height: 80vw;
   }
 }
+@media screen and (max-width: 600px) and (orientation: portrait) {
+  .expanded-image img {
+    height: 70vw;
+  }
+}
+
 
 .expanded-image button {
   width: 3rem;
