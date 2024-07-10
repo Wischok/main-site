@@ -150,14 +150,16 @@ a:focus, button:focus {
 .two-column .column img {
   max-width: 100%;
   aspect-ratio: 1 / 1;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   justify-self: center;
   align-self: center;
 }
 .three-column .column img {
   max-width: 100%;
   aspect-ratio:  1/ 1;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   justify-self: center;
   align-self: center;
 }
@@ -176,7 +178,8 @@ a:focus, button:focus {
 .grid-squares .cell img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /* window width */
@@ -241,6 +244,8 @@ a:focus, button:focus {
   color: var(--color-primary);
   font-weight: 600;
   display: block;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
   max-width: max-content;
   text-decoration: none;
 }
@@ -254,6 +259,8 @@ a:focus, button:focus {
   background-color: var(--color-primary);
   font-weight: 600;
   display: block;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
   max-width: max-content;
   transition: color 200ms ease-out,
   background-color 200ms ease-out;
@@ -318,7 +325,8 @@ a:focus, button:focus {
 
 .hamburger .line {
   stroke: white;
-  animation: to-open-icon 0.5s forwards;
+  -webkit-animation: to-open-icon 0.5s forwards;
+          animation: to-open-icon 0.5s forwards;
 }
 
 .hamburger .line.top {
@@ -332,12 +340,33 @@ a:focus, button:focus {
 }
 
 .hamburger[aria-expanded=true] .line {
-  animation: to-close-icon 0.5s forwards;
+  -webkit-animation: to-close-icon 0.5s forwards;
+          animation: to-close-icon 0.5s forwards;
   stroke: white;
 }
 
 .hamburger[aria-expanded=true] .mid {
   opacity: 0;
+}
+
+@-webkit-keyframes to-close-icon {
+  0% {
+      stroke-dashoffset: 0;
+  }
+
+  40% {
+      stroke-dashoffset: 79.9;
+  }
+
+  60% {
+      stroke-dashoffset: 79.9;
+      rotate: var(--rotation);
+  }
+
+  100% {
+      stroke-dashoffset: 0;
+      rotate: var(--rotation);
+  }
 }
 
 @keyframes to-close-icon {
@@ -357,6 +386,16 @@ a:focus, button:focus {
   100% {
       stroke-dashoffset: 0;
       rotate: var(--rotation);
+  }
+}
+
+@-webkit-keyframes to-open-icon {
+  0% {
+      stroke-dashoffset: 79.9;
+  }
+
+  40% {
+      stroke-dashoffset: 0;
   }
 }
 
@@ -407,6 +446,15 @@ a:focus, button:focus {
   top: 0rem;
 }
 
+@-webkit-keyframes fade-in {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
 @keyframes fade-in {
   from {
       opacity: 0;
@@ -417,7 +465,8 @@ a:focus, button:focus {
 }
 
 .nav .logo {
-  filter: invert();
+  -webkit-filter: invert();
+          filter: invert();
   max-height: 5rem;
 }
 @media screen and (max-width: 720px) {
@@ -461,7 +510,8 @@ a:focus, button:focus {
 }
 
 .nav .content-top .phone img {
-  filter: invert();
+  -webkit-filter: invert();
+          filter: invert();
 }
 
 .nav .content-bottom {
@@ -494,7 +544,8 @@ a:focus, button:focus {
       height: 100%;
       background-color: rgba(0, 0, 0, 0.962);
       opacity: 0;
-      animation: fade-in 300ms ease-out forwards;
+      -webkit-animation: fade-in 300ms ease-out forwards;
+              animation: fade-in 300ms ease-out forwards;
   }
   .nav:has(.hamburger[aria-expanded=true]) .menubar::before {
       opacity: 1;
@@ -545,13 +596,16 @@ a:focus, button:focus {
 }
 
 .footer img {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .footer .logo {
   width: 7rem;
-  filter: invert();
-  object-fit: contain;
+  -webkit-filter: invert();
+          filter: invert();
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .footer p,
@@ -567,7 +621,8 @@ a:focus, button:focus {
 
 .footer .content-bottom .content-left img {
   align-self: start;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .footer .content-bottom .content-right {
@@ -597,10 +652,12 @@ a:focus, button:focus {
 }
 
 .footer .social-icon img {
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   width: 100%;
   height: 100%;
-  filter: invert();
+  -webkit-filter: invert();
+          filter: invert();
 }
 
 .footer a {
@@ -619,7 +676,8 @@ a:focus, button:focus {
 .header {
   margin-top: 9rem;
   opacity: 0;
-  animation: fade-in 1100ms ease-out forwards;
+  -webkit-animation: fade-in 1100ms ease-out forwards;
+          animation: fade-in 1100ms ease-out forwards;
 }
 @media screen and (max-width: 1000px) {
   .header {
@@ -629,6 +687,8 @@ a:focus, button:focus {
 
 .header .content {
   background-color: rgba(0, 0, 0, 0.708);
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
   max-width: max-content;
   padding: 30px;
   gap: 1.5rem;
@@ -636,7 +696,8 @@ a:focus, button:focus {
   position: relative;
   opacity: 0;
   bottom: -10px;
-  animation: fade-up-medium 500ms ease-out forwards 600ms;
+  -webkit-animation: fade-up-medium 500ms ease-out forwards 600ms;
+          animation: fade-up-medium 500ms ease-out forwards 600ms;
 }
 @media screen and (max-height: 900px) {
   .header .content {
@@ -657,7 +718,8 @@ a:focus, button:focus {
 .discount-section .img-wrapper img {
   max-width: 100%;
   aspect-ratio: 1 / 1;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .discount-section .content-right {
@@ -688,7 +750,8 @@ a:focus, button:focus {
   min-width: 100%;
   max-width: 100%;
   aspect-ratio: 1 / 1;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /* three row services */
@@ -785,7 +848,8 @@ h2:has( + .carousel) {
 }
 
 .carousel-item.display .column {
-  animation: slide-enter 500ms ease-out forwards;
+  -webkit-animation: slide-enter 500ms ease-out forwards;
+          animation: slide-enter 500ms ease-out forwards;
 }
 
 .carousel .carousel-item.exit {
@@ -793,6 +857,15 @@ h2:has( + .carousel) {
   top: 0;
   left: 0;
   position: absolute;
+}
+
+@-webkit-keyframes slide-enter {
+  from {
+    left: 120%;
+  }
+  to {
+    left: 0%;
+  }
 }
 
 @keyframes slide-enter {
@@ -805,7 +878,17 @@ h2:has( + .carousel) {
 }
 
 .carousel .carousel-item.exit .column {
-  animation: slide-exit 500ms ease-out forwards;
+  -webkit-animation: slide-exit 500ms ease-out forwards;
+          animation: slide-exit 500ms ease-out forwards;
+}
+
+@-webkit-keyframes slide-exit {
+  from {
+    left: 0%;
+  }
+  to {
+    left: -120%;
+  }
 }
 
 @keyframes slide-exit {
@@ -904,15 +987,18 @@ h2:has( + .carousel) {
 
 .long-columns .column1 {
   background-image: url(/portfolio/salon/docs/assets/img/hair-spray.jpg);
-  animation: fade-up-medium 500ms ease-out forwards;
+  -webkit-animation: fade-up-medium 500ms ease-out forwards;
+          animation: fade-up-medium 500ms ease-out forwards;
 }
 .long-columns .column2 {
   background-image: url(/portfolio/salon/docs/assets/img/haircut.jpg);
-  animation: fade-up-medium 500ms ease-out forwards 200ms;
+  -webkit-animation: fade-up-medium 500ms ease-out forwards 200ms;
+          animation: fade-up-medium 500ms ease-out forwards 200ms;
 }
 .long-columns .column3 {
   background-image: url(/portfolio/salon/docs/assets/img/hair-care4.jpg);
-  animation: fade-up-medium 500ms ease-out forwards 300ms;
+  -webkit-animation: fade-up-medium 500ms ease-out forwards 300ms;
+          animation: fade-up-medium 500ms ease-out forwards 300ms;
 }
 @media screen and (max-width: 720px) {
   .long-columns .column3 {
@@ -1059,7 +1145,8 @@ h2:has( + .carousel) {
 
 .expanded-image button.exit {
   background-image: url(/portfolio/salon/docs/assets/img/exit.png);
-  filter: invert();
+  -webkit-filter: invert();
+          filter: invert();
 }
 
 .expanded-image button.exit:focus,
