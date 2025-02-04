@@ -1,0 +1,142 @@
+/* fading */
+.fade-in {
+    opacity: 0.1;
+}
+.fade-in.show {
+    animation: fade-in 500ms ease-out forwards;
+}
+@keyframes fade-in {
+    from {
+        opacity: 0.1;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-up-short {
+    position: relative;
+    opacity: 0.1;
+    bottom: -10px;
+}
+.fade-up-short.show {
+    animation: fade-up-short 500ms ease-out forwards;
+}
+@keyframes fade-up-short {
+    from {
+        bottom: -10px;
+        opacity: 0.1;
+    }
+    to {
+        opacity: 1;
+        bottom: 0;
+    }
+}
+
+.fade-up-medium {
+    position: relative;
+    opacity: 0.1;
+    bottom: -100px;
+}
+@media screen and (max-width: 600px) {
+    .fade-up-medium {
+        bottom: -50px;
+    }
+}
+.fade-up-medium.show {
+    animation: fade-up-medium 500ms ease-out forwards;
+}
+@keyframes fade-up-medium {
+    from {
+        bottom: -100px;
+        opacity: 0.1;
+    }
+    to {
+        opacity: 1;
+        bottom: 0;
+    }
+}
+@media screen and (max-width: 600px) {
+    @keyframes fade-up-medium {
+        from {
+            bottom: -50px;
+            opacity: 0.1;
+        }
+        to {
+            opacity: 1;
+            bottom: 0;
+        }
+    }
+}
+
+.fade-left-medium {
+    position: relative;
+    opacity: 0.1;
+    right: -200px;
+}
+@media screen and (max-width: 600px) {
+    .fade-left-medium {
+        right: -100px;
+    }
+}
+.fade-left-medium.show {
+    animation: fade-left-medium 500ms ease-out forwards;
+}
+@keyframes fade-left-medium {
+    from {
+        right: -200px;
+        opacity: 0.1;
+    }
+    to {
+        opacity: 1;
+        right: 0;
+    }
+}
+@media screen and (max-width: 600px) {
+    @keyframes fade-left-medium {
+        from {
+            right: -100px;
+            opacity: 0.1;
+        }
+        to {
+            opacity: 1;
+            right: 0;
+        }
+    }
+}
+
+.fade-right-medium {
+    position: relative;
+    opacity: 0.1;
+    left: -200px;
+}
+@media screen and (max-width: 600px) {
+    .fade-right-medium {
+        left: -100px;
+    }
+}
+.fade-right-medium.show {
+    animation: fade-right-medium 500ms ease-out forwards;
+}
+@keyframes fade-right-medium {
+    from {
+        left: -200px;
+        opacity: 0.1;
+    }
+    to {
+        opacity: 1;
+        left: 0;
+    }
+}
+@media screen and (max-width: 600px) {
+    @keyframes fade-right-medium {
+        from {
+            left: -100px;
+            opacity: 0.1;
+        }
+        to {
+            opacity: 1;
+            left: 0;
+        }
+    }
+}
