@@ -415,6 +415,11 @@ h3 {
     transition: color 100ms ease-out;
     color: var(--black);
 }
+@media screen and (max-height: 850px) and (min-width: 1537px) {
+    .nav .menu-button {
+        font-size: 6rem;
+    }
+}
 @media screen and (max-width: 1536px) {
     .nav .menu-button {
         font-size: 6rem;
@@ -439,6 +444,21 @@ h3 {
 @media screen and (max-width: 800px) {
     .nav .menu-button {
         font-size: 1.7rem;
+    }
+}
+@media screen and (max-height: 850px) and (min-width: 1537px) {
+    .nav .menu-button {
+        font-size: 6rem;
+    }
+}
+@media screen and (max-height: 750px) and (min-width: 1537px) {
+    .nav .menu-button {
+        font-size: 5rem;
+    }
+}
+@media screen and (max-height: 650px) and (min-width: 1537px) {
+    .nav .menu-button {
+        font-size: 4rem;
     }
 }
 @media screen and (orientation: portrait) {
@@ -879,7 +899,7 @@ h3 {
     /* top: 50%;
     left: 50%; */
     transition: top 300ms ease-out;
-    top: 0;
+    top: -2rem;
 }
 
 @media screen and (orientation: portrait) {
@@ -973,8 +993,8 @@ h3 {
 }
 @media screen and (max-width: 800px) and (orientation: landscape) {
     .carousel .controls button {
-        height: 20px;
-        width: 20px;
+        height: 22px;
+        width: 22px;
     }
 }
 @media screen and (orientation: portrait) {
